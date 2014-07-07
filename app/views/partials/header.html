@@ -1,4 +1,91 @@
-<nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
+        <div class="container">
+            <header class="th-header">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
+                            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#th-main-nav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-7 col-md-8">
+                            <a class="th-header__logo" href="#">Vanilla</a>
+                        </div>
+
+                        <div class="col-xs-3 col-sm-4">
+                            <div class="th-header__utility pull-right">                            
+                                <div class="hidden-xs th-sitelinks">
+                                    <a href="#" class="th-sitelinks__link">Log in</a> /
+                                    <a href="#" class="th-sitelinks__link">Register</a>
+                                </div>
+                                
+                                <div class="th-header__cart">
+                                    <div class="th-cart-summary">
+                                        <a data-legacy-link="/checkout.asp" class="th-cart-summary__link" href="/checkout.asp">
+                                            <div class="th-icon th-icon--cart th-cart-summary__icon">
+                                                <div class="th-icon__foreground"></div>
+                                            </div>
+                                            <span class="th-cart-summary__number">0</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="collapse navbar-collapse" id="th-main-nav">
+                                <ul class="nav navbar-nav">
+                                    <li class="active" data-ui-sref-active="active">
+                                      <a href="index.html">Home</a>
+                                    </li>
+                                    <li data-ui-sref-active="active">
+                                      <a href="category.html">Category Page</a>
+                                    </li>
+                                    <li data-ui-sref-active="active">
+                                      <a href="product.html">Product Page</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="th-header__search">
+                                <form class="th-search" role="search">
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-default th-search__submit">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
+                                        <input type="text" class="form-control th-search__input">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+
+
+
+
+<!-- <nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
 
 	<div class="th-header">
 		<div class="container">
@@ -15,54 +102,40 @@
 		</div>
 	</div>
 	<div class="container th-menu-container">
-		<div class="row">
+		<div class="row"> -->
 			<!-- Desktop Logo -->
-			<div class="col-md-2 hidden-xs hidden-sm">
+			<!-- <div class="col-md-2 hidden-xs hidden-sm"> -->
 				<!--TODO: cleanup html-->
 				<!--<a class="navbar-brand" ui-sref="i18n.home">-->
-				<a class="navbar-brand" href="/">
+				<!-- <a class="navbar-brand" href="/">
 					<img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" />
 				</a>
 			</div>
-
+ -->
 			<!-- Sandwich Button -->
-			<div class="col-xs-3 hidden-md hidden-lg">
+<!-- 			<div class="col-xs-3 hidden-md hidden-lg">
 				<button type="button" class="navbar-toggle" ng-init="navCollapsed = true" snap-toggle="left">
 					<span class="sr-only">Toggle Navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-			</div>
+			</div> -->
 
 			<!-- Mobile Logo -->
-			<div class="col-xs-6 hidden-md hidden-lg">
+<!-- 			<div class="col-xs-6 hidden-md hidden-lg">
 				<a class="th-navbar__logo" ui-sref="i18n.home">
 					<img ng-src="{{config.general.logoUrl}}" class="img-responsive" />
 				</a>
 			</div>
 			<div class="col-md-8 hidden-xs hidden-sm">
 				<div class="collapse navbar-collapse " id="th-main-menu" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+ -->
 
-					<!-- Navigation -->
-					<!--<ul class="nav navbar-nav">-->
-					<!--<li class="dropdown" ng-repeat="item in mainNav.data">-->
-					<!--<a class="th-dropdown-toggle"-->
-					<!--href="c/{{ item.slug }}">{{item.name}}</a>-->
-					<!--<span>-->
-					<!--<a href="" ng-if="item.subCategories" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">-->
-					<!--<span class="caret"></span>-->
-					<!--</a>-->
-					<!--<ul class="dropdown-menu" ng-if="item.subCategories.length">-->
-					<!--<li ng-repeat="subCategory in item.subCategories">-->
-					<!--<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>-->
-					<!--</li>-->
-					<!--</ul>-->
-					<!--</span>-->
-					<!--</li>-->
-					<!--</ul>-->
+
+
 					<!-- Categories -->
-					<ul class="nav navbar-nav">
+<!-- 					<ul class="nav navbar-nav">
 						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
 							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
 							<span>
@@ -117,6 +190,6 @@
 			</div>
 		</div>
 
-	</div>
+	</div> -->
 	<!-- /.container-fluid -->
-</nav>
+<!-- </nav> -->
