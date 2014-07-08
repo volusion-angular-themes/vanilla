@@ -1,5 +1,9 @@
 $userDefined: ( // User Defined Colors
+<<<<<<< HEAD
 	brand-primary:                      #333,
+=======
+	brand-primary:                      #000,
+>>>>>>> More Header change:
 	body-bg:                            #fff,
 	text:                               #333,
 	text-emphasized:                    #f63e34,
@@ -30,9 +34,13 @@ $userDefined: map-merge($userDefined, (
 	component-bg--darkest:              darken(map-get($userDefined, component-bg), 100)
 ));
 
+<<<<<<< HEAD
 // Bootstrap Colors
 
 $bootstrap: ( 
+=======
+$bootstrap: ( // Bootstrap Colors
+>>>>>>> More Header change:
 	graydarker:                         #222,
 	graydark:                           #333,
 	gray:                               #555,
@@ -70,8 +78,13 @@ $bootstrap: (
 	btnDangerColor:                     #fff,
 
 	inputBg:                            #fff,
+<<<<<<< HEAD
 	inputBorder:                        #ccc,
 	inputFocus:                         #66afe9,
+=======
+	inputBorder:                        #cdcdcd,
+	inputFocus:                         #000,
+>>>>>>> More Header change:
 
 	legendBorderColor:                  #e5e5e5,
 
