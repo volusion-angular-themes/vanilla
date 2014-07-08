@@ -22,6 +22,5 @@ angular.module('Volusion.controllers')
 			};
 
 
-
 		}
 	]);
