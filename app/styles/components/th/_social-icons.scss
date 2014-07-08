@@ -1,4 +1,30 @@
-.th-social {
+// taken from Vanilla static file: th > _icon-group.scss
+
+.th-icongroup {
+    &__icon {
+        @extend %opacity-100;
+        margin-right: 15px;
+
+        &:hover {
+            @extend %opacity-75;
+            @extend %animate-all-default;
+        }
+
+        &--small {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
+
+////////////
+
+
+
+
+/* .th-social {
   text-align: center;
   padding: 26px 0 20px;
   clear: both;
@@ -25,4 +51,4 @@
     margin: 0 6px;
   }
 
-}
+} */
