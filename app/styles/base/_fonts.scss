@@ -1,23 +1,35 @@
 // Declare Custom Fonts Here (update any .svg file's id to 'font'!)
 // Set to font's file name
-@include app-font('roboto-regular');
-@include app-font('roboto-italic');
-@include app-font('roboto-bold');
-@include app-font('roboto-bolditalic');
-@include app-font('robotocondensed-regular');
-@include app-font('robotocondensed-bold');
 
-@include app-font('antonio-regular');
-@include app-font('antonio-bold');
-@include app-font('antonio-light');
+@include app-font(lato-light);
+@include app-font(lato-light-italic);
 
-@include app-font('crimsontext');
-@include app-font('crimsontext-italic');
+@include app-font(lato-reg);
+@include app-font(lato-reg-italic);
 
-// Custom Font Variables
-$font-family-condensed-reg:         "robotocondensed-regular";
-$font-family-condensed-bold:        "robotocondensed-bold";
-$font-family-serif-italic:          "crimsontext-italic", "Times New Roman", Times, serif !default;
-$font-family-heading-reg:           "antonio-regular";
+@include app-font(lato-bold);
+@include app-font(lato-bold-italic);
 
-// Primary Fonts are assigned to Bootstrap variables. See file '_bootstrap-style.scss'
+@include app-font(robotoslab-light);
+@include app-font(robotoslab-reg);
+
+
+
+
+
+
+
+
+// @include app-font('roboto-regular');
+// @include app-font('roboto-italic');
+// @include app-font('roboto-bold');
+// @include app-font('roboto-bolditalic');
+// @include app-font('robotocondensed-regular');
+// @include app-font('robotocondensed-bold');
+
+// @include app-font('antonio-regular');
+// @include app-font('antonio-bold');
+// @include app-font('antonio-light');
+
+// @include app-font('crimsontext');
+// @include app-font('crimsontext-italic');

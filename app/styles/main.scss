@@ -1,6 +1,59 @@
-// Initialize with Compass and our custom helpers/mixins
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+//@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+@import 'style-guide/theme-vars'; // Custom Theme Variables
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+// Core variables and mixins
 @import 'compass';
-@import 'base/helpers';
+@import 'core/base/mixins';
+@import 'core/base/helpers';
+
+// Reset
+@import 'reset/normalize';
+@import 'reset/print';
+
+// Core CSS
+@import 'core/scaffolding';
+@import 'core/type';
+@import 'core/code';
+@import 'core/grid';
+@import 'core/tables';
+@import 'core/forms';
+@import 'core/buttons';
+
+// Components
+@import 'components/component-animations';
+@import 'components/glyphicons';
+@import 'components/dropdowns';
+@import 'components/button-groups';
+@import 'components/input-groups';
+@import 'components/navs';
+@import 'components/navbar';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/pager';
+@import 'components/labels';
+@import 'components/badges';
+@import 'components/jumbotron';
+@import 'components/thumbnails';
+@import 'components/alerts';
+@import 'components/progress-bars';
+@import 'components/media';
+@import 'components/list-group';
+@import 'components/panels';
+@import 'components/wells';
+@import 'components/close';
+
+// Components w/ Javascript
+@import 'components/js/modals';
+@import 'components/js/tooltip';
+@import 'components/js/popovers';
+@import 'components/js/carousel';
 
 // Import our fonts and customized Bootstrap variables
 @import 'base/fonts';
@@ -16,4 +69,5 @@
 @import 'style-guide/style-guide';
 
 // // Added for Vanilla Theme
+// @import 'style-guide/variables';
 // @import 'overrides';
