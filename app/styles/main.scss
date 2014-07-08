@@ -1,12 +1,15 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 //@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 
-@import 'style-guide/theme-vars'; // Custom Theme Variables
+// Custom Theme Variables & Configuration
+@import 'style-guide/theme-vars';
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
+
+
 
 // Core variables and mixins
 @import 'compass';
