@@ -12,5 +12,8 @@
 // Import all 'th' (theme) stylesheets
 @import 'th-import';
 
-// Customize Bootstrap default styling
-@import 'base/bootstrap-style';
+// Theme - Method
+@import 'style-guide/style-guide';
+
+// // Added for Vanilla Theme
+// @import 'overrides';
