@@ -1,3 +1,18 @@
+.th-product-description {
+    padding-top: 40px;
+
+    &__title {
+        font-size: 1.8rem;
+        margin-bottom: ($line-height-computed / 2);
+    }
+
+    p {
+        margin: 0 0 $line-height-computed;
+    }
+}
+
+
+/* 
 .th-product-info {
     clear       : both;
     padding-top : 15px;
@@ -18,3 +33,4 @@
     margin     : 0;
     border-top : 0;
 }
+ */

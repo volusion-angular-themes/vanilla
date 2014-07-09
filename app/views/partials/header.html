@@ -1,8 +1,12 @@
 
         <div class="container">
             <header class="th-header">
+
                 <nav class="navbar navbar-default" role="navigation">
+                    
                     <div class="row">
+
+                    		<!-- Sandwich Button -->
                         <div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
                             <button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
                                 <span class="sr-only">Toggle navigation</span>
@@ -12,6 +16,7 @@
                             </button>
                         </div>
 
+                        <!-- Logo -->
                         <div class="col-xs-6 col-sm-7 col-md-8">
                             <a class="th-header__logo" href="#">
                             <!-- <img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
@@ -19,52 +24,42 @@
                             </a>
                         </div>
 
-                 				<!-- Mobile Logo -->
-												<!-- 
-												<div class="col-xs-6 hidden-md hidden-lg">
-														<a class="th-navbar__logo" ui-sref="i18n.home">
-															<img ng-src="{{config.general.logoUrl}}" class="img-responsive" />
-														</a>
-													</div>
-													<div class="col-md-8 hidden-xs hidden-sm">
-														<div class="collapse navbar-collapse " id="th-main-menu" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
-												 -->
-
                         <div class="col-xs-3 col-sm-4">
                             <div class="th-header__utility pull-right">                            
                                 <div class="hidden-xs th-sitelinks">
-                                    <a href="#" class="th-sitelinks__link">Log in</a> /
-                                    <a href="#" class="th-sitelinks__link">Register</a>
+                                    <a href="#" data-translate="index.signIn" class="th-sitelinks__link">Log in</a> /
+                                    <a href="#" data-translate="index.createAccount" class="th-sitelinks__link">Register</a>
                                 </div>
                                 
                                 <div class="th-header__cart">
-<!--                                 	Need to fix hover state on shopping cart 75% opacity -->                                    <div class="th-cart-summary">
-																			<span class="th-my-cart">
+                                    <span class="th-my-cart">
 																				<a legacy-link="{{viewCart()}}" class="th-my-cart__link">
 																					<div class="th-icon th-icon--cart th-cart-summary__icon">
                                           	<div class="th-icon__foreground"></div>
                                           </div>      
-																					<span class="th-my-cart__number">{{cart.items.length + 0}}</span>
+																					<span class="th-my-cart__number">
+																						{{cart.items.length + 0}}
+																					</span>
 																				</a>
-																			</span>
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- /Row -->
 
+                    <!-- Categories -->
                     <div class="row">
                         <div class="col-md-8">
                             <div class="collapse navbar-collapse" id="th-main-nav">
                                 <ul class="nav navbar-nav">
                                     <li class="active" data-ui-sref-active="active">
-                                      <a href="index.html">Home</a>
+                                      <a href="/">Home</a>
                                     </li>
                                     <li data-ui-sref-active="active">
-                                      <a href="category.html">Category Page</a>
+                                      <a href="c/category.html">Category Page</a>
                                     </li>
                                     <li data-ui-sref-active="active">
-                                      <a href="product.html">Product Page</a>
+                                      <a href="p/product.html">Product Page</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -107,6 +102,8 @@
 																			-->
                             </div>
                         </div>
+
+                        <!-- Search -->
                         <div class="col-xs-12 col-md-4">
                             <div class="th-header__search">
                                 <form class="th-search" role="search">
@@ -121,10 +118,12 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+
+                    </div><!-- /Categories and Search Row -->
+                
                 </nav>
             </header>
-        </div>
+        </div><!-- /Container -->
 
 
 

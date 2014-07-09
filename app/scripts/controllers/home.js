@@ -110,8 +110,6 @@ angular.module('Volusion.controllers')
 
 			$scope.cart = vnApi.Cart().get();
 
-<<<<<<< HEAD
-=======
 			//this.getConfig(this.getCart);  //TODO Prune this code
 			//
 			// TODO add function for ng-click that does this.
@@ -144,7 +142,5 @@ angular.module('Volusion.controllers')
 			$scope.doSearch = function () {
 				alert('Searching for: ' + $scope.searchLocal);
 			};
-
->>>>>>> upstream/refactor2
 		}
 	]);

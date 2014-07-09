@@ -1,3 +1,17 @@
+.th-product-options {
+    &__add-cart {
+        @extend %font-smoothing;
+        background-color: $gray-dark;
+        color: lighten($text-color, 100%);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+}
+
+
+
+/* 
 .th-options-wrap {
     margin-top     : 15px;
     padding-top    : 10px;
@@ -75,3 +89,4 @@
     }
 }
 
+ */

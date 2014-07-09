@@ -146,7 +146,7 @@ $table-border-color:            map-get($colors, tableBorderColor) !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                700 !default;
+$btn-font-weight:                normal !default;
 
 $btn-default-color:              map-get($colors, btnDefaultColor) !default;
 $btn-default-bg:                 map-get($colors, btnDefaultBg) !default;

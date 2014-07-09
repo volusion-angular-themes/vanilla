@@ -1,0 +1,16 @@
+.th-product-price {
+	&__price {		
+		@extend %inline-block;
+		margin-bottom: 0.2em;
+
+		&--medium {
+			font-size: 1.8rem;
+		}
+
+		&--large {
+			font-family: lato-light;
+			font-size: 3.0rem;
+			margin-bottom: 0;
+		}
+	}
+}
