@@ -1,5 +1,4 @@
 .th-cart-summary {
-<<<<<<< HEAD
 	&__link {
 		&:hover {
 			@extend %opacity-75;
@@ -9,76 +8,9 @@
 
 	&__number {
 		@extend %inline-block;
-		// CSS incorporated from Method
-		color : map-get($colors, link-active);
-		&:before {
-			content : "(";
-		}
-		&:after {
-			content : ")";
-		}
 	}
 
 	@include respond-to(md-and-up) {
 		font-size: 1.6rem;
 	}
 }
-=======
-    &__link {
-        &:hover {
-            @extend %opacity-75;
-        }
-    }
-
-    &__number {
-        @extend %inline-block;
-    }
-
-    @include respond-to(md-and-up) {
-        font-size: 1.6rem;
-    }
-}
-
-
-
-
-
-// .th-cart-summary {
-//     position    : relative;
-//     white-space : nowrap;
-//     top         : 8px;
-//     right       : 0;
-// }
-
-// .th-my-cart {
-//     @include inline-block;
-//     padding : 6px 0;
-
-//     &__number {
-//         color : map-get($colors, link-active);
-
-//         &:before {
-//             content : "(";
-//         }
-
-//         &:after {
-//             content : ")";
-//         }
-//     }
-// }
-
-// @include respond-to(sm-and-up) {
-//     .th-cart-summary {
-//         top : 23px;
-//     }
-// }
-
-// @include respond-to(md-and-up) {
-//     .th-cart-summary {
-//         position : relative;
-//         right    : 13px;
-//         top      : 29px;
-//     }
-// }
-
->>>>>>> Moved more css components:
