@@ -5,6 +5,8 @@ angular.module('Volusion.controllers')
 		'$scope', '$rootScope', '$location', '$window', '$timeout', 'vnApi', 'themeSettings',
 		function($scope, $rootScope, $location, $window, $timeout, vnApi, themeSettings) {
 
+			$scope.searchLocal = '';
+
 			console.log('vnApi in home', vnApi);
 
 			$scope.themeSettings = themeSettings.getThemeSettings();
@@ -108,5 +110,41 @@ angular.module('Volusion.controllers')
 
 			$scope.cart = vnApi.Cart().get();
 
+<<<<<<< HEAD
+=======
+			//this.getConfig(this.getCart);  //TODO Prune this code
+			//
+			// TODO add function for ng-click that does this.
+			//$rootScope.viewCart = function() {
+			//	if ($rootScope.isInDesktopMode) {
+			//		return '/shoppingcart.asp';
+			//	} else {
+			//		return '/checkout.asp';
+			//	}
+			//};
+			//
+			// TODO: Refactor the add to cart flow
+			// Add to Cart
+			//$rootScope.$on('ADD_TO_CART', function(event, cartItem) {
+			//	var cartId = $scope.cart && $scope.cart.id;
+			//	if (cartId === undefined) {
+			//		cartId = $scope.config.checkout.cartId;
+			//	}
+			//	api.carts.save({ cartId: cartId }, cartItem)
+			//			.then(function(response) {
+			//				$rootScope.$emit('ITEM_ADDED_TO_CART', $scope.cart = response.data);
+			//			});
+
+			//	Cart.saveCart(cartId, cartItem)
+			//			.then(function(response) {
+			//				$scope.cart = response.data;
+			//			});
+			//});
+
+			$scope.doSearch = function () {
+				alert('Searching for: ' + $scope.searchLocal);
+			};
+
+>>>>>>> upstream/refactor2
 		}
 	]);
