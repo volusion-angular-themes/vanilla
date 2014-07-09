@@ -1,54 +1,141 @@
+<!-- Add your site or application content here -->
+<div class="theme-showcase" role="main" data-ui-view="" data-autoscroll="false">
+    <div class="container">
+        <div class="th-product-card">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-1.jpg" alt="" class="img-responsive th-product-card__image">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Vanilla Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-2.jpg" alt="" class="img-responsive th-product-card__image">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Strawberry Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-3.jpg" alt="" class="img-responsive th-product-card__image ">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Pistachio Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-4.jpg" alt="" class="img-responsive th-product-card__image">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Chocolate Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-5.jpg" alt="" class="img-responsive th-product-card__image">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Mango Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="#" class="th-product-card__image-link">
+                        <img src="images/demo/product-6.jpg" alt="" class="img-responsive th-product-card__image">
+                    </a>
+                    <div class="th-product-card__title">
+                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Espresso Ice Cream</a>
+                    </div>
+                    <div class="th-product-card__price">
+                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container__text-center">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--
 <div class="container categories">
 	<div class="row col-md-12">
-		<div class="col-sm-3 col-lg-2 vn-faceted-search"
-			 ng-class="{ isMobileAndVisible: true == isMobileAndVisible }"
-				data-ng-hide="!hasFacetsOrCategories">
-			<h3 data-ng-show="!showMobileSearch">Narrow By</h3>
-			<div vn-faceted-search
-				 categories="categoryList"
-				 facets="facets"
-				 data-ng-show="mobileDisplay"
-				 class="vn-faceted-search-control">
-			</div>
-		</div>
-		<div class="col-sm-9 col-lg-10 vn-category-product-tiles"
-			 ng-class="{ 'isMobileAndHidden': true == !isMobileAndHidden }">
-			<div class="content-top">
-				<div class="page-header">
-					<div class="row">
-						<h1 class="col-sm-10 col-md-10">{{category.name}}</h1>
-						<div vn-sort-search
-							 class="col-sm-2 col-md-2 vn-sort-desktop-search"
-							 data-ng-show="mobileDisplay"
-							 query-products="queryProducts()"></div>
-					</div>
-					<img class="banner img img-responsive"
-						 ng-hide="checkForFacetFilters()"
-						 ng-src="{{category.bannerImgUrl}}">
-					<div class="description" itemprop="description"
-						 ng-hide="checkForFacetFilters()"
-						 data-ng-bind-html="category.description | legacyLinkify | html"></div>
-				</div>
+		 This is a bootstrap responsive column that holds the search by category and facets functionality -->
+<!-- 		<div class="col-sm-2 -faceted-search">
+			<h3>Narrow By</h3>
+			<div vn-category-search categories="categories"></div>
+			<h3>Filter By</h3>
+			<div vn-facet-search facets="facets"></div>
+			<h3>Price</h3>
+			<input type="text"
+					ng-model="minPrice"
+					ng-keypress="searchByPrice($event)"/>
+			to
+			<input type="text"
+					ng-model="maxPrice"
+					ng-keypress="searchByPrice($event)"/>
+			<button class="btn" href ng-click="clearAllFilters()">Clear Filters</button>
+		</div> -->
+		<!-- This is a bootstrap responsive column that holds product tiles for the current query -->
+<!-- 		<div class="col-sm-10">
+			<div class="row">
+				<ol class="breadcrumb -breadcrumb visible-lg visible-md">
+					<li><a href="/">Home</a></li>
+					<li><a href="">{{ categories.name }}</a></li>
+				</ol>
 			</div>
 
 			<!-- Mobile Filtering & Sorting Controls -->
-			<div class="row mobile-filters" data-ng-hide="mobileDisplay" ng-class="{ isMobileAndVisible: true == isMobileAndVisible }">
+			<!--<div class="row mobile-filters" data-ng-hide="mobileDisplay" ng-class="{ isMobileAndVisible: true == isMobileAndVisible }">
 				<a class="col-xs-6" href data-ng-click="toggleSearch()">
 					<button class="btn btn-default pull-right vn-facet-search-control">Filter</button>
 				</a>
 				<div class="col-xs-6 vn-sort-mobile-search-control" vn-sort-search query-products="queryProducts()"></div>
 				<!-- place sort by button here -->
-			</div>
+			<!--</div>
 
 			<div class="row">
-				<div class="-product-tile-animation col-sm-6 col-md-4 col-lg-3" data-ng-repeat="product in products track by product.id">
-					<div class="th-product">
-						<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
-						<span class="th-product__new" data-ng-show="product.isNew"></span>
+				<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" ng-repeat="product in products track by $index"> -->
+					<!--<div vn-product-tile product="product"></div>-->
+<!-- 					<div class="th-product">
+						<span class="th-product__sale" ng-show="product.isOnSale"></span>
+						<span class="th-product__new" ng-show="product.isNew"></span>
 
-						<div class="th-product__image">
-							<a href="{{ product.url }}">
-								<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive" alt="">
+						<div class="th-product__image"> -->
+							<!--<a ui-sref="i18n.product({ productTitle: product.seoFriendlyProductTitle, productCode: product.code })"> -->
+<!-- 							<a href="p/{{product.slug}}">
+								<img ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
 							</a>
 						</div>
 						<div class="th-product__name">
@@ -63,11 +150,21 @@
 								<span class="th-price">{{product.pricing.salePrice | currency}}</span>
 								<span class="th-price-text">Now</span>
 							</span>
+						</div> -->
+						<!-- Todo: show available colors: but how does the client know which color to show for this product?
+						<div class="th-colors-sm">
+								<a href="#"><img src="/images/theme/sw-1-sm.png" class="img-responsive" alt=""></a>
+								<a href="#"><img src="/images/theme/sw-2-sm.png" class="img-responsive" alt=""></a>
+								<a href="#"><img src="/images/theme/sw-3-sm.png" class="img-responsive" alt=""></a>
+								<a href="#"><img src="/images/theme/sw-4-sm.png" class="img-responsive" alt=""></a>
+								<a href="#"><img src="/images/theme/sw-5-sm.png" class="img-responsive" alt=""></a>
 						</div>
-					</div>
+						-->
+					<!-- </div>
 				</div>
 			</div>
  			<div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>
 		</div>
 	</div>
 </div>
+ -->

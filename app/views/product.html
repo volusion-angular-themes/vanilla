@@ -1,16 +1,126 @@
-<div class="container" itemscope itemtype="http://schema.org/Product">
-	<div class="th-product-wrap clearfix">
+
+        <!-- Add your site or application content here -->
+        <div class="theme-showcase" role="main" data-ui-view="" data-autoscroll="false">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="th-product-view">
+                            <a href="#" class="th-product-view__link">
+                                <img src="images/demo/product-1.jpg" alt="" class="img-responsive th-product-view__image">
+                            </a>
+
+                            <div class="th-product-view__alternates">
+                                <div class="th-alt-views">
+                                    <a href="#" class="th-alt-views__link">
+                                        <img src="images/demo/product-1-v1.jpg" alt="" class="img-responsive th-alt-views__image">
+                                    </a>
+
+                                    <a href="#" class="th-alt-views__link">
+                                        <img src="images/demo/product-1-v2.jpg" alt="" class="img-responsive th-alt-views__image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="th-product-details">
+                            <div class="th-product-details__title">
+                                <div class="th-product-title th-product-title--large">Vanilla Ice Cream</div>
+                            </div>
+
+                            <div class="th-product-details__price">
+                                <div class="th-product-price__price th-product-price__price--large">$5.00</div>
+                            </div>
+                        </div>
+
+                        <div class="th-product-options">
+
+                            <div class="th-product-options__btn-dropdown">
+                                <label class="th-label" id="size">Size</label>
+                                <div class="btn-group clearfix th-btn-dropdown">
+                                    <button type="button" id="size" class="btn btn-default dropdown-toggle th-btn-dropdown__button" data-toggle="dropdown">
+                                        gallon <span class="caret th-btn-dropdown__caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">gallon</a></li>
+                                        <li><a href="#">quart</a></li>
+                                        <li><a href="#">pint</a></li>
+                                        <li><a href="#">cup</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="th-product-options_qty">
+                                <label for="qty" class="th-label">Qty</label>
+                                <div class="th-qty">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default th-qty__button" type="button" id="qty">-</button>
+                                        </div>
+                                        <input type="text" class="form-control th-qty__input" placeholder="1">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default th-qty__button" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default th-product-options__add-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="th-product-description">
+                            <div class="th-product-description__title">Description</div>
+                            <p>Our vanilla ice cream is made with the best vanilla bean and organic cream. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                            <p>
+                                Made in the USA <br>
+                                100% Certified Organic <br>
+                                Available in pint, quart &amp; gallon sizes
+                            </p>
+
+                            <div class="th-product-description__title">Share</div>
+                            <div class="th-icongroup">
+                                <a class="th-icon th-icon--facebook th-icongroup__icon" href="#" target="_blank">
+                                    <div class="th-icon__foreground"></div>
+                                </a>
+                                <a class="th-icon th-icon--twitter th-icongroup__icon" href="#" target="_blank">
+                                    <div class="th-icon__foreground"></div>
+                                </a>
+                                <a class="th-icon th-icon--pinterest th-icongroup__icon" href="#" target="_blank">
+                                    <div class="th-icon__foreground"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container" itemscope itemtype="http://schema.org/Product">
+	<div class="th-product-wrap clearfix"> -->
 		<!-- PRODUCT TITLE/NAME FOR TABLET -->
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col-sm-12 visible-sm">
 				<div class="th-product-details__title--tablet">
 					<span itemprop="name" data-ng-bind="product.name"></span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- PRODUCT IMAGE AND ALT VIEWS -->
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-sm-6 col-md-5">
 				<div class="visible-xs th-product">
 					<div class="vn-slider vn-slider--product">
@@ -38,19 +148,19 @@
 							</span>
 						</div>
 					</div>
-				</div><!-- .th-product -->
-			</div>
+				</div> --><!-- .th-product -->
+<!-- 			</div> -->
 
 			<!-- PRODUCT DETAILS RIGHT -->
-			<div class="col-sm-6 col-md-7">
+<!-- 			<div class="col-sm-6 col-md-7">
 				<div class="th-product-details">
 					<div class="row visible-md visible-lg">
 						<div class="col-xs-12">
 							<div class="th-product-details__title">
 								<span itemprop="name" data-ng-bind="product.name"></span>
 							</div>
-						</div><!-- .product name -->
-					</div>
+						</div> --><!-- .product name -->
+<!-- 					</div>
 					<div class="row">
 						<div class="col-xs-12 col-md-6">
 							<div class="th-product-details__title visible-xs">
@@ -68,11 +178,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="th-product__availability" ng-if="itemSelectionsNotInStock" data-ng-cloak>
-								Not in stock
-							</div>
-						</div><!-- end left product column -->
-						<div class="col-xs-12 col-md-6">
+						</div> --><!-- end left product column -->
+						<!-- <div class="col-xs-12 col-md-6">
 							<div class="th-product-details__options">
 								<div data-vn-product-option
 										 data-ng-repeat="option in product.options"
@@ -121,27 +228,51 @@
 							</div>
 						</div>
 
-						<!-- DESCRIPTIONS -->
-						<div class="hidden-xs hidden-sm th-product-info" data-ng-include=" 'views/partials/product-descriptions.html' "></div>
+						<div class="th-product-info visible-lg visible-md">
+							<div data-accordion data-close-others="true">
+								<div data-accordion-group data-is-open="accordionPanels.isopen1" data-ng-show="product.descriptions.detail">
+									<div data-accordion-heading>
+										<span data-translate="product.description">Description</span>  <i class="pull-right glyphicon" data-ng-class="{'glyphicon-chevron-down': accordionPanels.isopen1, 'glyphicon-chevron-right': !accordionPanels.isopen1}"></i>
+									</div>
+									<span itemprop="description" data-ng-bind-html="product.descriptions.detail | legacyLinkify | html"></span>
+								</div>
+								<div data-accordion-group data-is-open="accordionPanels.isopen2" data-ng-show="product.descriptions.features">
+									<div data-accordion-heading>
+										<span data-translate="product.features">Features</span>  <i class="pull-right glyphicon" data-ng-class="{'glyphicon-chevron-down': accordionPanels.isopen2, 'glyphicon-chevron-right': !accordionPanels.isopen2}"></i>
+									</div>
+									<span data-ng-bind-html="product.descriptions.features | legacyLinkify | html"></span>
+								</div>
+								<div data-accordion-group data-is-open="accordionPanels.isopen3" data-ng-show="product.descriptions.techSpecs">
+									<div data-accordion-heading>
+										<span data-translate="product.techSpecs">Tech Specs</span>  <i class="pull-right glyphicon" data-ng-class="{'glyphicon-chevron-down': accordionPanels.isopen3, 'glyphicon-chevron-right': !accordionPanels.isopen3}"></i>
+									</div>
+									<span data-ng-bind-html="product.descriptions.techSpecs | legacyLinkify | html"></span>
+								</div>
+								<div data-accordion-group data-is-open="accordionPanels.isopen4" data-ng-show="product.descriptions.extendedInfo">
+									<div data-accordion-heading>
+										<span data-translate="product.extendedInfo">Extended Info</span>  <i class="pull-right glyphicon" data-ng-class="{'glyphicon-chevron-down': accordionPanels.isopen4, 'glyphicon-chevron-right': !accordionPanels.isopen4}"></i>
+									</div>
+									<span data-ng-bind-html="product.descriptions.extendedInfo | legacyLinkify | html"></span>
+								</div>
+							</div>
+						</div> --><!-- .th-product-info -->
 
-						<!-- SOCIAL SHARE ICONS -->
-						<div class="hidden-xs">
+<!-- 						<div class="visible-sm visible-md visible-lg">
 							<div class="th-social" data-ng-include=" 'views/partials/social-sharing.html' "></div>
-						</div><!-- .th-social-icons -->
-					</div>
+						</div> --><!-- .th-social-icons -->
+<!-- 					</div>
 				</div>
-			</div><!-- .th-product-details -->
-		</div><!-- .row -->
-
-		<!-- DESCRIPTIONS -->
-		<div class="row hidden-md hidden-lg">
+			</div> --><!-- .th-product-details -->
+<!-- 		</div> --><!-- .row -->
+<!--
+		<div class="hidden-lg hidden-md row">
 			<div class="col-sm-12">
 				<div class="th-product-info" data-ng-include=" 'views/partials/product-descriptions.html' "></div>
 			</div>
 		</div>
-
+ -->
 		<!-- MOBILE SOCIAL ICONS -->
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col-xs-12">
 				<div class="visible-xs-block">
 					<div class="th-social" data-ng-include=" 'views/partials/social-sharing.html' "></div>
@@ -150,7 +281,7 @@
 		</div>
 
 		<!-- RELATED PRODUCTS & ACCESSORIES -->
-		<div class="row" data-ng-if="relatedProducts.length > 0 || accessories.length > 0">
+		<!--<div class="row" data-ng-if="relatedProducts.length > 0 || accessories.length > 0">
 			<div class="col-xs-12">
 				<div class="th-related-wrap">
 					<div data-tabset>
@@ -173,34 +304,68 @@
 							</div>
 						</div>
 					</div>
+ -->
+					<!-- LOAD MORE BUTTON -->
+<!-- 					<div class="th-load-more visible-xs">
+						<button class="btn btn-default th-load-more" data-translate="product.loadMore">Load More</button>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- REVIEWS -->
-		<div class="th-reviews" data-ng-if="config.general.enableCustomerReviews">
+		<!--<div class="th-reviews" data-ng-if="config.general.enableCustomerReviews">
 			<div class="th-reviews__heading" data-translate="product.reviews">Reviews</div>
 			<div class="th-reviews__totals">
 				<div class="th-reviews__totals--left" data-ng-if="ratingsAndReviews.data.reviews.length > 0">
 					<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="th-reviews__count"><meta itemprop="worstRating" content="1">This product has recieved <span itemprop="ratingValue" data-ng-bind="ratingsAndReviews.data.avgRating"></span> out of <span itemprop="bestRating" data-ng-bind="ratingsAndReviews.data.maxRating"></span> stars based on <span itemprop="reviewCount" data-ng-bind="ratingsAndReviews.cursor.total"></span> customer reviews</div>
 					<div class="th-reviews__avg">
-						<div data-vn-rating rating-value="ratingsAndReviews.data.avgRating"
-								 maximum="ratingsAndReviews.data.maxRating"
-								 editable="isEditable" title=""></div>
+	 -->					<!-- TODO: Do this -->
+	<!-- 					<div class="th-review-stars">
+							<div class="th-icon th-icon--star th-review-stars__star">
+								<div class="th-icon__foreground"></div>
+							</div>
+							<div class="th-icon th-icon--star th-review-stars__star">
+								<div class="th-icon__foreground"></div>
+							</div>
+							<div class="th-icon th-icon--star th-review-stars__star">
+								<div class="th-icon__foreground"></div>
+							</div>
+							<div class="th-icon th-icon--star-half th-review-stars__star">
+								<div class="th-icon__foreground"></div>
+							</div>
+							<div class="th-icon th-icon--star-inactive th-review-stars__star">
+								<div class="th-icon__foreground"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="th-reviews__totals--right">
 					<a legacy-link="/reviewnew.asp?productcode={{product.code}}" class="btn btn-default btn-grey-sm" data-translate="product.writeAReview">Write a Review &gt;</a>
 				</div>
 			</div>
-			<div data-ng-if="ratingsAndReviews.data.reviews.length > 0" class="th-reviews" itemprop="review" itemscope itemtype="http://schema.org/Review" data-ng-repeat="review in ratingsAndReviews.data.reviews">
-				<div class="th-reviews__helpful"><span data-ng-bind="review.helpful"></span> people found the following review helpful</div>
-				<div class="th-reviews__ratings">
-					<div class="th-reviews__star-group"
-							 data-vn-rating rating-value="review.rating"
-							 maximum="ratingsAndReviews.data.maxRating"
-							 title="" editable="isEditable"></div>
-					<span class="th-rating-text" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="1"><span itemprop="ratingValue" data-ng-bind="review.rating"></span> out of <span itemprop="bestRating" data-ng-bind="ratingsAndReviews.data.maxRating"></span></span> By <span itemprop="author" class="th-review__ratings__author" data-ng-bind="review.nameOfReviewer || 'Anonymous'"></span>
+			<div class="th-review" itemprop="review" itemscope itemtype="http://schema.org/Review" data-ng-repeat="review in ratingsAndReviews.data.reviews">
+				<div class="th-review__helpful"><span data-ng-bind="review.helpful"></span> people found the following review helpful</div>
+				<div class="th-review__rating">
+ -->					<!-- TODO: Do this -->
+	<!-- 				<div class="th-review-stars">
+						<div class="th-icon th-icon--star th-review-stars__star">
+							<div class="th-icon__foreground"></div>
+						</div>
+						<div class="th-icon th-icon--star th-review-stars__star">
+							<div class="th-icon__foreground"></div>
+						</div>
+						<div class="th-icon th-icon--star th-review-stars__star">
+							<div class="th-icon__foreground"></div>
+						</div>
+						<div class="th-icon th-icon--star-half th-review-stars__star">
+							<div class="th-icon__foreground"></div>
+						</div>
+						<div class="th-icon th-icon--star-inactive th-review-stars__star">
+							<div class="th-icon__foreground"></div>
+						</div>
+					</div>
+					<span class="th-rating-text" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content="1"><span itemprop="ratingValue" data-ng-bind="review.rating"></span> out of <span itemprop="bestRating" data-ng-bind="ratingsAndReviews.data.maxRating"></span></span> By <span itemprop="author" class="th-review__rating__author" data-ng-bind="review.nameOfReviewer"></span>
 					<div itemprop="datePublished" class="th-rating-date hidden-xs pull-right" data-ng-bind="review.date"></div>
 				</div>
 				<div itemprop="name" class="th-reviews__title" data-ng-bind="review.title"></div>
@@ -213,5 +378,5 @@
 				</div>
 			</div>
 		</div>
-	</div><!-- .th-product-wrap -->
-</div><!-- .container -->
+	</div> --><!-- .th-product-wrap -->
+<!-- </div> --><!-- .container -->

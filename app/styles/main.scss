@@ -8,6 +8,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+
 // Core variables and mixins
 @import 'compass';
 @import 'core/base/mixins';
@@ -59,13 +60,43 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import 'base/fonts';
 @import 'base/bootstrap-variables';
 
-// Import Bootstrap-Sass from Bower - we don't edit these
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+// Theme Components
 
-// added for Vanilla
-@import 'components/th/sitelinks';
-@import 'components/th/link-list';
+@import 'components/th/cart-summary';
+@import 'components/th/elist';
+@import 'components/th/footer';
+@import 'components/th/header';
+@import 'components/th/home-content';
+@import 'components/th/mobile-menu';
+@import 'components/th/mobile-sitemap';
+@import 'components/th/product';
+@import 'components/th/product-description';
+@import 'components/th/product-details';
+@import 'components/th/product-title';
+@import 'components/th/product-view';
+@import 'components/th/quantity-counter';
+@import 'components/th/quickview';
+@import 'components/th/reviews';
+@import 'components/th/review-stars';
+@import 'components/th/search';
+@import 'components/th/search-popout';
+@import 'components/th/search-refinement';
+@import 'components/th/social-icons';
+@import 'components/th/sort-by';
+@import 'components/th/sprites-icons';
+@import 'components/th/sprites-social';
+@import 'components/th/sprites-stars';
+
+// Stylesheets added from Vanilla
+@import 'components/th/alt-views';
+@import 'components/th/btn-dropdown';
+@import 'components/th/hero-promo';
 @import 'components/th/input-labels';
+@import 'components/th/link-list';
+@import 'components/th/product-card';
+@import 'components/th/product-options';
+@import 'components/th/product-prices';
+@import 'components/th/sitelinks';
 
 // Utility classes
 @import 'utilities/utilities';
@@ -73,5 +104,3 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // Theme - Method
 @import 'style-guide/style-guide';
-
-
