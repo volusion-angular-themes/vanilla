@@ -1,0 +1,18 @@
+.th-alt-views {
+	margin-top: 20px;
+
+	&__link {
+		@extend %inline-block;
+		text-decoration: none;
+	}
+
+	&__image {
+		@extend %inline-block;
+		max-height: 120px;
+		padding: 0 10px;
+
+		&:hover {
+			@extend %opacity-75;
+		}
+	}
+}
