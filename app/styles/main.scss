@@ -92,6 +92,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import 'components/th/cart-summary';
 @import 'components/th/quantity-counter';
 
+// added for Vanilla
+@import 'components/th/sitelinks';
+@import 'components/th/link-list';
+@import 'components/th/input-labels';
+
 // Utility classes
 @import 'utilities/utilities';
 @import 'utilities/responsive-utilities';
@@ -99,6 +104,4 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 // Theme - Method
 @import 'style-guide/style-guide';
 
-// // Added for Vanilla Theme
-// @import 'style-guide/variables';
-// @import 'overrides';
+

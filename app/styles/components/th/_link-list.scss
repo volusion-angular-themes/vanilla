@@ -1,0 +1,10 @@
+.th-linklist {
+	margin: 0 0 15px;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		color: $link-color;
+		margin-bottom: 10px;
+	}
+}

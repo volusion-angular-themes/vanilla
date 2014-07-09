@@ -3,7 +3,7 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="row">
                         <div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
-                            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#th-main-nav">
+                            <button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -12,8 +12,22 @@
                         </div>
 
                         <div class="col-xs-6 col-sm-7 col-md-8">
-                            <a class="th-header__logo" href="#">Vanilla</a>
+                            <a class="th-header__logo" href="#">
+                            <!-- <img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
+                            	Vanilla
+                            </a>
                         </div>
+
+                 				<!-- Mobile Logo -->
+												<!-- 
+												<div class="col-xs-6 hidden-md hidden-lg">
+														<a class="th-navbar__logo" ui-sref="i18n.home">
+															<img ng-src="{{config.general.logoUrl}}" class="img-responsive" />
+														</a>
+													</div>
+													<div class="col-md-8 hidden-xs hidden-sm">
+														<div class="collapse navbar-collapse " id="th-main-menu" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+												 -->
 
                         <div class="col-xs-3 col-sm-4">
                             <div class="th-header__utility pull-right">                            
@@ -23,13 +37,15 @@
                                 </div>
                                 
                                 <div class="th-header__cart">
-                                    <div class="th-cart-summary">
-                                        <a data-legacy-link="/checkout.asp" class="th-cart-summary__link" href="/checkout.asp">
-                                            <div class="th-icon th-icon--cart th-cart-summary__icon">
-                                                <div class="th-icon__foreground"></div>
-                                            </div>
-                                            <span class="th-cart-summary__number">0</span>
-                                        </a>
+<!--                                 	Need to fix hover state on shopping cart 75% opacity -->                                    <div class="th-cart-summary">
+																			<span class="th-my-cart">
+																				<a legacy-link="{{viewCart()}}" class="th-my-cart__link">
+																					<div class="th-icon th-icon--cart th-cart-summary__icon">
+                                          	<div class="th-icon__foreground"></div>
+                                          </div>      
+																					<span class="th-my-cart__number">{{cart.items.length + 0}}</span>
+																				</a>
+																			</span>
                                     </div>
                                 </div>
                             </div>
@@ -60,6 +76,34 @@
                                         </ul>
                                     </li>
                                 </ul>
+
+																<!--
+																<ul class="nav navbar-nav">
+																	<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
+																		<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
+																		<span>
+																			<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+																				<span class="caret"></span>
+																			</a>
+																			<ul class="dropdown-menu" data-ng-if="category.subCategories.length">
+																				<li data-ng-repeat="subCategory in category.subCategories">
+																					<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
+																				</li>
+																			</ul>
+																		</span>
+																	</li>
+																	<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
+																		<a href="#" class="navbar-link" data-translate=" index.smartNavMoreLinkText">More</a>
+																		<span>
+																			<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+																				<span class="caret"></span>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li data-ng-repeat="category in smartNavMoreCategories">
+																					<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
+																				</li>
+																			</ul>
+																			-->
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-4">
@@ -71,7 +115,7 @@
                                                 <span class="glyphicon glyphicon-search"></span>
                                             </button>
                                         </span>
-                                        <input type="text" class="form-control th-search__input">
+                                        <input type="text" class="form-control th-search__input" placeholder='Search...'>
                                     </div>
                                 </form>
                             </div>
@@ -85,7 +129,22 @@
 
 
 
-<!-- <nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+		HTML FROM METHOD
+
+<nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
 
 	<div class="th-header">
 		<div class="container">

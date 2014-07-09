@@ -1,4 +1,24 @@
 .th-elist {
+    max-width: 360px;
+
+    &__input {
+        border-color: $gray-lighter;
+        padding:8px 15px;
+        height: 42px;
+    }
+
+    &__submit {
+        @extend %font-smoothing;
+        font-weight: normal;
+        padding: 10px 15px;
+        z-index: 2;
+    }
+}
+
+
+
+
+/* .th-elist {
     border-bottom : 1px solid map-get($colors, border);
     padding       : 12px 0;
 
@@ -51,14 +71,14 @@
 }
 
 /* Small devices (tablets, 768px and up) */
-@include respond-to(sm-and-up) {
+/* @include respond-to(sm-and-up) {
     .th-elist__title {
         @include inline-block;
     }
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@include respond-to(lg) {
+/* @include respond-to(lg) {
     .th-elist {
         border-bottom : 0;
         padding       : 0 0 25px 35px;
@@ -87,8 +107,4 @@
             }
         }
     }
-}
-
-
-
-
+} */

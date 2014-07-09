@@ -29,6 +29,10 @@
 	@include single-transition(all, 200ms, ease);
 }
 
+%animate-color {
+  @include transition(color, 0.2s, ease-in-out);
+}
+
 %position-absolute-center {
 	position: absolute;
 	top: 0;
@@ -39,5 +43,26 @@
 }
 
 %font-smoothing {
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%placeholder-text {
+  @include input-placeholder {
+    color: $gray-light;
+  }
+}
+
+%placeholder-text-focus {
+  @include input-placeholder {
+    color: $gray;
+  }
+}
+
+%remove-shadow {
+  @include box-shadow(none);
+}
+
+%remove-padding {
+  padding: 0;
 }
