@@ -1,0 +1,20 @@
+.th-btn-dropdown {
+	float: none;
+	display: block;
+
+	&__button {
+		padding-right: 26px;
+		text-align: left;
+		width: 100%;
+		max-width: 360px;
+	}
+
+	&__caret {
+		color: $dropdown-caret-color;
+		margin: auto 0;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+	}
+}

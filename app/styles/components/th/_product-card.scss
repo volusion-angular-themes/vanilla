@@ -1,0 +1,11 @@
+.th-product-card {
+	&__image-link {
+		display: block;
+		padding: 20px 0;
+		text-align: center;
+
+	}
+	&__image {
+		@extend %inline-block;
+	}
+}

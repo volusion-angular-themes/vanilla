@@ -5,16 +5,12 @@
 			<!-- PRODUCT IMAGE AND ALT VIEWS -->
 			<div class="col-xs-12 col-md-6 text-center th-product-view">
 				<div class="clearfix col-xs-12">
-					<img data-ng-src="{{ product.image.medium }}" class="img-responsive th-product-view__main-img"
-						 alt="{{product.name}}">
+					<img data-ng-src="{{ product.image.medium }}" class="img-responsive th-product-view__main-img" alt="{{product.name}}">
 				</div>
-					<span data-ng-click="product.image=image"
-						  ng-repeat="image in currentImageCollection | filter: '!youtube.com'"
-						  class="col-xs-4 th-product-view__thumbnails">
+					<span data-ng-click="product.image=image" ng-repeat="image in currentImageCollection | filter: '!youtube.com'" class="col-xs-4 th-product-view__thumbnails">
 						<img data-ng-src="{{ image.medium }}" class="img-responsive img-thumbnail" alt="">
 					</span>
-			</div>
-			<!-- /col-xs-12 col-md-6 -->
+			</div><!-- /col-xs-12 col-md-6 -->
 
 			<div class="col-xs-12 col-md-6 th-product-view">
 				<div class="th-product-name--large" itemprop="name" data-ng-bind="product.name"></div>
@@ -29,8 +25,8 @@
 						 data-product="product"
 						 data-save-to="cartItem.options">
 					</div>
-					<label for="qty" class="th-product-options__label">Qty</label>
 
+					<label for="qty" class="th-product-options__label">Qty</label>
 					<div class="form-group">
 						<div data-vn-block="th-qty-counter" class="input-group">
 		      		<span class="input-group-btn">
@@ -64,36 +60,31 @@
 						<span data-ng-if="!cartItem.qty" data-translate="product.outOfStock"></span>
 					</button>
 
-				</div>
-				<!-- /product-options -->
+				</div> <!-- /product-options -->
 
 				<div class="th-product-description">
 					<div data-ng-show="product.descriptions.detail">
 						<div class="th-product-description__title" data-translate="product.description"></div>
 						<p>
-							<span itemprop="description"
-								  data-ng-bind-html="product.descriptions.detail | legacyLinkify | html"></span>
+							<span itemprop="description" data-ng-bind-html="product.descriptions.detail | legacyLinkify | html"></span>
 						</p>
 					</div>
 					<div data-ng-show="product.descriptions.features">
 						<div class="th-product-description__title" data-translate="product.features"></div>
 						<p>
-							<span itemprop="features"
-								  data-ng-bind-html="product.descriptions.features | legacyLinkify | html"></span>
+							<span itemprop="features" data-ng-bind-html="product.descriptions.features | legacyLinkify | html"></span>
 						</p>
 					</div>
 					<div data-ng-show="product.descriptions.techSpecs">
 						<div class="th-product-description__title" data-translate="product.techSpecs"></div>
 						<p>
-							<span itemprop="tech specs"
-								  data-ng-bind-html="product.descriptions.techSpecs | legacyLinkify | html"></span>
+							<span itemprop="tech specs" data-ng-bind-html="product.descriptions.techSpecs | legacyLinkify | html"></span>
 						</p>
 					</div>
 					<div data-ng-show="product.descriptions.extendedInfo">
 						<div class="th-product-description__title" data-translate="product.extendedInfo"></div>
 						<p>
-							<span itemprop="extended info"
-								  data-ng-bind-html="product.descriptions.extendedInfo | legacyLinkify | html"></span>
+							<span itemprop="extended info" data-ng-bind-html="product.descriptions.extendedInfo | legacyLinkify | html"></span>
 						</p>
 					</div>
 					<!-- Social Icons -->
@@ -101,11 +92,10 @@
 					<!--<div class="th-icon-group" data-ng-include=" 'views/partials/social-sharing.html' "></div>-->
 					<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 					<!--<script type="text/javascript">stLight.options({publisher: "1b7dd8df-7478-4045-b3e3-88d4ba9c7878", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>-->
-					<style> .stMainServices { height : 22px !important; }</style>
+					<style> .stMainServices {height:22px !important;}</style>
 					<span class='st_facebook_hcount' displayText='Facebook'></span>
 					<span class='st_twitter_hcount' displayText='Tweet'></span>
 					<span class='st_pinterest_hcount' displayText='Pinterest'></span>
-
 				</div>
 			</div>
 		</div>
@@ -119,9 +109,7 @@
 								Related
 							</div>
 							<div class="clearfix">
-								<div class="col-xs-12 col-sm-3"
-									 data-ng-repeat="product in relatedProducts | filter: '!' + product.id"
-									 data-ng-include=" 'views/partials/product-tile.html' ">
+								<div class="col-xs-12 col-sm-3" data-ng-repeat="product in relatedProducts | filter: '!' + product.id" data-ng-include=" 'views/partials/product-tile.html' ">
 								</div>
 							</div>
 						</div>
