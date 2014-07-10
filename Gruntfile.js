@@ -131,7 +131,7 @@ module.exports = function(grunt) {
 				livereload: 35729
 			},
 			rules: [
-				{ from: '^/(bower_components|fonts|images|scripts|styles|translations|views)(/.*)$', to: '/$1$2' },
+				{ from: '^/(bower_components|styles/fonts|images|scripts|styles|translations|views)(/.*)$', to: '/$1$2' },
 				{ from: '^/404.html', to: '/404.html' },
 				{ from: '^/(.*)$', to: '/index.html' }
 			],
@@ -276,7 +276,7 @@ module.exports = function(grunt) {
 				],
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
-				httpFontsPath: '/fonts',
+				httpFontsPath: '/styles/fonts',
 				relativeAssets: false,
 				assetCacheBuster: false,
 				raw: 'Sass::Script::Number.precision = 10\n'
@@ -303,9 +303,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
 						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.dist %>/fonts/*'
+						'<%= yeoman.dist %>/styles/fonts/*'
 					]
 				}
 			}
@@ -482,7 +480,7 @@ module.exports = function(grunt) {
 							'*.html',
 							'views/{,*/}*.html',
 							'images/{,*/}*.{webp}',
-							'fonts/*',
+							'styles/fonts/*',
 							'translations/{,*/}*.json',
 							'settings/{,*/}*',
 							'styles/overrides.css',
