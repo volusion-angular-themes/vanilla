@@ -47,6 +47,18 @@ module.exports = function(grunt) {
 					}
 				}
 			},
+			mybox: {
+				options: {
+					dest: '<%= yeoman.app %>/scripts/config.js'
+				},
+				constants: {
+					ENV: {
+						name: 'mybox',
+						host: 'http://txlpt374-vm.corp.volusion.com',
+						apiEndpoint: '/api/v1'
+					}
+				}
+			},
 			production: {
 				options: {
 					dest: '<%= yeoman.app %>/scripts/config.js'
@@ -101,11 +113,11 @@ module.exports = function(grunt) {
 					livereload: '<%= connect.options.livereload %>'
 				},
 				files: [
-						'<%= yeoman.app %>/views/**/*.html',
-						'.tmp/styles/{,*/}*.css',
-						'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.app %>/translations/{,*/}*.json',
-						'<%= yeoman.app %>/settings/{,*/}*'
+					'<%= yeoman.app %>/views/**/*.html',
+					'.tmp/styles/{,*/}*.css',
+					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+					'<%= yeoman.app %>/translations/{,*/}*.json',
+					'<%= yeoman.app %>/settings/{,*/}*'
 				]
 			}
 		},
@@ -189,15 +201,15 @@ module.exports = function(grunt) {
 		clean: {
 			dist: {
 				files: [
-						{
-							dot: true,
-							src: [
-								'.tmp',
-								'<%= yeoman.dist %>/*',
-								'!<%= yeoman.dist %>/.git*'//,
+					{
+						dot: true,
+						src: [
+							'.tmp',
+							'<%= yeoman.dist %>/*',
+							'!<%= yeoman.dist %>/.git*'//,
 //								'<%= yeoman.app %>/scripts/config.js'
-							]
-						}
+						]
+					}
 				]
 			},
 			configure: {
@@ -220,12 +232,12 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: [
-						{
-							expand: true,
-							cwd: '.tmp/styles/',
-							src: '{,*/}*.css',
-							dest: '.tmp/styles/'
-						}
+					{
+						expand: true,
+						cwd: '.tmp/styles/',
+						src: '{,*/}*.css',
+						dest: '.tmp/styles/'
+					}
 				]
 			}
 		},
@@ -506,12 +518,14 @@ module.exports = function(grunt) {
 		if (target === 'dist') {
 			grunt.log.write('TARGET is set to [DIST]');
 			grunt.task.run(['ngconstant:production']);
-		} else {
-			// default build
-			// if (target === undefined || target === 'undefined' || target === '' || target === 'samplestore') {
+		} else if (target === undefined || target === 'undefined' || target === '' || target === 'samplestore') {
+			//default build
 			grunt.task.run(['ngconstant:samplestore']);
 			grunt.log.write('TARGET is set to [SAMPLESTORE]');
-			//}
+		} else {
+			//specific build
+			grunt.task.run(['ngconstant:' + target ]);
+			grunt.log.write('TARGET is set to [' + target + ']');
 		}
 	});
 
@@ -524,7 +538,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'wiredep',
 			'compass:server',
-			'configure:' + target,
+				'configure:' + target,
 			'autoprefixer',
 			'htmlmin:server',
 			'connect:livereload',
@@ -542,20 +556,18 @@ module.exports = function(grunt) {
 			'clean:server',
 			'compass:server',
 			'autoprefixer',
-			'configure:' + target,
+				'configure:' + target,
 			'connect:test',
 			'karma'
 		]);
 	});
 
-
 	grunt.registerTask('build', function(target) {
 		grunt.task.run([
 			'clean:dist',
-			'clean:configure',
 			'newer:jshint:all',
-			'configure:' + target,
-			'test',
+				'configure:' + target,
+			'test:dist',
 			'wiredep',
 			'useminPrepare',
 			'compass:dist',
@@ -574,7 +586,6 @@ module.exports = function(grunt) {
 			'htmlmin:dist'
 		]);
 	});
-
 
 	grunt.registerTask('default', [
 		'build:samplestore'
