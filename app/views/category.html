@@ -90,23 +90,35 @@
 
 <!-- 
 <div class="container categories">
-	<div class="row col-md-12">
-		 This is a bootstrap responsive column that holds the search by category and facets functionality -->
-<!-- 		<div class="col-sm-2 -faceted-search">
-			<h3>Narrow By</h3>
-			<div vn-category-search categories="categories"></div>
-			<h3>Filter By</h3>
-			<div vn-facet-search facets="facets"></div>
-			<h3>Price</h3>
-			<input type="text"
-					ng-model="minPrice"
-					ng-keypress="searchByPrice($event)"/>
-			to
-			<input type="text"
-					ng-model="maxPrice"
-					ng-keypress="searchByPrice($event)"/>
-			<button class="btn" href ng-click="clearAllFilters()">Clear Filters</button>
-		</div> -->
+	<div class="row col-md-12"> -->
+
+		<!-- This is a bootstrap responsive column that holds the search by category and facets functionality -->
+ 		<!-- <div class="col-sm-2 -faceted-search">
+			<div class=""> -->
+				<!-- conditional content that gives us a mobile menu toggle btn -->
+<!-- 				<h3 ng-show="!showMobileSearch">Narrow By</h3>
+				<a href ng-show="showMobileSearch"
+					ng-click="toggleSearch()">
+					<h3>Narrow By</h3>
+				</a>
+			</div>
+			<div ng-show="mobileDisplay"> -->
+				<!-- This is here b/c mobile needs to hide / show the content -->
+<!-- 				<div vn-category-search categories="categories"></div>
+				<h3>Filter By</h3>
+				<div vn-facet-search facets="facets"></div>
+				<h3>Price</h3>
+				<input type="text"
+					   ng-model="minPrice"
+					   ng-keypress="searchByPrice($event)"/>
+				to
+				<input type="text"
+					   ng-model="maxPrice"
+					   ng-keypress="searchByPrice($event)"/>
+				<button class="btn" href ng-click="clearAllFilters()">Clear Filters</button>
+			</div>
+		</div> --> 
+
 		<!-- This is a bootstrap responsive column that holds product tiles for the current query -->
 <!-- 		<div class="col-sm-10">
 			<div class="row">

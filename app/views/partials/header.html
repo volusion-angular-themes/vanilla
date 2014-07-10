@@ -144,10 +144,9 @@
 
 		HTML FROM METHOD
 
-<nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
-=======
+
 <nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation" data-ng-hide="hideWrapper">
->>>>>>> upstream/refactor2
+
 
 	<div class="th-header">
 		<div class="container">
@@ -169,8 +168,11 @@
 			<!-- <div class="col-md-2 hidden-xs hidden-sm"> -->
 				<!--TODO: cleanup html-->
 				<!--<a class="navbar-brand" ui-sref="i18n.home">-->
-				<!-- <a class="navbar-brand" href="/">
-					<img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" />
+
+<!--
+				<a class="navbar-brand" href="/">
+					<img ng-src="{{ config.data.general.logoUrl }}" class="img-responsive" />
+
 				</a>
 			</div>
  -->
@@ -187,6 +189,13 @@
 			<!-- Mobile Logo -->
 <!-- 			<div class="col-xs-6 hidden-md hidden-lg">
 				<a class="th-navbar__logo" ui-sref="i18n.home">
+					<img ng-src="{{config.data.general.logoUrl }}" class="img-responsive" />
+				</a>
+			</div>
+
+			 Mobile Logo 
+			<div class="col-xs-6 hidden-md hidden-lg">
+				<a class="th-navbar__logo" ng-href="/">
 					<img ng-src="{{config.general.logoUrl}}" class="img-responsive" />
 				</a>
 			</div>
@@ -205,7 +214,7 @@
 								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
 								</a>
-								<ul class="dropdown-menu" data-ng-if="category.subCategories.length">
+								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
 									<li data-ng-repeat="subCategory in category.subCategories">
 										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
 									</li>
@@ -218,7 +227,7 @@
 								<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
 								</a>
-								<ul class="dropdown-menu">
+								<ul show-on-dropdown-hover class="dropdown-menu">
 									<li data-ng-repeat="category in smartNavMoreCategories">
 										<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
 									</li>

@@ -1,11 +1,11 @@
-'use strict';
+/*global alert */
 
 angular.module('Volusion.controllers')
 	.controller('HomeCtrl', [
 		'$scope', '$rootScope', '$location', '$window', '$timeout', 'vnApi', 'themeSettings',
 		function($scope, $rootScope, $location, $window, $timeout, vnApi, themeSettings) {
 
-			$scope.searchLocal = '';
+			'use strict';
 
 			console.log('vnApi in home', vnApi);
 
@@ -139,8 +139,42 @@ angular.module('Volusion.controllers')
 			//			});
 			//});
 
+			$scope.searchLocal = '';
+
 			$scope.doSearch = function () {
-				alert('Searching for: ' + $scope.searchLocal);
+//				alert('Searching for: ' + $scope.searchLocal);
+			};
+
+			$scope.doScrollTop = function () {
+				alert('scroll to top');
+//				TODO: Figure out how to scroll
+//				$window.scrollTo(0,0);
+//				$timeout(function () {
+//					$('html,body').animate({
+//						scrollTop: '0px'
+//					}, 500);
+//				}, 250);
 			};
 		}
 	]);
+
+
+
+//$(document).ready(function() {
+//
+//	'use strict';
+//
+//	$(window).scroll(function() {
+//		if ($(this).scrollTop() > 100) {
+//			$('#toTop').fadeIn();
+//		} else {
+//			$('#toTop').fadeOut();
+//		}
+//	});
+//
+//	To be replaced by doScrollTop()
+//  ***********************************************************************
+//	$('#toTop').click(function() {
+//		$('html, body').animate({ scrollTop: 0 }, 600); //Scroll time in ms
+//		return false;
+//	});

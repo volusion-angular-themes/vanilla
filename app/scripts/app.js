@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('Volusion.directives', []);
+angular.module('Volusion.templates', []);
+angular.module('Volusion.directives', ['Volusion.templates']);
 angular.module('Volusion.filters', []);
 angular.module('Volusion.services', []);
 angular.module('Volusion.decorators', []);
@@ -91,8 +92,8 @@ angular.module('methodApp', [
 					redirectTo: '/'
 				});
 		}])
-	.run(['snapRemote', '$rootScope', '$window', 'SiteConfig', 'themeSettings', 'Cart',
-		function (snapRemote, $rootScope, $window, SiteConfig, themeSettings, Cart) {
+	.run(['snapRemote', '$rootScope', '$window', 'cacheBustFilter', 'SiteConfig', 'themeSettings', 'Cart',
+		function (snapRemote, $rootScope, $window, cacheBustFilter, SiteConfig, themeSettings, Cart) {
 
 			$rootScope.isInDesktopMode = true;
 
@@ -120,6 +121,9 @@ angular.module('methodApp', [
 				}
 			});
 			/*jslint unparam: false*/
+
+			// TODO: This should be in a controller ...  $rootScope is not the place for that
+			$rootScope.overridesCSS = cacheBustFilter('/styles/overrides.css');
 
 			// Init services
 			// one time initialization for services
