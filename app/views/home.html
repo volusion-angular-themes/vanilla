@@ -77,8 +77,10 @@
               </div>
           </div>
 
-<!-- 
-          <div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts | limitTo:4">
+        <!-- Angular Vanilla Test -->
+				<div class="container" ng-app="store">
+					<div ng-controller="StoreCtrl as store">
+	          <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="product in store.products | limitTo:4">
               <a href="#" class="th-product-card__image-link">
                   <img ng-src="{{product.image[0]}}" alt="{{product.name}}" class="img-responsive th-product-card__image">
               </a>
@@ -86,8 +88,10 @@
               <div class="th-product-price">
                   <div class="th-product-price__price th-product-price__price--medium">{{product.price | currency}}</div>
               </div>
+	        	</div>
           </div>
- -->
+        </div>
+
 
       </div>
   </div>
