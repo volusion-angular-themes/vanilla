@@ -82,6 +82,24 @@
                 <li><a href="#">&raquo;</a></li>
             </ul>
         </div>
+
+
+						<div class="th-product__name">
+							<a href="p/{{ product.slug }}">{{ product.name }}</a>
+						</div>
+						<div class="th-product__price">
+							<span class="th-reg-price" ng-show="product.price.regularPrice > 0">
+								<span class="th-price" ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</span>
+								<span class="th-price-text th-text-left">Reg</span>
+							</span>
+							<span class="th-now-price" ng-show="product.price.salePrice > 0">
+								<span class="th-price">{{product.price.salePrice | currency}}</span>
+								<span class="th-price-text">Now</span>
+							</span>
+						</div>
+
+
+        
     </div>
 </div>
 
