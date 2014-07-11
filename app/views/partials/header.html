@@ -27,8 +27,8 @@
                         <div class="col-xs-3 col-sm-4">
                             <div class="th-header__utility pull-right">                            
                                 <div class="hidden-xs th-sitelinks">
-                                    <a href="#" data-translate="index.signIn" class="th-sitelinks__link">Log in</a> /
-                                    <a href="#" data-translate="index.createAccount" class="th-sitelinks__link">Register</a>
+                                    <a href="#" class="th-sitelinks__link">Log in</a> /
+                                    <a href="#" class="th-sitelinks__link">Register</a>
                                 </div>
                                 
                                 <div class="th-header__cart">
@@ -38,7 +38,7 @@
                                           	<div class="th-icon__foreground"></div>
                                           </div>      
 																					<span class="th-my-cart__number">
-																						{{cart.items.length + 0}}
+																						{{cart.items.length + 0}} <!-- Zero placeholder -->
 																					</span>
 																				</a>
                                     </span>
@@ -51,57 +51,68 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="collapse navbar-collapse" id="th-main-nav">
-                                <ul class="nav navbar-nav">
-                                    <li class="active" data-ui-sref-active="active">
-                                      <a href="/">Home</a>
-                                    </li>
-                                    <li data-ui-sref-active="active">
-                                      <a href="c/category.html">Category Page</a>
-                                    </li>
-                                    <li data-ui-sref-active="active">
-                                      <a href="p/product.html">Product Page</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-																<!--
-																<ul class="nav navbar-nav">
-																	<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
-																		<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
+		                            <ul class="nav navbar-nav">
+																	<li data-ng-repeat="category in smartNavCategories">
+																		<a href="c/{{ category.slug }}">{{category.name}}</a>
 																		<span>
-																			<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+																			<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
 																				<span class="caret"></span>
 																			</a>
-																			<ul class="dropdown-menu" data-ng-if="category.subCategories.length">
-																				<li data-ng-repeat="subCategory in category.subCategories">
-																					<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
+																			<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
+																				<li class="dropdown" data-ng-repeat="subCategory in category.subCategories">
+																					<a class="dropdown-toggle" href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
 																				</li>
 																			</ul>
 																		</span>
 																	</li>
-																	<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
-																		<a href="#" class="navbar-link" data-translate=" index.smartNavMoreLinkText">More</a>
+<!-- 																	<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
+																		<a href="#" class="dropdown-toggle" data-translate=" index.smartNavMoreLinkText">More</a>
 																		<span>
 																			<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
 																				<span class="caret"></span>
 																			</a>
-																			<ul class="dropdown-menu">
+																			<ul show-on-dropdown-hover class="dropdown-menu">
 																				<li data-ng-repeat="category in smartNavMoreCategories">
-																					<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
+																					<a href="c/{{ category.id }}">{{category.name}}</a>
 																				</li>
-																			</ul>
-																			-->
+                              				</ul>
+																		</span>
+																	</li> -->
+																</ul>
                             </div>
                         </div>
+
+
+<!-- 						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
+							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
+							<span>
+								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</a>
+								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
+									<li data-ng-repeat="subCategory in category.subCategories">
+										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
+									</li>
+								</ul>
+							</span>
+						</li>
+						<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
+							<a href="#" class="navbar-link" data-translate=" index.smartNavMoreLinkText">More</a>
+							<span>
+								<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</a>
+								<ul show-on-dropdown-hover class="dropdown-menu">
+									<li data-ng-repeat="category in smartNavMoreCategories">
+										<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
+									</li>
+								</ul>
+							</span>
+						</li> -->
+																			
+
+
+
 
                         <!-- Search -->
                         <div class="col-xs-12 col-md-4">
@@ -124,15 +135,6 @@
                 </nav>
             </header>
         </div><!-- /Container -->
-
-
-
-
-
-
-
-
-
 
 
 

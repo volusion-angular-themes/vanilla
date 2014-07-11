@@ -14,7 +14,8 @@
 
 <div class="container th-home-content">
 
-
+	<!-- CONTENT 1 -->
+	<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
 
 	<!-- CONTENT 2 -->
 	<div data-ng-bind-html="themeSettings.pages.home.content2 | legacyLinkify | html"></div>
@@ -26,8 +27,8 @@
 				<div data-tab-heading data-translate="home.featured">
 					Featured
 				</div>
-				<div class="th-products-wrap clearfix">
-					<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include="'views/partials/product-tile.html'">
+				<div class="th-product-card clearfix">
+					<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
 					</div>
 				</div>
 			</div>
@@ -37,66 +38,7 @@
 	<!-- CONTENT 3 -->
 	<div data-ng-bind-html="themeSettings.pages.home.content3 | legacyLinkify | html"></div>
 
-
-  <div class="th-product-card">
-      <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="#" class="th-product-card__image-link">
-                  <img src="images/demo/product-1.jpg" alt="" class="img-responsive th-product-card__image">
-              </a>
-              <a href="#" class="th-product-title th-product-title--medium">Vanilla Ice Cream</a>
-              <div class="th-product-price">
-                  <div class="th-product-price__price th-product-price__price--medium">$5.00</div>
-              </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="#" class="th-product-card__image-link">
-                  <img src="images/demo/product-2.jpg" alt="" class="img-responsive th-product-card__image">
-              </a>
-              <a href="#" class="th-product-title th-product-title--medium">Strawberry Ice Cream</a>
-              <div class="th-product-price">
-                  <div class="th-product-price__price th-product-price__price--medium">$5.00</div>
-              </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="#" class="th-product-card__image-link">
-                  <img src="images/demo/product-3.jpg" alt="" class="img-responsive th-product-card__image ">
-              </a>
-              <a href="#" class="th-product-title th-product-title--medium">Pistachio Ice Cream</a>
-              <div class="th-product-price">
-                  <div class="th-product-price__price th-product-price__price--medium">$5.00</div>
-              </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-              <a href="#" class="th-product-card__image-link">
-                  <img src="images/demo/product-4.jpg" alt="" class="img-responsive th-product-card__image">
-              </a>
-              <a href="#" class="th-product-title th-product-title--medium">Chocolate Ice Cream</a>
-              <div class="th-product-price">
-                  <div class="th-product-price__price th-product-price__price--medium">$5.00</div>
-              </div>
-          </div>
-
-        <!-- Angular Vanilla Test -->
-				<div class="container" ng-app="store">
-					<div ng-controller="StoreCtrl as store">
-	          <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="product in store.products | limitTo:4">
-              <a href="#" class="th-product-card__image-link">
-                  <img ng-src="{{product.image[0]}}" alt="{{product.name}}" class="img-responsive th-product-card__image">
-              </a>
-              <a href="#" class="th-product-title th-product-title--medium">{{product.name}}</a>
-              <div class="th-product-price">
-                  <div class="th-product-price__price th-product-price__price--medium">{{product.price | currency}}</div>
-              </div>
-	        	</div>
-          </div>
-        </div>
-
-
-      </div>
-  </div>
-
-</div>
+</div><!-- /container th-home-content -->
 
 
 
