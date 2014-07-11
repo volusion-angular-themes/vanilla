@@ -189,10 +189,6 @@
 											<div class="th-icon__foreground"></div>
 										</div>
 									</div>
-									<a href="#" data-translate="product.writeReview"></a>
-								</div>
-								<div class="th-add-favorite">
-									<a href="#"><span class="th-favorite-icon"></span> <span data-translate="product.addToFavorites">Add to Favorites &gt;</span></a>
 								</div>
 							</div>
 						</div> --><!-- end left product column -->
@@ -206,15 +202,17 @@
 								</div>
 							</div>
 							<div class="row">
-								<p class="th-product-details__availability" data-ng-show="availabilityMessage" ng-bind="availabilityMessage"></p>
+								<p class="th-product-details__availability"
+								   data-ng-show="availabilityMessage"
+								   data-ng-bind="availabilityMessage"></p>
 							</div>
 							<div class="row">
 								<div class="col-xs-12 col-sm-4 th-qty-wrap">
 									<div data-vn-block="th-qty-counter" class="input-group">
 										<span class="input-group-btn">
 											<button data-vn-element="btn" class="btn btn-default"
-															data-ng-click="decrementQty()"
-															data-ng-disabled="cartItem.quantity == 0">
+													data-ng-click="decrementQty()"
+													data-ng-disabled="cartItem.quantity == 0">
 												-
 											</button>
 										</span>
@@ -333,7 +331,7 @@
 								Related
 							</div>
 							<div class="th-products-wrap clearfix">
-								<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in relatedProducts | filter: '!' + product.id" data-ng-include="'views/partials/product-tile.html'">
+								<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in relatedProducts | filter: '!' + product.id" data-ng-include=" 'views/partials/product-tile.html' ">
 								</div>
 							</div>
 						</div>
@@ -342,7 +340,7 @@
 								Accessories
 							</div>
 							<div class="th-products-wrap clearfix">
-								<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in accessories" data-ng-include="'views/partials/product-tile.html'">
+								<div class="col-xs-12 col-sm-3 col-md-3" data-ng-repeat="product in accessories" data-ng-include=" 'views/partials/product-tile.html' ">
 								</div>
 							</div>
 						</div>
@@ -385,8 +383,7 @@
 					</div>
 				</div>
 				<div class="th-totals-right">
-					<a href="#" class="th-read-all" data-translate="product.readAllReviews">Read All Reviews &gt;</a>
-					<button class="btn btn-default btn-grey-sm" data-translate="product.writeAReview">Write a Review &gt;</button>
+					<a legacy-link="/reviewnew.asp?productcode={{product.code}}" class="btn btn-default btn-grey-sm" data-translate="product.writeAReview">Write a Review &gt;</button>
 				</div>
 			</div>
 			<div class="th-review" itemprop="review" itemscope itemtype="http://schema.org/Review" data-ng-repeat="review in ratingsAndReviews.data.reviews">
@@ -418,8 +415,8 @@
 				</div>
 				<div class="th-review__helpful">
 					<span data-translate="product.wasThisReviewHelpfulToYou">Was this review helpful for you?</span>
-					<button class="btn btn-default btn-grey-sm">Yes</button>
-					<button class="btn btn-default btn-grey-sm">No</button>
+					<a legacy-link="/reviewhelpful.asp?ProductCode={{product.code}}&ID={{review.id}}&yes=yes" class="btn btn-default btn-grey-sm">Yes</a>
+					<a legacy-link="/reviewhelpful.asp?ProductCode={{product.code}}&ID={{review.id}}&yes=no" class="btn btn-default btn-grey-sm">No</a>
 				</div>
 			</div>
 		</div>

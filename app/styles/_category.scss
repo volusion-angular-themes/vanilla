@@ -2,12 +2,16 @@
 
 .-faceted-search {
 	// resets
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
+
+	label {
+		display: block;
+	}
 
 	div {
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 	}
 
 	input {
@@ -17,6 +21,27 @@
 	button {
 		margin: 15px auto;
 		display: block;
+	}
+
+	.name {
+		display: inline-block;
+	}
+
+	.count {
+		// &:before {
+		// 	content: "("
+		// }
+		// &:after {
+		// 	content: ")"
+		// }
+		margin-left: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+		float: right;
+		background-color: #999;
+		color: white;
+		display: block;
+		border-radius: 2px;
 	}
 }
 
@@ -35,7 +60,7 @@ Animation for products as facets of search are applied. [rough draft]
 */
 .-product-tile-animation.ng-enter,
 .-product-tile-animation.ng-leave {
-    -webkit-transition: 100mss ease-out all;
+    -webkit-transition: 100ms ease-out all;
     transition: 100ms ease-out all;
 }
 
