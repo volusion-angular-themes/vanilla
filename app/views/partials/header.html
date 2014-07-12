@@ -68,23 +68,39 @@
                     
                     <div class="row">
 
-                    		<!-- Sandwich Button -->
+                    	<!-- Sandwich Button -->
                         <div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
-                            <button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
+                        	<button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
+		                        <span class="sr-only">Toggle navigation</span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                    	</button>
+		                		</div>
+
+                        <!-- Desktop Logo -->
+						            <div class="col-md-8 hidden-xs hidden-sm">
+						            	<a data-ui-sref="i18n.home">
+						              	<img src="../../images/theme/logo.png" class="th-header__logo img-responsive"/>
+											      <!-- ANGULAR <img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
+						              </a>
+						             </div>
+
+												<!-- Mobile Logo -->
+												<div class="col-xs-6 hidden-md hidden-lg">
+													<a data-ui-sref="i18n.home">
+						              	<img src="../../images/theme/logo-mobile.png" class="th-header__logo img-responsive"/>
+														<!-- <img data-ng-src="{{config.general.logoUrl}}" class="img-responsive"/> -->
+													</a>
+												</div>
 
                         <!-- Logo -->
-                        <div class="col-xs-6 col-sm-7 col-md-8">
-                            <a class="th-header__logo" href="#">
-                            <!-- <img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
-                            	Vanilla
+<!--                         <div class="col-xs-6 col-sm-7 col-md-8">
+                            <a class="th-header__logo" href="#"> -->
+                            
+<!--                             	Vanilla
                             </a>
-                        </div>
+                        </div> -->
 
                         <div class="col-xs-3 col-sm-4">
                             <div class="th-header__utility pull-right">
@@ -94,16 +110,16 @@
                                 </div>
 
                                 <div class="th-header__cart">
-                                    <span class="th-my-cart">
-																				<a legacy-link="{{viewCart()}}" class="th-my-cart__link">
+                                    <div class="th-cart-summary">
+																				<a data-legacy-link="{{viewCart()}}" class="th-cart-summary__link">
 																					<div class="th-icon th-icon--cart th-cart-summary__icon">
-                                          	<div class="th-icon__foreground"></div>
-                                          </div>      
-																					<span class="th-my-cart__number">
-																						{{cart.items.length + 0}} <!-- Zero placeholder -->
+                                          </div>
+                                          	&#8202;     
+																					<span class="th-cart-summary__number">
+																						{{0 + cart.items.length}}<!-- Zero is a visual placeholder -->
 																					</span>
 																				</a>
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,54 +143,9 @@
 																			</ul>
 																		</span>
 																	</li>
-<!-- 																	<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
-																		<a href="#" class="dropdown-toggle" data-translate=" index.smartNavMoreLinkText">More</a>
-																		<span>
-																			<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
-																				<span class="caret"></span>
-																			</a>
-																			<ul show-on-dropdown-hover class="dropdown-menu">
-																				<li data-ng-repeat="category in smartNavMoreCategories">
-																					<a href="c/{{ category.id }}">{{category.name}}</a>
-																				</li>
-                              				</ul>
-																		</span>
-																	</li> -->
 																</ul>
                             </div>
                         </div>
-
-
-<!-- 						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
-							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
-							<span>
-								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
-									<span class="caret"></span>
-								</a>
-								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
-									<li data-ng-repeat="subCategory in category.subCategories">
-										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
-									</li>
-								</ul>
-							</span>
-						</li>
-						<li class="dropdown" ng-show="displaySmartNavMoreMenuItem">
-							<a href="#" class="navbar-link" data-translate=" index.smartNavMoreLinkText">More</a>
-							<span>
-								<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
-									<span class="caret"></span>
-								</a>
-								<ul show-on-dropdown-hover class="dropdown-menu">
-									<li data-ng-repeat="category in smartNavMoreCategories">
-										<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
-									</li>
-								</ul>
-							</span>
-						</li> -->
-																			
-
-
-
 
                         <!-- Search -->
                         <div class="col-xs-12 col-md-4">

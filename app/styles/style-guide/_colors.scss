@@ -30,7 +30,9 @@ $userDefined: map-merge($userDefined, (
 	component-bg--darkest:              darken(map-get($userDefined, component-bg), 100)
 ));
 
-$bootstrap: ( // Bootstrap Colors
+// Bootstrap Colors
+
+$bootstrap: ( 
 	graydarker:                         #222,
 	graydark:                           #333,
 	gray:                               #555,
