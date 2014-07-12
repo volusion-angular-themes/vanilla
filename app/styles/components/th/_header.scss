@@ -15,6 +15,18 @@
     }
 
     &__logo {
+
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+
+        @include respond-to(sm-and-down) {
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+
+/*      Vanilla logo replaced with IMAGE file and text CSS is commented out
+
         @include font(
             $size: 3.6rem,
             $family: robotoslab-light
@@ -29,7 +41,7 @@
         @include respond-to(md-and-up) {
             @include inline-block;
             font-size: 6rem;
-        }
+        } */
     }
 
     &__search {
