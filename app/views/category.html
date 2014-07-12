@@ -2,74 +2,35 @@
 <div class="theme-showcase" role="main" data-ui-view="" data-autoscroll="false">
     <div class="container">
         <div class="th-product-card">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-1.jpg" alt="" class="img-responsive th-product-card__image">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Vanilla Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-2.jpg" alt="" class="img-responsive th-product-card__image">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Strawberry Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-3.jpg" alt="" class="img-responsive th-product-card__image ">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Pistachio Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-4.jpg" alt="" class="img-responsive th-product-card__image">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Chocolate Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-5.jpg" alt="" class="img-responsive th-product-card__image">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Mango Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <a href="#" class="th-product-card__image-link">
-                        <img src="images/demo/product-6.jpg" alt="" class="img-responsive th-product-card__image">
-                    </a>
-                    <div class="th-product-card__title">
-                        <a href="#" class="th-product-title th-product-title th-product-title--medium">Espresso Ice Cream</a>
-                    </div>
-                    <div class="th-product-card__price">
-                        <div class="th-product-price th-product-price__price th-product-price__price--medium">$5.00</div>
-                    </div>
-                </div>
-            </div>
+          <div class="row">
+          	<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in products">
+							<div vn-product-tile product="product"></div>
+							<div class="th-product">
+								<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
+								<span class="th-product__new" data-ng-show="product.isNew"></span>
+								<div class="th-product__image">
+									<a ui-sref="i18n.product({ productTitle: product.seoFriendlyProductTitle, productCode: product.code })">
+										<a href="p/{{product.slug}}" class="th-product-card__image-link">
+											<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive th-product-card__image" alt="">
+										</a>
+									</a>
+								</div>
+								<div class="th-product-title th-product-title th-product-title--medium">
+									<a href="p/{{ product.slug }}">{{ product.name }}</a>
+								</div>
+								<div class="th-product__price">
+									<span class="th-reg-price" data-ng-show="product.price.regularPrice > 0">
+										<span class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</span>
+										<!-- <span class="th-price-text th-text-left">Reg</span> -->
+									</span>
+<!-- 									<span class="th-now-price" data-ng-show="product.price.salePrice > 0">
+										<span class="th-price">{{product.price.salePrice | currency}}</span>
+										<span class="th-price-text">Now</span> -->
+									</span>
+								</div>
+							</div>
+						</div>
+          </div>
         </div>
 
         <div class="container container__text-center">
@@ -82,24 +43,6 @@
                 <li><a href="#">&raquo;</a></li>
             </ul>
         </div>
-
-
-						<div class="th-product__name">
-							<a href="p/{{ product.slug }}">{{ product.name }}</a>
-						</div>
-						<div class="th-product__price">
-							<span class="th-reg-price" ng-show="product.price.regularPrice > 0">
-								<span class="th-price" ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</span>
-								<span class="th-price-text th-text-left">Reg</span>
-							</span>
-							<span class="th-now-price" ng-show="product.price.salePrice > 0">
-								<span class="th-price">{{product.price.salePrice | currency}}</span>
-								<span class="th-price-text">Now</span>
-							</span>
-						</div>
-
-
-        
     </div>
 </div>
 
@@ -152,8 +95,10 @@
 
 						<div class="th-product__image"> -->
 							<!--<a ui-sref="i18n.product({ productTitle: product.seoFriendlyProductTitle, productCode: product.code })"> -->
-<!-- 							<a href="p/{{product.slug}}">
-								<img ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
+
+							<!--
+							<a href="p/{{product.slug}}">
+								<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
 							</a>
 						</div>
 						<div class="th-product__name">
