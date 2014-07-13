@@ -14,14 +14,17 @@
         }
     }
 
+    // Padding here represents Navbar > Row height minus Logo height
+    // There is probably a bette way to do this 
+
     &__logo {
+        padding-top: 12px;
+        padding-bottom: 13px;
 
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-
-        @include respond-to(sm-and-down) {
-            padding-top: 7px;
-            padding-bottom: 7px;
+        @include respond-to(xs-and-down) {
+            margin: 0 auto;
+            padding-top: 9px;
+            padding-bottom: 10px;
         }
 
 
