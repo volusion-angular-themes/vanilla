@@ -11,29 +11,32 @@ angular.module('Volusion.controllers')
 					$scope.products = response.data;
 					$scope.facets = response.facets;
 					$scope.categories = response.categories;
-					$scope.subCategories = response.categories.subCategories;
+//					$scope.currentPage = 1;
+//					$scope.totalPages = response.cursor.totalPages;
+					$scope.cursor = response.cursor;
+					console.log('cursor: ', $scope.cursor);
 				});
 
-				// Hack to get many products into this scope.
-				vnApi.Product().query(params).$promise.then(function(response) {
-					angular.forEach(response.data, function(value) {
-						$scope.products.push(value);
-					});
-				});
-				// Hack to get many products into this scope.
-				vnApi.Product().query(params).$promise.then(function(response) {
-					console.log('the second response', response);
-					angular.forEach(response.data, function(value) {
-						$scope.products.push(value);
-					});
-				});
+//				// Hack to get many products into this scope.
+//				vnApi.Product().query(params).$promise.then(function(response) {
+//					angular.forEach(response.data, function(value) {
+//						$scope.products.push(value);
+//					});
+//				});
+//				// Hack to get many products into this scope.
+//				vnApi.Product().query(params).$promise.then(function(response) {
+//					angular.forEach(response.data, function(value) {
+//						$scope.products.push(value);
+//					});
+//				});
 			}
 
 			function getCategory(newSlug) {
 				vnApi.Category().get({ slug: newSlug }).$promise.then(function(response) {
 					// Handle the category data
-					$scope.category = response.data;
-					vnProductParams.addCategory(response.data.id);
+					$scope.category = response.data[0];  // Prior to 7-11-2014 it was object, not array. Todo: figure out the proper fix.
+					$scope.subCategories = response.data[0].subCategories;
+					vnProductParams.addCategory(response.data[0].id);
 					queryProducts();
 				});
 			}
@@ -46,6 +49,21 @@ angular.module('Volusion.controllers')
 			// TODO: refactor this into a service and use that service where it has access to the directive in the header.
 			$rootScope.seo = {};
 			$scope.currentCategory = {};
+
+			$scope.nextPage = function() {
+
+				var currentPage = parseInt( vnProductParams.getPageNumber() );
+				console.log('the cur page: ', currentPage);
+				var nextPage = currentPage + 1;
+				vnProductParams.setPageNumber(nextPage.toString());
+				queryProducts();
+
+				console.log('go next: ', nextPage.toString());
+			};
+
+			$scope.prevPage = function() {
+				console.log('go prev');
+			};
 
 			$scope.clearAllFilters = function() {
 
@@ -95,6 +113,11 @@ angular.module('Volusion.controllers')
 
 			// Load the url category when the controller is activated.
 			getCategory($routeParams.slug);
+
+			// Forct the pageSize and pageNumber for now.
+//			pageSize: '1', pageNumber: '1'
+			vnProductParams.setPageSize('');
+			vnProductParams.setPageNumber('1');
 
 			// Listen for faceted search updates
 			$rootScope.$on('ProductSearch.facetsUpdated', function() {
