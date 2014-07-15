@@ -8,14 +8,6 @@
 
 	&__number {
 		@extend %inline-block;
-		// CSS incorporated from Method
-		color : map-get($colors, link-active);
-		&:before {
-			content : "(";
-		}
-		&:after {
-			content : ")";
-		}
 	}
 
 	@include respond-to(md-and-up) {
