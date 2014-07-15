@@ -1,6 +1,12 @@
+/*global alert*/
+
 angular.module('Volusion.controllers')
-	.controller('HomeCtrl', ['$scope', '$filter', 'vnApi',
-		function($scope, $filter, vnApi) {
+	.controller('HomeCtrl', ['$scope', '$rootScope', '$timeout', '$window', 'vnApi', 'themeSettings',
+		function($scope, $rootScope, $timeout, $window, vnApi, themeSettings) {
+
+		'use strict';
+
+			// console.log('vnApi in home', vnApi);
 
 			'use strict';
 
@@ -88,5 +94,4 @@ angular.module('Volusion.controllers')
 			$scope.doSearch = function () {
 				alert('Searching for: ' + $scope.searchLocal);
 			};
-		}
-	]);
+		}]);
