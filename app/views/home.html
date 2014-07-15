@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
 	<div class="th-hero-promo">
 		<div class="text-center th-hero-promo__content" ng-controller="SearchCtrl">
@@ -6,14 +7,83 @@
 			</div>
 			<div class="th-hero-promo__title th-hero-promo__title--large">
 				Vanilla
+=======
+<div class="theme-showcase" role="main" data-ui-view="" data-autoscroll="false">
+	<div class="container">
+	    <div class="th-hero-promo">
+	        <div class="th-hero-promo__content">
+	            <div class="th-hero-promo__title">
+	                Simple &amp; Refreshing
+	            </div>
+	            <div class="th-hero-promo__title th-hero-promo__title--large">
+	                Vanilla
+	            </div>
+	            <a href="#" class="th-hero-promo__button">Shop now</a>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="container th-home-content">
+
+		<!-- CONTENT 1 -->
+		<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
+
+		<!-- CONTENT 2 -->
+		<div data-ng-bind-html="themeSettings.pages.home.content2 | legacyLinkify | html"></div>
+
+		<!-- FEATURED PRODUCTS -->
+		<div class="visible-lg visible-md" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
+			<div data-tabset>
+				<div data-tab>
+					<div data-tab-heading data-translate="home.featured">
+						Featured
+					</div>
+					<div class="th-product-card clearfix">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
+							</div>
+						</div>
+					</div>
+				</div>
+>>>>>>> Minor fixes to category page
 			</div>
 			<a data-ng-click="doSearch()" class="btn btn-success btn-lg">Shop now</a>
 		</div>
+<<<<<<< HEAD
 	</div>
 </div>
 
 <div class="container">
 	<!-- CONTENT 1 -->
+=======
+
+		<!-- CONTENT 3 -->
+		<div data-ng-bind-html="themeSettings.pages.home.content3 | legacyLinkify | html"></div>
+
+	</div><!-- /container th-home-content -->
+</div> <!-- /theme-showcase -->
+
+
+
+
+
+<!-- METHOD HTML -->
+
+<!-- SLIDER
+<div class="container th-content-slider" data-ng-if="themeSettings.pages.home.slider.isEnabled">
+	<div class="vn-slider">
+		<carousel data-interval="themeSettings.pages.home.slider.interval">
+			<slide data-ng-repeat="slide in themeSettings.pages.home.slider.slides" data-active="slide.active">
+				<a href="{{slide.linksTo}}" title="{{slide.headline}} - {{slide.subHeadline}}">
+					<div class="vn-slider__slide" data-ng-style="{'background-image':'url({{slide.imageUrl}})' }"></div>
+				</a>
+			</slide>
+		</carousel>
+	</div>
+</div> /.container carousel  -->
+
+<!-- 	CONTENT 1
+>>>>>>> Minor fixes to category page
 	<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
 	<!-- FEATURED PRODUCTS -->
 	<div data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
