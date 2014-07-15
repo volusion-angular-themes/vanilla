@@ -1,20 +1,14 @@
-/*global alert */
+'use strict';
 
 angular.module('Volusion.controllers')
-	.controller('HomeCtrl', [
-		'$scope', '$rootScope', '$location', '$window', '$timeout', 'vnApi', 'themeSettings',
-		function($scope, $rootScope, $location, $window, $timeout, vnApi, themeSettings) {
-
-			'use strict';
+	.controller('HomeCtrl', function(
+		$scope,
+		vnApi,
+		themeSettings) {
 
 			console.log('vnApi in home', vnApi);
 
 			$scope.themeSettings = themeSettings.getThemeSettings();
-
-			//hide header & footer when viewing theme-settings
-			if ($location.path().indexOf('/theme-settings') >= 0) {
-				$rootScope.hideWrapper = true;
-			}
 
 			// Featured Products
 			vnApi.Product().get({ filter: 'featured', pageSize: 4 }).$promise
@@ -155,25 +149,4 @@ angular.module('Volusion.controllers')
 //				}, 250);
 			};
 		}
-	]);
-
-
-
-//$(document).ready(function() {
-//
-//	'use strict';
-//
-//	$(window).scroll(function() {
-//		if ($(this).scrollTop() > 100) {
-//			$('#toTop').fadeIn();
-//		} else {
-//			$('#toTop').fadeOut();
-//		}
-//	});
-//
-//	To be replaced by doScrollTop()
-//  ***********************************************************************
-//	$('#toTop').click(function() {
-//		$('html, body').animate({ scrollTop: 0 }, 600); //Scroll time in ms
-//		return false;
-//	});
+	);

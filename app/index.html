@@ -12,7 +12,7 @@
 	<!-- build:css /styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="/bower_components/angular-snap/angular-snap.css" />
-	<link rel="stylesheet" href="/bower_components/angular-carousel/dist/angular-carousel.css" />
+	<link rel="stylesheet" href="/bower_components/easyzoom/css/easyzoom.css" />
 	<link rel="stylesheet" href="/bower_components/vn-toolbox-ecomm/dist/vn-toolbox-ecomm-styles.css" />
 	<link rel="stylesheet" href="/bower_components/vn-toolbox-common/dist/vn-toolbox-common-styles.css" />
 	<!-- endbower -->
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" ng-href="{{ overridesCSS }}">
 	<base href="/">
 </head>
-<body role="document" ng-controller="HomeCtrl">
+<body role="document" data-ng-controller="MainCtrl">
 	<!--[if lt IE 9]>
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>
 	to improve your experience.</p>
@@ -88,9 +88,6 @@
 	<script src="/bower_components/firebase-simple-login/firebase-simple-login.js"></script>
 	<script src="/bower_components/angularfire/angularfire.js"></script>
 	<script src="/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js"></script>
-	<!-- endbower -->
-	<script src="/bower_components/matchMedia/matchMedia.addListener.js"></script>
-	<script src="bower_components/angular-i18n/angular-locale_en-us.js"></script>
 	<!-- endbuild -->
 
 	<!-- build:js({.tmp,app}) /scripts/scripts.js -->
@@ -120,6 +117,10 @@
 	<script src="scripts/services/theme-settings.js"></script>
 	<script src="scripts/services/token-generator.js"></script>
 	<script src="scripts/services/translate-provider.js"></script>
+<script src="scripts/controllers/search.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/header.js"></script>
+<script src="scripts/controllers/footer.js"></script>
 	<!-- endbuild -->
 
 </body>

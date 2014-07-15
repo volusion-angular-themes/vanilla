@@ -84,6 +84,11 @@ angular.module('methodApp', [
 					templateUrl: 'views/category.html',
 					controller : 'CategoryCtrl'
 				})
+				.when('/search', {
+					templateUrl: 'views/search.html',
+					controller: 'SearchCtrl'
+				})
+				// Articles must come after search or search will never be picked up.
 				.when('/:slug', {
 					templateUrl: 'views/article.html',
 					controller : 'ArticleCtrl'
@@ -113,14 +118,12 @@ angular.module('methodApp', [
 				snapRemote.close();
 			});
 
-			/*jslint unparam: true*/
 			$rootScope.$on('$routeChangeError', function (event, toState, toParams, fromState, fromParams, error) {
 				event.preventDefault();
 				if (error.status === 404) {
 					$window.location.replace('/404.html');
 				}
 			});
-			/*jslint unparam: false*/
 
 			// TODO: This should be in a controller ...  $rootScope is not the place for that
 			$rootScope.overridesCSS = cacheBustFilter('/styles/overrides.css');

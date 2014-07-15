@@ -1,55 +1,18 @@
-<div class="container">
-    <div class="th-product-card">
-        <div class="row">
-            <div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in products track by $index">
-            		<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
-								<span class="th-product__new" data-ng-show="product.isNew"></span>
-                <a href="p/{{product.slug}}" class="th-product-card__image-link">
-                    <img data-ng-src="{{product.images.default[0].medium}}" alt="" class="img-responsive th-product-card__image">
-                </a>
-                <div class="th-product-card__title">
-                    <a href="p/{{ product.slug }}" class="th-product-title th-product-title th-product-title--medium">{{ product.name }}</a>
-                </div>
-                <div class="th-product-card__price" data-ng-show="product.price.regularPrice > 0">
-                    <div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container container__text-center">
-        <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-    </div>
-</div>
-
-
-
-
-<!-- 
 <div class="container categories">
-	<div class="row col-md-12"> -->
-
+	<div class="row col-md-12">
 		<!-- This is a bootstrap responsive column that holds the search by category and facets functionality -->
- 		<!-- <div class="col-sm-2 -faceted-search">
-			<div class=""> -->
+		<div class="col-sm-2 -faceted-search">
+			<div>
 				<!-- conditional content that gives us a mobile menu toggle btn -->
-
-<!-- 				<h3 data-ng-show="!showMobileSearch">Narrow By</h3>
+				<h3 data-ng-show="!showMobileSearch">Narrow By</h3>
 				<a href data-ng-show="showMobileSearch"
-					data-ng-click="toggleSearch()">
+				   data-ng-click="toggleSearch()">
 					<h3>Narrow By</h3>
 				</a>
 			</div>
-			<div data-ng-show="mobileDisplay"> -->
-
+			<div data-ng-show="mobileDisplay">
 				<!-- This is here b/c mobile needs to hide / show the content -->
-<!-- 				<div vn-category-search categories="categories"></div>
+				<div vn-category-search categories="categories"></div>
 				<h3>Filter By</h3>
 				<div vn-facet-search facets="facets"></div>
 				<h3>Price</h3>
@@ -62,30 +25,22 @@
 					   data-ng-keypress="searchByPrice($event)"/>
 				<button class="btn" href data-ng-click="clearAllFilters()">Clear Filters</button>
 			</div>
-		</div> --> 
-
+		</div>
 		<!-- This is a bootstrap responsive column that holds product tiles for the current query -->
-		<!--
 		<div class="col-sm-10">
 			<div class="content-top">
 				<div class="page-header">
-					<h1>{{category.name}}</h1>
-					<img class="banner img img-responsive" ng-src="{{category.bannerImgUrl}}">
-					<div class="description" itemprop="description" data-ng-bind-html="category.description | legacyLinkify | html"></div>
+					<h1>Search for {{ lastSearchString }}</h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in products track by $index">
-				
 					<div class="th-product">
 						<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
 						<span class="th-product__new" data-ng-show="product.isNew"></span>
 
-
-						<div class="th-product__image"> -->
+						<div class="th-product__image">
 							<!--<a ui-sref="i18n.product({ productTitle: product.seoFriendlyProductTitle, productCode: product.code })"> -->
-
-							<!--
 							<a href="p/{{product.slug}}">
 								<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
 							</a>
@@ -102,7 +57,7 @@
 								<span class="th-price">{{product.price.salePrice | currency}}</span>
 								<span class="th-price-text">Now</span>
 							</span>
-						</div> -->
+						</div>
 						<!-- Todo: show available colors: but how does the client know which color to show for this product?
 						<div class="th-colors-sm">
 								<a href="#"><img src="/images/theme/sw-1-sm.png" class="img-responsive" alt=""></a>
@@ -112,7 +67,7 @@
 								<a href="#"><img src="/images/theme/sw-5-sm.png" class="img-responsive" alt=""></a>
 						</div>
 						-->
-					<!-- </div>
+					</div>
 				</div>
 				<button class="btn btn-default btn-lg visible-xs th-load-more">Load More</button>
 			</div>
@@ -122,4 +77,3 @@
 		</div>
 	</div>
 </div>
- -->

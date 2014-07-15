@@ -1,58 +1,59 @@
-        <div class="container">
-            <footer class="th-footer">
-                <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                        <div class="th-footer__heading">Helpful Links</div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <ul class="th-linklist">
-                                    <li class="th-linklist__item"><a href="#">About us</a></li>
-                                    <li class="th-linklist__item"><a href="#">Contact</a></li>
-                                    <li class="th-linklist__item"><a href="#">Terms &amp; Conditions</a></li>
-                                    <li class="th-linklist__item"><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                                <ul class="th-linklist">
-                                    <li class="th-linklist__item"><a href="#">Shipping Information</a></li>
-                                    <li class="th-linklist__item"><a href="#">Returns &amp; Exchanges</a></li>
-                                    <li class="th-linklist__item"><a href="#">FAQ</a></li>
-                                    <li class="th-linklist__item"><a href="#">My Account</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="th-footer__heading">Social</div>
-                        <div class="th-icongroup">
-                            <a class="th-icon th-icon--facebook th-icongroup__icon" href="#" target="_blank">
-                            </a>
-                            <a class="th-icon th-icon--twitter th-icongroup__icon" href="#" target="_blank">
-                            </a>
-                            <a class="th-icon th-icon--pinterest th-icongroup__icon" href="#" target="_blank">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="th-footer__heading">Sign up for our newsletter!</div>
-                        <div class="th-footer__elist">
-                            <form class="th-elist" role="form" name="MailingList">
-                                <div class="input-group">
-                                    <input type="text" class="form-control th-elist__input" placeholder="email@example.com">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary th-elist__submit" type="button">Subscribe</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="th-footer__copyright">
-                    Made with &#10084; by <a href="#">Awesome Theme Developer</a>. Built with <a href="#" target="_blank">Volusion</a>.
-                </div>
-            </footer>
-        </div>
+<div class="container">
+	<footer class="th-footer">
+		<div class="row">
+			<div class="col-sm-6 col-md-5">
+				<div class="th-footer__heading">Helpful Links</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<ul class="th-linklist">
+							<li class="th-linklist__item"><a href="#">About us</a></li>
+							<li class="th-linklist__item"><a href="#">Contact</a></li>
+							<li class="th-linklist__item"><a href="#">Terms &amp; Conditions</a></li>
+							<li class="th-linklist__item"><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<ul class="th-linklist">
+							<li class="th-linklist__item"><a href="#">Shipping Information</a></li>
+							<li class="th-linklist__item"><a href="#">Returns &amp; Exchanges</a></li>
+							<li class="th-linklist__item"><a href="#">FAQ</a></li>
+							<li class="th-linklist__item"><a href="#">My Account</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="th-footer__heading">Social</div>
+				<div class="th-icongroup">
+					<a class="th-icon th-icon--facebook th-icongroup__icon" href="#" target="_blank">
+					</a>
+					<a class="th-icon th-icon--twitter th-icongroup__icon" href="#" target="_blank">
+					</a>
+					<a class="th-icon th-icon--pinterest th-icongroup__icon" href="#" target="_blank">
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="th-footer__heading">Sign up for our newsletter!</div>
+				<div class="th-footer__elist">
+					<form class="th-elist" role="form" name="MailingList">
+						<div class="input-group">
+							<input type="text" class="form-control th-elist__input" placeholder="email@example.com">
+							<span class="input-group-btn">
+								<button class="btn btn-primary th-elist__submit" type="button">Subscribe</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="th-footer__copyright">
+			Made with &#10084; by <a href="#">Awesome Theme Developer</a>. Built with <a href="#" target="_blank">Volusion</a>.
+		</div>
+	</footer>
+</div>
 
 
 
@@ -60,6 +61,11 @@
 
 <!-- 
 <footer class="th-footer">
+=======
+<footer class="th-footer"
+		data-ng-controller="FooterCtrl">
+
+>>>>>>> upstream/master
 	<div class="th-newsbar">
 		<div class="th-elist">
 			<div class="th-elist__title">Sign-Up for Our Newsletter</div>
@@ -70,7 +76,7 @@
 				<button type="submit" class="btn btn-default th-elist__submit">Go</button>
 			</form>
 		</div>
-		 .v-newsletter -->
+		.v-newsletter -->
 <!-- 	</div>
 	<div class="container th-footer__top">
 		<div class="row">
@@ -83,7 +89,8 @@
 							<li><a href="#">Shopping Bag</a></li>
 							<li><a href="#">Order sStatus</a></li> -->
 							<!--<li><a ui-sref="i18n.contact" translate="index.contact">Contact Us</a></li>-->
-<!-- 							<li><a href="/contact">Contact Us</a></li>
+<!--
+							<li><a href="/contact" data-translate="footer.contact">Contact Us</a></li>
 							<li><a href="#">Returns</a></li>
 							<li><a href="#">Shipping</a></li>
 							<li><a href="#">Size Charts</a></li>
@@ -94,7 +101,7 @@
 					<div class="col-md-4">
 						<ul class="nav">
 							<li class="th-footer__title">Company Info</li>
-							<li><a href="#" data-translate="index.about">About Us</a></li>
+							<li><a href="#" data-translate="footer.about">About Us</a></li>
 							<li><a href="#">Careers</a></li>
 							<li><a href="#">Partners</a></li>
 							<li><a href="#">Excetera</a></li>
@@ -172,7 +179,7 @@
 				<a href="#" class="th-back-top" id="toTop" scroll-to-anchor="header">Back to Top <span>^</span></a>
 			</div>
 		</div>
-		 .th-footer__bottom -->
+		.th-footer__bottom -->
 <!-- 	</div>
 </footer>
- --> 
+--> 
