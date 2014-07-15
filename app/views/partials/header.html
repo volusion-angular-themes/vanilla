@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container">
 	<header class="th-header">
 		<nav class="navbar navbar-default"
@@ -7,6 +6,7 @@
 			 data-ng-controller="HeaderCtrl">
 
 			<div class="row">
+
 				<!-- Sandwich Button -->
 				<div class="col-xs-3 hidden-md hidden-lg">
 					<button type="button" class="navbar-toggle pull-left" data-ng-init="navCollapsed = true"
@@ -59,201 +59,6 @@
 						</div>
 					</div>
 					<!-- /th-header__utility -->
-=======
-
-        <div class="container">
-            <header class="th-header">
-
-                <nav class="navbar navbar-default" role="navigation">
-                    
-                    <div class="row">
-
-                    	<!-- Sandwich Button -->
-                        <div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
-                        	<button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
-		                        <span class="sr-only">Toggle navigation</span>
-		                        <span class="icon-bar"></span>
-		                        <span class="icon-bar"></span>
-		                        <span class="icon-bar"></span>
-		                    	</button>
-		                		</div>
-
-                        <!-- Desktop Logo -->
-						            <div class="col-md-8 hidden-xs hidden-sm">
-						            	<a data-ng-href="/">
-						              	<img src="../../images/theme/logo.png" class="th-header__logo img-responsive"/>
-											      <!-- ANGULAR <img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
-						              </a>
-						             </div>
-
-												<!-- Mobile Logo -->
-												<div class="col-xs-6 hidden-md hidden-lg">
-													<a data-ui-sref="i18n.home">
-						              	<img src="../../images/theme/logo-mobile.png" class="th-header__logo img-responsive"/>
-														<!-- <img data-ng-src="{{config.general.logoUrl}}" class="img-responsive"/> -->
-													</a>
-												</div>
-
-                        <!-- Logo -->
-<!--                         <div class="col-xs-6 col-sm-7 col-md-8">
-                            <a class="th-header__logo" href="#"> -->
-                            
-<!--                             	Vanilla
-                            </a>
-                        </div> -->
-
-                        <div class="col-xs-3 col-sm-4">
-                            <div class="th-header__utility pull-right">
-                                <div class="hidden-xs th-sitelinks">
-                                    <a href="#" class="th-sitelinks__link">Log in</a> /
-                                    <a href="#" class="th-sitelinks__link">Register</a>
-                                </div>
-
-                                <div class="th-header__cart">
-                                    <div class="th-cart-summary">
-																				<a data-legacy-link="{{viewCart()}}" class="th-cart-summary__link">
-																					<div class="th-icon th-icon--cart th-cart-summary__icon">
-                                          </div>
-                                          	&#8202;     
-																					<span class="th-cart-summary__number">
-																						{{0 + cart.items.length}}<!-- Zero is a visual placeholder -->
-																					</span>
-																				</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- /Row -->
-
-                    <!-- Categories -->
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="collapse navbar-collapse" id="th-main-nav">
-		                            <ul class="nav navbar-nav">
-																	<li data-ng-repeat="category in smartNavCategories">
-																		<a href="c/{{ category.slug }}">{{category.name}}</a>
-																		<span>
-																			<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
-																				<span class="caret"></span>
-																			</a>
-																			<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
-																				<li class="dropdown" data-ng-repeat="subCategory in category.subCategories">
-																					<a class="dropdown-toggle" href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
-																				</li>
-																			</ul>
-																		</span>
-																	</li>
-																</ul>
-                            </div>
-                        </div>
-
-                        <!-- Search -->
-                        <div class="col-xs-12 col-md-4">
-                            <div class="th-header__search">
-                                <form class="th-search" role="search">
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-default th-search__submit">
-                                                <span class="glyphicon glyphicon-search"></span>
-                                            </button>
-                                        </span>
-                                        <input type="text" class="form-control th-search__input" placeholder='Search...'>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div><!-- /Categories and Search Row -->
-                
-                </nav>
-            </header>
-        </div><!-- /Container -->
-
-
-
-
-
-
-
-<!-- 
-
-		HTML FROM METHOD
-
-<nav class="navbar navbar-default navbar-fixed-top th-navbar" role="navigation">
-
-
-	<div class="hidden-xs hidden-sm th-header">
-		<div class="container">
-			<div class="pull-left th-header__shipping-text">
-				<span data-ng-bind-html="themeSettings.general.header.content.topPromo | legacyLinkify | html"></span>
-			</div>
-			<div class="pull-right th-header__account-menu">
-					<a legacy-link="/login.asp" data-translate="header.signIn">Sign In</a>
-			</div>
-		</div>
-	</div>
-	<div class="container th-menu-container">
-		<div class="row"> -->
-			<!-- Desktop Logo -->
-			<!-- <div class="col-md-2 hidden-xs hidden-sm"> -->
-				<!--TODO: cleanup html-->
-				<!--<a class="navbar-brand" ui-sref="i18n.home">-->
-				<!-- <a class="navbar-brand" href="/">
-					<img ng-src="{{config.data.general.logoUrl}}" class="img-responsive" />
-				</a>
-			</div>
- -->
-			<!-- Sandwich Button -->
-<!-- 			<div class="col-xs-3 hidden-md hidden-lg">
-				<button type="button" class="navbar-toggle" ng-init="navCollapsed = true" snap-toggle="left">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div> -->
-
-			<!-- Mobile Logo -->
-
-<!-- 			<div class="col-xs-6 hidden-md hidden-lg">
-				<a class="th-navbar__logo" ui-sref="i18n.home">
-					<img ng-src="{{config.general.logoUrl}}" class="img-responsive" />
-				</a>
-			</div>
-			<div class="col-md-8 hidden-xs hidden-sm">
-				<div class="collapse navbar-collapse " id="th-main-menu" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
- -->
-
-
-
-					<!-- Categories -->
-<!-- 					<ul class="nav navbar-nav">
-						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
-							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
-							<span>
-								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu" data-ng-if="category.subCategories.length">
-									<li data-ng-repeat="subCategory in category.subCategories">
-										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
-									</li>
-								</ul>
-							</span>
-						</li>
-						<li class="dropdown" data-ng-show="displaySmartNavMoreMenuItem">
-							<a href="#" class="navbar-link" data-translate="header.smartNavMoreLinkText">
-								More
-								<span class="caret th-dropdown-toggle"></span>
-							</a>
-							<ul show-on-dropdown-hover class="dropdown-menu">
-								<li data-ng-repeat="category in smartNavMoreCategories">
-									<a class="navbar-link" data-ng-href="{{ category.url }}">{{category.name}}</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
->>>>>>> header changes:
 				</div>
 
 			</div>
@@ -262,7 +67,6 @@
 			<!-- Categories -->
 			<div class="row">
 
-<<<<<<< HEAD
 				<div class="col-md-8">
 					<div class="collapse navbar-collapse" id="th-main-nav">
 						<ul class="nav navbar-nav">
@@ -297,16 +101,6 @@
 								</span>
 							</li>
 						</ul>
-=======
-			<div class="col-xs-3 col-md-2">
-				<div class="pull-right th-cart-summary">
-					<div search-form></div>
-					<div class="th-my-cart">
-						<a legacy-link="{{ viewCart() }}" class="th-my-cart__link">
-							<span class="th-my-cart__text" data-translate="header.myCart">My Bag</span>
-							<span class="th-my-cart__number">{{ getCartItemsCount() }}</span>
-						</a>
->>>>>>> Code cleanup.
 					</div>
 				</div>
 
@@ -331,12 +125,6 @@
 			</div>
 			<!-- /Categories and Search Row -->
 
-<<<<<<< HEAD
 		</nav>
 	</header>
 </div><!-- /Container -->
-=======
-	</div> -->
-	<!-- /.container-fluid -->
-<!-- </nav> -->
->>>>>>> header changes:
