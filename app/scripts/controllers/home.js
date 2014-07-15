@@ -1,12 +1,12 @@
-'use strict';
+/*global alert*/
 
 angular.module('Volusion.controllers')
-	.controller('HomeCtrl', function(
-		$scope,
-		vnApi,
-		themeSettings) {
+	.controller('HomeCtrl', ['$scope', '$rootScope', '$timeout', '$window', 'vnApi', 'themeSettings', 
+		function($scope, $rootScope, $timeout, $window, vnApi, themeSettings) {
 
-			console.log('vnApi in home', vnApi);
+		'use strict';
+
+			// console.log('vnApi in home', vnApi);
 
 			$scope.themeSettings = themeSettings.getThemeSettings();
 
@@ -148,5 +148,4 @@ angular.module('Volusion.controllers')
 //					}, 500);
 //				}, 250);
 			};
-		}
-	);
+		}]);
