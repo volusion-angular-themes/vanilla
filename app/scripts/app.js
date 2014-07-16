@@ -19,6 +19,7 @@ angular.module('methodApp', [
 	'ui.bootstrap',
 	'pascalprecht.translate',
 	'snap',
+	'textAngular',
 
 	// Volusion modules
 	'seo',
@@ -65,7 +66,9 @@ angular.module('methodApp', [
 					controller : 'HomeCtrl',
 					resolve    : {
 						translations: ['translate', function (translate) {
-							return translate.addParts('home');
+							translate.addParts('home');
+							translate.addParts('product');
+							return;
 						}]
 					}
 				})
@@ -88,7 +91,11 @@ angular.module('methodApp', [
 					templateUrl: 'views/search.html',
 					controller: 'SearchCtrl'
 				})
-				// Articles must come after search or search will never be picked up.
+				.when('/theme-settings', {
+					templateUrl: 'views/theme-settings.html',
+					controller: 'ThemeSettingsCtrl'
+				})
+				// Articles must be last or the prior /search and /theme-settings will never be picked up
 				.when('/:slug', {
 					templateUrl: 'views/article.html',
 					controller : 'ArticleCtrl'
