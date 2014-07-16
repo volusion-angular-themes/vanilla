@@ -1,96 +1,54 @@
 .th-header {
-    padding-top: 10px;
-    margin-bottom: 20px;
-    
-    @include respond-to(md-and-up) {
-        border-bottom: 1px solid $gray-lighter;
-    }
+	padding-top   : 10px;
+	margin-bottom : 20px;
 
+	@include respond-to(md-and-up) {
+		border-bottom : 1px solid $gray-lighter;
+	}
 
-    &__cart {
-        @extend %inline-block;
-        @include respond-to(sm-and-up) {
-            padding-left: 25px;
-        }
-    }
+	&__cart {
+		@extend %inline-block;
+		@include respond-to(sm-and-up) {
+			padding-left : 25px;
+		}
+	}
 
-    &__logo {
+	&__dropdown-caret {
+		margin-left : 5px;
+		margin-top  : -3px;
+	}
 
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
+	&__logo {
+		padding-top    : 12px;
+		padding-bottom : 13px;
 
-        @include respond-to(sm-and-down) {
-            padding-top: 7px;
-            padding-bottom: 7px;
-        }
+		&--small {
+			max-height     : 47px;
+			margin         : 0 auto;
+			padding-top    : 0;
+			padding-bottom : 0;
+		}
+	}
 
+	&__sign-in {
+		@extend %inline-block;
+		font-size  : 1.6rem;
+		text-align : right;
+	}
 
-/*      Vanilla logo replaced with IMAGE file and text CSS is commented out
+	&__search {
+		padding : 10px 0;
 
-        @include font(
-            $size: 3.6rem,
-            $family: robotoslab-light
-        );
-        display: block;
-        text-align: center;
+		@include respond-to(md-and-up) {
+			padding : 20px 0;
+		}
+	}
 
-        @include respond-to(sm-and-up) {
-            text-align: left;
-        }
+	&__utility {
+		padding-top : 12px;
 
-        @include respond-to(md-and-up) {
-            @include inline-block;
-            font-size: 6rem;
-        } */
-    }
-
-    &__search {
-        padding: 10px 0;
-
-        @include respond-to(md-and-up) {
-            padding: 20px 0;
-        }
-    }
-
-    &__utility {
-        padding-top: 12px;
-
-        @include respond-to(md-and-up) {
-            padding-top: 30px;
-        }
-    }
+		@include respond-to(md-and-up) {
+			padding-top : 30px;
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* .th-header {
-    display : none;
-    border  : 1px solid map-get($colors, border);
-
-    a:hover {
-        @extend %animate-all-default;
-    }
-
-    &__shipping-text {
-        float : left;
-    }
-
-    &__account-menu {
-        float : right;
-    }
-}
-
-@include respond-to(md-and-up) {
-    .th-header {
-        display : block
-    }
-} */
