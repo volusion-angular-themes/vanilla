@@ -1,16 +1,17 @@
-
-
 <div class="container">
 	<header class="th-header">
 
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default"
+				 role="navigation"
+				 data-ng-hide="hideWrapper"
+				 data-ng-controller="HeaderCtrl">
 			
 			<div class="row">
 
 				<!-- Sandwich Button -->
 				<div class="col-xs-3 col-sm-1 hidden-md hidden-lg">
-					<button type="button" class="navbar-toggle pull-left" ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
-						<span class="sr-only">Toggle navigation</span>
+					<button type="button" class="navbar-toggle pull-left" data-ng-init="navCollapsed = true" data-toggle="collapse" data-target="#th-main-nav">
+						<span class="sr-only" data-translate="header.toggleNavigation">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -36,7 +37,8 @@
 				<div class="col-xs-3 col-sm-4">
 					<div class="th-header__utility pull-right">                            
 						<div class="hidden-xs th-sitelinks">
-							<a href="#" class="th-sitelinks__link">Log in</a> /
+							<!-- FYI 'Log In' says 'Sign In' due to data-translate -->
+							<a legacy-link="/login.asp" data-translate="header.signIn" class="th-sitelinks__link">Log in</a> /
 							<a href="#" class="th-sitelinks__link">Register</a>
 						</div>
 						
@@ -62,16 +64,29 @@
 					<div class="collapse navbar-collapse" id="th-main-nav">
 						<ul class="nav navbar-nav">
 							<li data-ng-repeat="category in smartNavCategories">
-								<a href="c/{{ category.slug }}">{{category.name}}</a>
-								<span>
-									<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
-										<span class="caret"></span>
-									</a>
-									<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
-										<li class="dropdown" data-ng-repeat="subCategory in category.subCategories">
-											<a class="dropdown-toggle" href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
-										</li>
-									</ul>
+							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
+							<span>
+								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</a>
+								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
+									<li data-ng-repeat="subCategory in category.subCategories">
+										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
+									</li>
+								</ul>
+							</span>
+						</li>
+						<li class="dropdown" data-ng-show="displaySmartNavMoreMenuItem">
+							<a href="#" class="navbar-link" data-translate="header.smartNavMoreLinkText">More</a>
+							<span>
+								<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+									<span class="caret"></span>
+								</a>
+								<ul show-on-dropdown-hover class="dropdown-menu">
+									<li data-ng-repeat="category in smartNavMoreCategories">
+										<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
+									</li>
+								</ul>
 								</span>
 							</li>
 						</ul>
@@ -80,15 +95,15 @@
 
 				<!-- Search -->
 				<div class="col-xs-12 col-md-4">
-					<div class="th-header__search">
-						<form class="th-search" role="search">
+					<div class="th-header__search" ng-controller="SearchCtrl">
+						<form class="th-search" role="search" name="frmSearch" data-ng-submit="doSearch()" novalidate>
 							<div class="input-group">
 								<span class="input-group-btn">
-									<button type="submit" class="btn btn-default th-search__submit">
+									<button type="button" data-ng-click="doSearch()" class="btn btn-default th-search__submit">
 										<span class="glyphicon glyphicon-search"></span>
 									</button>
 								</span>
-								<input type="text" class="form-control th-search__input" placeholder='Search...'>
+								<input type="text" data-ng-model='searchLocal' class="form-control th-search__input" placeholder='Search...'>
 							</div>
 						</form>
 					</div>

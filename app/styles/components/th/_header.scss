@@ -21,30 +21,11 @@
         padding-top: 12px;
         padding-bottom: 13px;
 
-        @include respond-to(xs-and-down) {
+        @include respond-to(xs) {
             margin: 0 auto;
             padding-top: 9px;
             padding-bottom: 10px;
         }
-
-
-/*      Vanilla logo replaced with IMAGE file and text CSS is commented out
-
-        @include font(
-            $size: 3.6rem,
-            $family: robotoslab-light
-        );
-        display: block;
-        text-align: center;
-
-        @include respond-to(sm-and-up) {
-            text-align: left;
-        }
-
-        @include respond-to(md-and-up) {
-            @include inline-block;
-            font-size: 6rem;
-        } */
     }
 
     &__search {
