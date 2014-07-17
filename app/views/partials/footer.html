@@ -1,11 +1,15 @@
 
 <div class="container">
-	<footer class="th-footer">
+	<footer class="th-footer"
+					data-ng-hide="hideWrapper"
+					data-ng-controller="FooterCtrl">
 		<div class="row">
 			<div class="col-sm-6 col-md-5">
 				<div class="th-footer__heading">Helpful Links</div>
 				<div class="row">
 					<div class="col-xs-6">
+						<!-- Angular in Method is pulling in items with the commented code below
+						<div data-ng-bind-html="themeSettings.general.footer.content.column1 | legacyLinkify | html"></div> -->
 						<ul class="th-linklist">
 							<li class="th-linklist__item"><a href="#">About us</a></li>
 							<li class="th-linklist__item"><a href="#">Contact</a></li>
@@ -34,12 +38,12 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="th-footer__heading">Sign up for our newsletter!</div>
-				<div class="th-footer__elist">
+			<div class="col-sm-6 col-md-4">				
+				<div class="th-footer__elist" ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
+					<div class="th-footer__heading">Sign up for our newsletter!</div>
 					<form class="th-elist" role="form" name="MailingList">
 						<div class="input-group">
-							<input type="text" class="form-control th-elist__input" placeholder="email@example.com">
+							<input type="email" class="form-control th-elist__input" placeholder="email@example.com">
 							<span class="input-group-btn">
 								<button class="btn btn-primary th-elist__submit" type="button">Subscribe</button>
 							</span>
@@ -49,9 +53,17 @@
 			</div>
 		</div>
 
+		<!-- Angular footer from Method
+		<div class="container">
+			<div class="th-footer__bottom">
+				<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
+			</div>
+		</div> -->
+
 		<div class="th-footer__copyright">
 			Made with &#10084; by <a href="#">Awesome Theme Developer</a>. Built with <a href="#" target="_blank">Volusion</a>.
 		</div>
+
 	</footer>
 </div>
 
