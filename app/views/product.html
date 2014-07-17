@@ -108,13 +108,15 @@
 				<div class="th-product-description">
 					<div data-ng-show="product.descriptions.detail">
 						<div class="th-product-description__title" data-translate="product.description">Description</div>
-							<p>
-								<span itemprop="description" data-ng-bind-html="product.descriptions.detail | legacyLinkify | html"></span>
-							</p>
+						<p>
+							<span itemprop="description" data-ng-bind-html="product.descriptions.detail | legacyLinkify | html"></span>
+						</p>
 					</div>
 					<div data-ng-show="product.descriptions.features">
 						<div class="th-product-description__title" data-translate="product.features">Features</div>
-						<span data-ng-bind-html="product.descriptions.features | legacyLinkify | html"></span>
+						<p>
+							<span data-ng-bind-html="product.descriptions.features | legacyLinkify | html"></span>
+						</p>
 					</div>
 
 					<!-- Social Icons -->
