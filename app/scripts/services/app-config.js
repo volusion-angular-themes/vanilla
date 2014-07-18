@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('Volusion.services')
-	.provider('AppConfig', function () {
+	.provider('AppConfig', ['ENV', 'vnDataEndpointProvider', function (ENV, vnDataEndpointProvider) {
+
+		vnDataEndpointProvider.setApiUrl(ENV.apiEndpoint);
 
 		// Private variables
-		var apiUrl = '',                    // URL will be set during config
+		var apiUrl = ENV.apiEndpoint,
 			isLocalEnv = true,              // Boolean - will be set during config
 			disableTranslations = false,
 			urlPrefix = '',
@@ -16,11 +18,6 @@ angular.module('Volusion.services')
 		function AppConfig() {
 			this.AppConfig = function () {
 				return this;
-			};
-
-			// STUB ... TODO: Move this method in site-config implementation
-			this.getCheckoutCartId = function () {
-				return 1;
 			};
 		}
 
@@ -85,4 +82,4 @@ angular.module('Volusion.services')
 		this.$get = function () {
 			return new AppConfig();
 		};
-	});
+	}]);
