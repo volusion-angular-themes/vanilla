@@ -23,7 +23,7 @@
 				<div class="col-md-8 hidden-xs hidden-sm">
 					<a data-ng-href="/">
 						<img src="../../images/theme/logo.png" class="th-header__logo img-responsive"/>
-						<!-- ANGULAR <img data-ng-src="{{config.data.general.logoUrl}}" class="img-responsive" /> -->
+						<!-- ANGULAR <img data-ng-src="{{config.data.general.logoUrl}}" class="th-header__logo img-responsive" /> -->
 					</a>
 				</div>
 
@@ -31,10 +31,11 @@
 				<div class="col-xs-6 col-sm-7 hidden-md hidden-lg">
 					<a data-ng-href="/">
 						<img src="../../images/theme/logo-mobile.png" class="th-header__logo img-responsive"/>
-						<!-- <img data-ng-src="{{config.general.logoUrl}}" class="img-responsive"/> -->
+						<!-- <img data-ng-src="{{config.data.general.logoUrl}}" class="th-header__logo img-responsive"/> -->
 					</a>
 				</div>
 
+				<!-- Log in / Register -->
 				<div class="col-xs-3 col-sm-4">
 					<div class="th-header__utility pull-right">
 						<div class="hidden-xs th-sitelinks">
@@ -49,7 +50,7 @@
 								<a data-legacy-link="{{viewCart()}}" class="th-cart-summary__link">
 									<div class="th-icon th-icon--cart th-cart-summary__icon">
 									</div>
-									&#8202; <!-- Hair Space -->
+									&#8202; <!-- Hair Space btwn Cart Icon and Number -->
 									<span class="th-cart-summary__number">
 										{{ getCartItemsCount() }}
 									</span>
