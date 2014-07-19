@@ -10,6 +10,21 @@
 
 		&--small {
 			margin-right: 10px;
-		}
+		}		
+
 	}
+
+  .th-footer & {
+
+	  @include respond-to(xs) {
+	  	text-align: center;
+	  }
+
+		&__icon {
+		  @include respond-to(xs) {
+				margin: 0 15px;
+			}
+	  }
+
+  }
 }
