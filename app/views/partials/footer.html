@@ -88,13 +88,13 @@
 				</div>
 			</div>
 			<div class="col-sm-6 col-md-4">
-				<div class="th-footer__elist" ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
+				<div class="th-footer__elist" data-ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
 					<div class="th-footer__heading">Sign up for our newsletter!</div>
-					<form class="th-elist" role="form" name="MailingList">
+					<form class="th-elist" role="form" name="MailingList" method="post" action="">
 						<div class="input-group">
-							<input type="email" class="form-control th-elist__input" placeholder="email@example.com">
+							<input type="email" name="emailaddress" class="form-control th-elist__input" value="" placeholder="email@example.com">
 							<span class="input-group-btn">
-								<button class="btn btn-primary th-elist__submit" type="button">Subscribe</button>
+								<button type="submit" class="btn btn-primary th-elist__submit">Subscribe</button>
 							</span>
 						</div>
 					</form>
@@ -102,7 +102,7 @@
 			</div>
 		</div>
 
-		<!-- Angular footer from Method
+		<!-- Angular bottom footer from Method
 		<div class="container">
 			<div class="th-footer__bottom">
 				<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
