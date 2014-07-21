@@ -189,10 +189,10 @@
  		<!--	<ul class="nav navbar-nav">
 				<div class="collapse navbar-collapse " id="th-main-menu" data-ng-class="!navCollapsed && 'in'" data-ng-click="navCollapsed=true">
 					<ul class="nav navbar-nav">
-						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="visibility: hidden;">
+						<li class="dropdown nav-top-level-menu-items" data-ng-repeat="category in smartNavCategories" style="">
 							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
 							<span>
-								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle">
 									<span class="caret"></span>
 								</a>
 								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
@@ -231,7 +231,7 @@
 						<div data-ng-show="showSearch" data-ng-include=" 'views/partials/form-search.html' "></div>
 					</div>
 					<div class="th-my-cart">
-						<a legacy-link="{{viewCart()}}" class="th-my-cart__link">
+						<a legacy-link="{{ viewCart() }}" class="th-my-cart__link">
 							<span class="th-my-cart__text" data-translate="header.myCart">My Bag</span>
 							<span class="th-my-cart__number">{{ getCartItemsCount() }}</span>
 						</a>
