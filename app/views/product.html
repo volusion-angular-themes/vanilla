@@ -6,13 +6,9 @@
 				<!-- PRODUCT IMAGE AND ALT VIEWS -->
 				<div class="th-product-view">
 					<div class="vn-slider vn-slider--product">
-						<carousel data-interval="carousel.interval">
-							<slide data-ng-repeat="image in currentImageCollection | filter: '!youtube.com'" data-active="image.active">
-								<div class="vn-slider__slide">
+							<div data-ng-repeat="image in product.images[product.optionSelection.images] | filter: '!youtube.com'" data-active="image.active">
 									<img itemprop="image" data-ng-src="{{image.large}}" class="img-responsive th-product-view__image" />
-								</div>
-							</slide>
-						</carousel>
+							</div>
 					</div>
 
 <!-- 					<div class="hidden-xs">
@@ -43,13 +39,14 @@
 		    	</div>
 
 		      <div class="th-product-details__price">
-		      	<span class="th-product-price__price" itemscope itemtype="http://schema.org/Offer" data-ng-show="product.price.regularPrice > 0"><span class="th-product-price__price--large" data-ng-class="{strike: product.price.salePrice > 0}"><span itemprop="price" data-ng-bind="product.price.regularPrice | currency"></span></span></span>
+		      	<span class="th-product-price__price--large" itemscope itemtype="http://schema.org/Offer" data-ng-show="product.price.regularPrice > 0"><span itemprop="price" data-ng-bind="product.price.regularPrice | currency"></span></span></span>
 		      </div>
 		    </div>
 
 		    <div class="th-product-options">
 
 		      <div class="th-product-options__btn-dropdown">
+
 		          <label class="th-label" id="size">Size</label>
 		          <div class="btn-group clearfix th-btn-dropdown">
 		              <button type="button" id="size" class="btn btn-default dropdown-toggle th-btn-dropdown__button" data-toggle="dropdown">
