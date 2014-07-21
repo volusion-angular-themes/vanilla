@@ -6,28 +6,21 @@
 
 				<!-- PRODUCT IMAGE AND ALT VIEWS -->
 				<div class="th-product-view">
-					<div class="vn-slider vn-slider--product">
-							<div data-ng-repeat="image in product.images[product.optionSelection.images] | filter: '!youtube.com'" data-active="image.active">
-									<img itemprop="image" data-ng-src="{{image.large}}" class="img-responsive th-product-view__image" />
-							</div>
-					</div>
 
-<!-- 					<div class="hidden-xs">
-						<div class="clearfix th-product-view vn-zoom">
-							<img easy-zoom
-									 ng-src="product.image.medium"
-									 ez-zoom-src="product.image.large"
-									 ez-adjacent="isInDesktopMode"
-									 ez-overlay="!isInDesktopMode"
-									 alt="{{product.name}}"> -->
+					<div class="clearfix th-product-view vn-zoom">
+						<img easy-zoom
+								 ng-src="product.image.medium"
+								 ez-zoom-src="product.image.large"
+								 ez-adjacent="isInDesktopMode"
+								 ez-overlay="!isInDesktopMode"
+								 alt="{{product.name}}">
 
-							<div class="th-product-view__alternates">
+							<div class="th-product-view__alternates center-block">
 								<span data-ng-click="product.image=image" ng-repeat="image in product.images[product.optionSelection.images] | filter: '!youtube.com'" class="col-xs-3 th-product-view__thumbnail">
 									<img data-ng-src="{{image.medium}}" class="img-responsive th-alt-views__image" alt="">
 								</span>
 							</div>
-<!-- 						</div>
-					</div> -->
+					</div>
 
 				</div><!-- .th-product-view -->
 			</div>
