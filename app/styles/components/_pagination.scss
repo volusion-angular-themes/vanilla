@@ -1,9 +1,0 @@
-//@import "bootstrap/pagination";
-
-.pagination {
-	margin: 80px 0 50px;
-
-	@include respond-to(md-and-up) {
-		float: right;
-	}
-}
