@@ -20,13 +20,12 @@
 
 		<!-- FEATURED PRODUCTS -->
 		<div class="visible-lg visible-md" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
-
-					<div class="th-product-card clearfix">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
-							</div>
-						</div>
+			<div class="th-product-card clearfix">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
 					</div>
+				</div>
+			</div>
 		</div>
 	</div><!-- /container th-home-content -->
 </div> <!-- /theme-showcase -->

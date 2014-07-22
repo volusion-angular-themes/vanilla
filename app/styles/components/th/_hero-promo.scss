@@ -57,7 +57,9 @@
 		padding: 8px 20px;
 
 		&:hover {
+			background-color: darken(#8fbbc3, 15%);
 			color: lighten($text-color, 100%);
+			text-decoration: none;
 		}
 
 		@include respond-to(sm-and-up) {

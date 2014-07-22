@@ -4,6 +4,9 @@
 		padding: 20px 0;
 		text-align: center;
 
+		// should be cleaned up later with proper class names
+		img:hover  { @extend %opacity-75; }
+
 	}
 	&__image {
 		@extend %inline-block;
