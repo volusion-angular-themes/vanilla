@@ -1,22 +1,24 @@
+@import 'compass';
+
 // Custom Theme Variables & Configuration
-@import 'style-guide/theme-vars';
+@import 'core/bootstrap-variables';
 
-// bower:scss
+// Bootstrap-Sass via Bower
+// Don't edit these files, instead edit 'Bootstrap-Variables' and 'Bootstrap-Styles'
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
-// endbower
-
 
 // Core variables and mixins
-@import 'compass';
-@import 'core/base/mixins';
-@import 'core/base/helpers';
+@import 'core/mixins';
+@import 'core/helpers';
 
 // Stylesheets from Components Folder
 @import 'components/components-import';
 
 // Theme - Method
-@import 'style-guide/fonts';
-@import 'style-guide/bootstrap-style';
+@import 'core/bootstrap-style';
+
+
+
 
 // misc stylesheet for faceted search that can be moved into components
 @import 'category';
