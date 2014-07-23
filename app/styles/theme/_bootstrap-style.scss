@@ -7,11 +7,11 @@
 // -----------------------------------------------------
 
 
-// Global Styles =====================================================================
 
-body {
+// Containers =================================================================
 
-}
+
+
 
 // Navbar =====================================================================
 
@@ -26,84 +26,143 @@ body {
 	.navbar-nav {
 		font-size: 2.0rem;
 
-        > .active {
-            > a,
-            > a:hover,
-            > a.focus {
-                text-decoration: underline;
-            }
-        }
-
-        > li {
-
-            > a {
-                display: inline-block;
-            }
-
-            > a:hover,
-            > a:focus {
-                text-decoration: underline;
-            }
-        }
-
-        .caret {
-            margin: 0 0.5rem;
-        }
+    > .active {
+      > a,
+      > a:hover,
+      > a.focus {
+        text-decoration: underline;
+      }
     }
 
-    @include respond-to(md-and-up) {
-        .navbar-collapse.collapse {
-            padding: 20px 0;
-        }
+    > li {
 
-        .navbar-nav {
-            > li > a {
-                margin-left: 1.6rem;
-                margin-right: 0.2rem;
-                padding-left: 0;
-                padding-right: 0;
-            }
+      > a {
+        display: inline-block;
+      }
 
-            > li:first-child {
-                > a {
-                    margin-left: 0;
-                }
-            }
-        }
+      > a:hover,
+      > a:focus {
+        text-decoration: underline;
+      }
     }
-}
 
-.navbar-inverse {
-    margin-bottom: 0;
-    
-    .navbar-toggle{
-        margin-right: 0;
-        margin-top: 8px;
+    .caret {
+      margin: 0 0.5rem;
+    }
+  }
+
+  @include respond-to(md-and-up) {
+    .navbar-collapse.collapse {
+      padding: 20px 0;
     }
 
     .navbar-nav {
-        font-size: 2.0rem;
-    }
+      > li > a {
+        margin-left: 1.6rem;
+        margin-right: 0.2rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-    @include respond-to(md-and-up) {
-        .navbar-collapse.collapse {
-            padding: 0;
+      > li:first-child {
+        > a {
+          margin-left: 0;
         }
+      }
     }
+  }
+}
+
+.navbar-inverse {
+  margin-bottom: 0;
+
+  .navbar-toggle{
+    margin-right: 0;
+    margin-top: 8px;
+  }
+
+  .navbar-nav {
+    font-size: 2.0rem;
+  }
+
+  @include respond-to(md-and-up) {
+    .navbar-collapse.collapse {
+      padding: 0;
+    }
+  }
 }
 
 
 // Buttons ====================================================================
 
-/*
-    We have customized our buttons within the Theme Components but feel free to add
-        global styles for buttons here
 
-    Learn more about Bootstrap's button classes @ http://getbootstrap.com/css/#buttons
-*/
+.btn-success {
+  @extend %font-smoothing;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  padding: 8px 20px;
+
+  @include respond-to(sm-and-up) {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    padding: 10px 33px;
+  }
+
+  @include respond-to(md-and-up) {
+    padding: 18px 55px;
+    font-size: 2.0rem;
+  }
+}
+
+.btn-primary {
+  @extend %font-smoothing;
+  font-weight: normal;
+  padding: 10px 15px;
+  z-index: 2;  
+}
+
+.th-add-to-cart {
+  button {
+    @extend %font-smoothing;
+    background-color: $gray-dark;
+    color: lighten($text-color, 100%);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 20px;  
+  }
+}
+
+.th-product-options {
+
+  .btn-group {
+    display: block;
+  }
+}
 
 
+// Dropdowns =================================================================
 
+.th-product-options {
+
+  .dropdown-toggle {
+    padding-right: 26px;
+    text-align: left;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .caret {
+    color: $dropdown-caret-color;
+    margin: auto 0;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+  }
+
+}
+
+  
 // Typography =================================================================
 
 @include app-font(lato-light);
@@ -119,7 +178,7 @@ body {
 @include app-font(robotoslab-reg);
 
 
-// Glyphicons =====================================================================
+// Glyphicons =================================================================
 
 .glyphicon {
 	top: 2px;
@@ -136,12 +195,18 @@ body {
 	@extend %remove-shadow;
 }
 
+.th-product-options {
+  .form-group {
+    width: 130px;    
+  }
+}
+
 
 // Navs =======================================================================
 
 
 
-// Pagination =======================================================================
+// Pagination =================================================================
 
 .pagination {
 	margin: 80px 0 50px;
@@ -149,21 +214,25 @@ body {
 	@include respond-to(md-and-up) {
 		float: right;
 	}
+
+  .active {
+    @extend %font-smoothing;
+  }
 }
 
 
-// Indicators =================================================================
+// Thumbnails =================================================================
 
+.thumbnail {
+  border: none;
+
+  &:hover {
+    @extend %opacity-80;
+  }
+}
 
 
 // Progress bars ==============================================================
 
 
 
-// Containers =================================================================
-
-.container {
-	&__text-center {
-		text-align: center;
-	}
-}
