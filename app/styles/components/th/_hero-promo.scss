@@ -1,12 +1,13 @@
 .th-hero-promo {
+
 	@extend %font-smoothing;
 	@include background(
-		$image: url('../images/theme/home/hero-graphic-bg.jpg'),
-		$repeat: no-repeat,
-		$position: center top
+	$image: url('../images/theme/home/hero-graphic-bg.jpg'),
+	$repeat: no-repeat,
+	$position: center top
 	);
+
 	@include background-size(cover);
-	text-align: center;
 	color: lighten($text-color, 100%);
 	font-family: $font-family-serif;
 	margin: -20px -15px 20px;
@@ -37,7 +38,8 @@
 		&--large {
 			font-size: 5.0rem;
 			line-height: 1;
-			font-family: robotoslab-light;
+			font-family: $font-family-serif;
+			font-weight: 300;
 
 			@include respond-to(sm-and-up) {
 				font-size: 10.0rem;
@@ -46,30 +48,6 @@
 			@include respond-to(md-and-up) {
 				font-size: 15.0rem;
 			}
-		}
-	}
-
-	&__button {
-		@extend %inline-block;
-		color: lighten($text-color, 100%);
-		background-color: #8fbbc3;
-		font-size: 1.1rem;
-		margin-top: 15px;
-		padding: 8px 20px;
-
-		&:hover {
-			color: lighten($text-color, 100%);
-		}
-
-		@include respond-to(sm-and-up) {
-			margin-top: 30px;
-			font-size: 1.4rem;
-			padding: 10px 33px;
-		}
-		
-		@include respond-to(md-and-up) {
-			padding: 18px 55px;
-			font-size: 2.0rem;
 		}
 	}
 }
