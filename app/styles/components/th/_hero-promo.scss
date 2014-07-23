@@ -1,4 +1,5 @@
 .th-hero-promo {
+	@extend %font-smoothing;
 	@include background(
 		$image: url('../images/theme/home/hero-graphic-bg.jpg'),
 		$repeat: no-repeat,

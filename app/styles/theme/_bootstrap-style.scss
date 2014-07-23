@@ -1,0 +1,169 @@
+// -----------------------------------------------------
+//
+// Vanilla - CSS Refactor
+//
+// Volusion
+//
+// -----------------------------------------------------
+
+
+// Global Styles =====================================================================
+
+body {
+
+}
+
+// Navbar =====================================================================
+
+.navbar-default {
+	margin-bottom: 0;
+	
+	.navbar-toggle{
+		margin-right: 0;
+		margin-top: 8px;
+	}
+
+	.navbar-nav {
+		font-size: 2.0rem;
+
+        > .active {
+            > a,
+            > a:hover,
+            > a.focus {
+                text-decoration: underline;
+            }
+        }
+
+        > li {
+
+            > a {
+                display: inline-block;
+            }
+
+            > a:hover,
+            > a:focus {
+                text-decoration: underline;
+            }
+        }
+
+        .caret {
+            margin: 0 0.5rem;
+        }
+    }
+
+    @include respond-to(md-and-up) {
+        .navbar-collapse.collapse {
+            padding: 20px 0;
+        }
+
+        .navbar-nav {
+            > li > a {
+                margin-left: 1.6rem;
+                margin-right: 0.2rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            > li:first-child {
+                > a {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.navbar-inverse {
+    margin-bottom: 0;
+    
+    .navbar-toggle{
+        margin-right: 0;
+        margin-top: 8px;
+    }
+
+    .navbar-nav {
+        font-size: 2.0rem;
+    }
+
+    @include respond-to(md-and-up) {
+        .navbar-collapse.collapse {
+            padding: 0;
+        }
+    }
+}
+
+
+// Buttons ====================================================================
+
+/*
+    We have customized our buttons within the Theme Components but feel free to add
+        global styles for buttons here
+
+    Learn more about Bootstrap's button classes @ http://getbootstrap.com/css/#buttons
+*/
+
+
+
+// Typography =================================================================
+
+@include app-font(lato-light);
+@include app-font(lato-light-italic);
+
+@include app-font(lato-reg);
+@include app-font(lato-reg-italic);
+
+@include app-font(lato-bold);
+@include app-font(lato-bold-italic);
+
+@include app-font(robotoslab-light);
+@include app-font(robotoslab-reg);
+
+
+// Glyphicons =====================================================================
+
+.glyphicon {
+	top: 2px;
+}
+
+
+// Tables =====================================================================
+
+
+
+// Forms ======================================================================
+
+.form-control {
+	@extend %remove-shadow;
+}
+
+
+// Navs =======================================================================
+
+
+
+// Pagination =======================================================================
+
+.pagination {
+	margin: 80px 0 50px;
+
+	@include respond-to(md-and-up) {
+		float: right;
+	}
+}
+
+
+// Indicators =================================================================
+
+
+
+// Progress bars ==============================================================
+
+
+
+// Containers =================================================================
+
+.container {
+	&__text-center {
+		text-align: center;
+	}
+}
