@@ -6,24 +6,19 @@
 //
 // -----------------------------------------------------
 
-label {
-	display: inline-block;
-	max-width: 100%;
-	font-weight: bold;
-	margin: 0 5px 5px;
+
+// Global Styles =====================================================================
+
+body {
+
 }
-
-// Containers =================================================================
-
-
-
 
 // Navbar =====================================================================
 
 .navbar-default {
 	margin-bottom: 0;
-
-	.navbar-toggle {
+	
+	.navbar-toggle{
 		margin-right: 0;
 		margin-top: 8px;
 	}
@@ -31,104 +26,100 @@ label {
 	.navbar-nav {
 		font-size: 2.0rem;
 
-		> .active {
-			> a,
-			> a:hover,
-			> a.focus {
-				text-decoration: underline;
-			}
-		}
+        > .active {
+            > a,
+            > a:hover,
+            > a.focus {
+                text-decoration: underline;
+            }
+        }
 
-		> li {
+        > li {
 
-			> a {
-				display: inline-block;
+            > a {
+                display: inline-block;
+            }
 
-				&:hover,
-				&:focus {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
+            > a:hover,
+            > a:focus {
+                text-decoration: underline;
+            }
+        }
 
-	@include respond-to(md-and-up) {
-		.navbar-collapse.collapse {
-			padding: 20px 0;
-		}
-		.navbar-nav {
-			> li > a {
-				margin-left: 1.6rem;
-				margin-right: 0.2rem;
-				padding-left: 0;
-				padding-right: 0;
-			}
+        .caret {
+            margin: 0 0.5rem;
+        }
+    }
 
-			> li:first-child {
-				> a {
-					margin-left: 0;
-				}
-			}
-		}
-	}
+    @include respond-to(md-and-up) {
+        .navbar-collapse.collapse {
+            padding: 20px 0;
+        }
+
+        .navbar-nav {
+            > li > a {
+                margin-left: 1.6rem;
+                margin-right: 0.2rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            > li:first-child {
+                > a {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }
 
 .navbar-inverse {
-	margin-bottom: 0;
+    margin-bottom: 0;
+    
+    .navbar-toggle{
+        margin-right: 0;
+        margin-top: 8px;
+    }
 
-	.navbar-toggle {
-		margin-right: 0;
-		margin-top: 8px;
-	}
-	.navbar-nav {
-		font-size: 2.0rem;
-	}
+    .navbar-nav {
+        font-size: 2.0rem;
+    }
 
-	@include respond-to(md-and-up) {
-		.navbar-collapse.collapse {
-			padding: 0;
-		}
-	}
+    @include respond-to(md-and-up) {
+        .navbar-collapse.collapse {
+            padding: 0;
+        }
+    }
 }
 
 
 // Buttons ====================================================================
 
+/*
+    We have customized our buttons within the Theme Components but feel free to add
+        global styles for buttons here
 
-.btn-lg {
-	@extend %font-smoothing;
-	border: none;
-	font-size: 1.1rem;
-	margin-top: 15px;
-	padding: 8px 20px;
+    Learn more about Bootstrap's button classes @ http://getbootstrap.com/css/#buttons
+*/
 
-	@include respond-to(sm-and-up) {
-		margin-top: 30px;
-		font-size: 1.4rem;
-		padding: 10px 33px;
-	}
-	@include respond-to(md-and-up) {
-		padding: 18px 55px;
-		font-size: 2.0rem;
-	}
-}
-
-.btn-group {
-	display: block;
-}
-
-
-// Dropdowns =================================================================
-.dropdown-menu > li > a {
-	cursor : pointer;
-}
 
 
 // Typography =================================================================
 
+@include app-font(lato-light);
+@include app-font(lato-light-italic);
+
+@include app-font(lato-reg);
+@include app-font(lato-reg-italic);
+
+@include app-font(lato-bold);
+@include app-font(lato-bold-italic);
+
+@include app-font(robotoslab-light);
+@include app-font(robotoslab-reg);
 
 
-// Glyphicons =================================================================
+// Glyphicons =====================================================================
 
 .glyphicon {
 	top: 2px;
@@ -145,45 +136,34 @@ label {
 	@extend %remove-shadow;
 }
 
-.th-product-options {
-	.form-group {
-		width: 130px;
-	}
-}
-
 
 // Navs =======================================================================
 
 
 
-// Pagination =================================================================
+// Pagination =======================================================================
 
 .pagination {
-	margin: 20px 0 10px;
+	margin: 80px 0 50px;
 
-	@include respond-to(sm-and-up) {
+	@include respond-to(md-and-up) {
 		float: right;
-		margin-top: 50px;
-	}
-
-	.active {
-		@extend %font-smoothing;
 	}
 }
 
 
-// Image Classes ===============================================================
+// Indicators =================================================================
 
-.img-thumbnail {
-
-	&:hover {
-		@extend %opacity-75;
-		cursor: -webkit-zoom-in;
-		cursor: zoom-in;
-	}
-}
 
 
 // Progress bars ==============================================================
 
 
+
+// Containers =================================================================
+
+.container {
+	&__text-center {
+		text-align: center;
+	}
+}
