@@ -14,39 +14,21 @@ If you create a new component stylesheet make sure it gets added to this list
 
 // Theme Components
 
+@import 'components/th/alt-views';
 @import 'components/th/cart-summary';
 @import 'components/th/elist';
 @import 'components/th/footer';
 @import 'components/th/header';
-// @import 'components/th/home-content';
-// @import 'components/th/mobile-menu';
-// @import 'components/th/mobile-sitemap';
-// @import 'components/th/product';
-@import 'components/th/product-description';
-@import 'components/th/product-details';
-@import 'components/th/product-title';
-@import 'components/th/product-view';
-@import 'components/th/quantity-counter';
-// @import 'components/th/quickview';
-// @import 'components/th/reviews';
-// @import 'components/th/review-stars';
-@import 'components/th/search';
-// @import 'components/th/search-popout';
-// @import 'components/th/search-refinement';
-// @import 'components/th/social-icons';
-// @import 'components/th/sort-by';
-@import 'components/th/sprites-icons';
-// @import 'components/th/sprites-social';
-// @import 'components/th/sprites-stars';
-
-// Stylesheets added from Vanilla
-@import 'components/th/alt-views';
-@import 'components/th/btn-dropdown';
 @import 'components/th/hero-promo';
 @import 'components/th/icon-group';
 @import 'components/th/input-labels';
 @import 'components/th/link-list';
 @import 'components/th/product-card';
-@import 'components/th/product-options';
+@import 'components/th/product-description';
+@import 'components/th/product-details';
 @import 'components/th/product-prices';
+@import 'components/th/product-title';
+@import 'components/th/product-view';
+@import 'components/th/search';
 @import 'components/th/sitelinks';
+@import 'components/th/sprites-icons';
