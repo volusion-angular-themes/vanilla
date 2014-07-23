@@ -10,7 +10,7 @@
 // Global Styles =====================================================================
 
 body {
-	@extend %font-smoothing;
+
 }
 
 // Navbar =====================================================================
@@ -95,7 +95,12 @@ body {
 
 // Buttons ====================================================================
 
-/* Learn more about Bootstrap's button classes @ http://getbootstrap.com/css/#buttons */
+/*
+    We have customized our buttons within the Theme Components but feel free to add
+        global styles for buttons here
+
+    Learn more about Bootstrap's button classes @ http://getbootstrap.com/css/#buttons
+*/
 
 
 

@@ -1,21 +1,21 @@
 .vn-slider {
 
-	.carousel-indicators {
-		.active {
-			width            : 13px;
-			height           : 13px;
-			border           : 0;
-			background-color : map-get($colors, component-active-bg);
-		}
+	// .carousel-indicators {
+	// 	.active {
+	// 		width            : 13px;
+	// 		height           : 13px;
+	// 		border           : 0;
+	// 		background-color : map-get($colors, component-active-bg);
+	// 	}
 
-		li {
-			width            : 13px;
-			margin           : 0 3px;
-			height           : 13px;
-			background-color : map-get($colors, body-bg);
-			border           : 0;
-		}
-	}
+	// 	li {
+	// 		width            : 13px;
+	// 		margin           : 0 3px;
+	// 		height           : 13px;
+	// 		background-color : map-get($colors, body-bg);
+	// 		border           : 0;
+	// 	}
+	// }
 
 	.carousel-control {
 		.glyphicon-chevron-left, .glyphicon-chevron-right {
