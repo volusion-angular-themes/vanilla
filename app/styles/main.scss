@@ -1,21 +1,23 @@
 @import 'compass';
 
 // Custom Theme Variables & Configuration
-@import 'core/bootstrap-variables';
+@import 'theme/bootstrap-variables';
 
 // Bootstrap-Sass via Bower
-// Don't edit these files, instead edit 'Bootstrap-Variables' and 'Bootstrap-Styles'
+// Don't edit these files, instead edit 'Bootstrap-Variables' and 'Bootstrap-Style'
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 
-// Core variables and mixins
-@import 'core/mixins';
-@import 'core/helpers';
+// Helpful Volusion Mixins and Silent Classes
+@import 'theme/mixins';
+@import 'theme/helpers';
 
-// Stylesheets from Components Folder
+// Theme - Bootstrap styled for Vanilla Theme
+@import 'theme/bootstrap-style';
+
+// All Stylesheets from Components Folder
 @import 'components/components-import';
 
-// Theme - Method
-@import 'core/bootstrap-style';
+
 
 
 

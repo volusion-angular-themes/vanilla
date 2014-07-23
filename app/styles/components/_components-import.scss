@@ -1,3 +1,10 @@
+/* 
+This file gathers all the component stylesheets and is then imported via main.scss
+
+If you create a new component stylesheet make sure it gets added to this list
+ */
+
+
 // Volusion Components
 @import 'components/vn/dropzone';
 @import 'components/vn/labeled-radio';
