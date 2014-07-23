@@ -48,30 +48,4 @@
 			}
 		}
 	}
-
-	&__button {
-		@extend %inline-block;
-		color: lighten($text-color, 100%);
-		background-color: #8fbbc3;
-		font-size: 1.1rem;
-		margin-top: 15px;
-		padding: 8px 20px;
-
-		&:hover {
-			background-color: darken(#8fbbc3, 15%);
-			color: lighten($text-color, 100%);
-			text-decoration: none;
-		}
-
-		@include respond-to(sm-and-up) {
-			margin-top: 30px;
-			font-size: 1.4rem;
-			padding: 10px 33px;
-		}
-		
-		@include respond-to(md-and-up) {
-			padding: 18px 55px;
-			font-size: 2.0rem;
-		}
-	}
 }

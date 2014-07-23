@@ -15,7 +15,7 @@
     }
 
     // Padding here represents Navbar > Row height minus Logo height
-    // There is probably a bette way to do this 
+    // There is probably a better way to do this with a mixin function for vertical alignment
 
     &__logo {
         padding-top: 12px;
@@ -44,37 +44,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* .th-header {
-    display : none;
-    border  : 1px solid map-get($colors, border);
-
-    a:hover {
-        @extend %animate-all-default;
-    }
-
-    &__shipping-text {
-        float : left;
-    }
-
-    &__account-menu {
-        float : right;
-    }
-}
-
-@include respond-to(md-and-up) {
-    .th-header {
-        display : block
-    }
-} */
