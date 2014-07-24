@@ -98,6 +98,7 @@
 
 .btn-success {
   @extend %font-smoothing;
+  border: none;
   font-size: 1.1rem;
   margin-top: 15px;
   padding: 8px 20px;
@@ -165,17 +166,17 @@
   
 // Typography =================================================================
 
-@include app-font(lato-light);
-@include app-font(lato-light-italic);
+// @include app-font(lato-light);
+// @include app-font(lato-light-italic);
 
-@include app-font(lato-reg);
-@include app-font(lato-reg-italic);
+// @include app-font(lato-reg);
+// @include app-font(lato-reg-italic);
 
-@include app-font(lato-bold);
-@include app-font(lato-bold-italic);
+// @include app-font(lato-bold);
+// @include app-font(lato-bold-italic);
 
-@include app-font(robotoslab-light);
-@include app-font(robotoslab-reg);
+// @include app-font(robotoslab-light);
+// @include app-font(robotoslab-reg);
 
 
 // Glyphicons =================================================================
@@ -221,13 +222,14 @@
 }
 
 
-// Thumbnails =================================================================
+// Image Classes ===============================================================
 
-.thumbnail {
+.img-thumbnail {
   border: none;
 
   &:hover {
-    @extend %opacity-80;
+    @extend %opacity-75;
+    cursor: pointer;
   }
 }
 
