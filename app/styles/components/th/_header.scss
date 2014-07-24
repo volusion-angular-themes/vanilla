@@ -14,7 +14,7 @@
         }
     }
 
-    // Padding here represents Navbar > Row height minus Logo height
+    // Padding here represents the height of the navbar's top row minus the Logo height
     // There is probably a better way to do this with a mixin function for vertical alignment
 
     &__logo {
