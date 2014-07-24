@@ -1,10 +1,12 @@
 .th-hero-promo {
+	
 	@extend %font-smoothing;
 	@include background(
 		$image: url('../images/theme/home/hero-graphic-bg.jpg'),
 		$repeat: no-repeat,
 		$position: center top
 	);
+
 	@include background-size(cover);
 	text-align: center;
 	color: lighten($text-color, 100%);
@@ -37,7 +39,8 @@
 		&--large {
 			font-size: 5.0rem;
 			line-height: 1;
-			font-family: robotoslab-light;
+			font-family: $font-family-serif;
+			font-weight: 300;
 
 			@include respond-to(sm-and-up) {
 				font-size: 10.0rem;
