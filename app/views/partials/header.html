@@ -1,6 +1,5 @@
 <div class="container">
 	<header class="th-header">
-
 		<nav class="navbar navbar-default"
 				 role="navigation"
 				 data-ng-hide="hideWrapper"
@@ -22,15 +21,15 @@
 				<!-- Desktop Logo -->
 				<div class="col-md-8 hidden-xs hidden-sm">
 					<a data-ng-href="/">
-						<img src="../../images/theme/logo.png" class="th-header__logo img-responsive"/>
-						<!-- ANGULAR <img data-ng-src="{{config.data.general.logoUrl}}" class="th-header__logo img-responsive" /> -->
+						<img src="../../images/theme/logo.png" class="th-header__logo"/>
+						<!-- Method logo from API <img data-ng-src="{{config.data.general.logoUrl}}" class="th-header__logo img-responsive" /> -->
 					</a>
 				</div>
 
 				<!-- Mobile Logo -->
 				<div class="col-xs-6 col-sm-7 hidden-md hidden-lg">
 					<a data-ng-href="/">
-						<img src="../../images/theme/logo-mobile.png" class="th-header__logo img-responsive"/>
+						<img src="../../images/theme/logo-mobile.png" class="th-header__logo"/>
 						<!-- <img data-ng-src="{{config.data.general.logoUrl}}" class="th-header__logo img-responsive"/> -->
 					</a>
 				</div>
@@ -59,17 +58,19 @@
 						</div>
 					</div> <!-- /th-header__utility -->
 				</div>
+
 			</div> <!-- /Row -->
 
 			<!-- Categories -->
 			<div class="row">
+
 				<div class="col-md-8">
 					<div class="collapse navbar-collapse" id="th-main-nav">
 						<ul class="nav navbar-nav">
 							<li data-ng-repeat="category in smartNavCategories">
 							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
 							<span>
-								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
 								</a>
 								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
@@ -82,7 +83,7 @@
 						<li class="dropdown" data-ng-show="displaySmartNavMoreMenuItem">
 							<a href="#" class="navbar-link" data-translate="header.smartNavMoreLinkText">More</a>
 							<span>
-								<a href="#" class="dropdown-toggle th-dropdown-toggle" data-toggle="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
 								</a>
 								<ul show-on-dropdown-hover class="dropdown-menu">
