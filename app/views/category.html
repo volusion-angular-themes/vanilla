@@ -1,31 +1,32 @@
 <div class="container">
-    <div class="th-product-card">
-        <div class="row">
-            <div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
-            		<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
-								<span class="th-product__new" data-ng-show="product.isNew"></span>
-                <a href="p/{{product.slug}}" class="th-product-card__image-link">
-                    <img data-ng-src="{{product.images.default[0].medium}}" alt="" class="img-responsive th-product-card__image">
-                </a>
-                <div class="th-product-card__title">
-                    <a href="p/{{ product.slug }}" class="th-product-title th-product-title th-product-title--medium">{{ product.name }}</a>
-                </div>
-                <div class="th-product-card__price" data-ng-show="product.price.regularPrice > 0">
-                    <div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
-                </div>
-            </div>
+  <div class="th-product-card">
+    <div class="row">
+      <div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
+        <span class="th-product__sale" data-ng-show="product.isOnSale"></span>
+        <span class="th-product__new" data-ng-show="product.isNew"></span>
+        <a href="{{ product.url }}" class="th-product-card__image-link">
+          <img data-ng-src="{{product.images.default[0].medium}}" alt="" class="img-responsive th-product-card__image">
+        </a>
+        <div class="th-product-card__title">
+          <a href="p/{{ product.slug }}" class="th-product-title--medium">{{ product.name }}</a>
         </div>
+        <div class="th-product-card__price" data-ng-show="product.price.regularPrice > 0">
+          <div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
+        </div>
+      </div>
     </div>
-
-    <div class="container text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
         <ul class="pagination">
-            <li><a ng-click="prevPage()">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <!-- This Angular needs to be cleaned up -->
-            <li><a ng-click="nextPage()">&raquo;</a></li>
+          <li><a ng-click="prevPage()">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <!-- This Angular needs to be cleaned up -->
+          <li><a ng-click="nextPage()">&raquo;</a></li>
         </ul>
+      </div>
     </div>
+  </div><!-- /th-product-card -->
 </div>

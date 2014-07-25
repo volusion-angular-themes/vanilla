@@ -1,4 +1,4 @@
-//@import "bootstrap/mixins";
+
 
 @mixin respond-to($viewport-size) {
 	@if $viewport-size == xs {

@@ -95,42 +95,43 @@
 
 // Buttons ====================================================================
 
-
-.btn-success {
-  @extend %font-smoothing;
-  border: none;
-  font-size: 1.1rem;
-  margin-top: 15px;
-  padding: 8px 20px;
-
-  @include respond-to(sm-and-up) {
-    margin-top: 30px;
-    font-size: 1.4rem;
-    padding: 10px 33px;
-  }
-
-  @include respond-to(md-and-up) {
-    padding: 18px 55px;
-    font-size: 2.0rem;
-  }
-}
-
-.btn-primary {
-  @extend %font-smoothing;
-  font-weight: normal;
-  padding: 10px 15px;
-  z-index: 2;  
-}
-
-.th-add-to-cart {
-  button {
+.th-hero-promo {
+  .btn-success {
     @extend %font-smoothing;
-    background-color: $gray-dark;
-    color: lighten($text-color, 100%);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-top: 20px;  
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 8px 20px;
+
+    @include respond-to(sm-and-up) {
+      margin-top: 30px;
+      font-size: 1.4rem;
+      padding: 10px 33px;
+    }
+
+    @include respond-to(md-and-up) {
+      padding: 18px 55px;
+      font-size: 2.0rem;
+    }
   }
+}
+
+.input-group-btn {
+  .btn-primary {
+    @extend %font-smoothing;
+    font-weight: normal;
+    padding: 10px 15px;
+    z-index: 2;  
+  }
+}
+
+button.th-add-to-cart {
+  @extend %font-smoothing;
+  background-color: $gray-dark;
+  color: lighten($text-color, 100%);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 5px;
 }
 
 .th-product-options {
@@ -166,17 +167,6 @@
   
 // Typography =================================================================
 
-// @include app-font(lato-light);
-// @include app-font(lato-light-italic);
-
-// @include app-font(lato-reg);
-// @include app-font(lato-reg-italic);
-
-// @include app-font(lato-bold);
-// @include app-font(lato-bold-italic);
-
-// @include app-font(robotoslab-light);
-// @include app-font(robotoslab-reg);
 
 
 // Glyphicons =================================================================
