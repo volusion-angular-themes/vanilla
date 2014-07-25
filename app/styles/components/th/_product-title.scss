@@ -1,13 +1,14 @@
-.th-product-title {
-    @extend %inline-block;
-    margin-bottom: 0.2em;
-    
-    &--medium {
-    	font-size: 1.8rem;
-    }
+.th-product-title {  
+	&--medium {
+		@extend %inline-block;
+		font-size: 1.8rem;
+		margin-bottom: 0.2em;
+	}
 
-    &--large {
-      font-size: 4.0rem;
-  		font-weight: 300;        
-    }
+	&--large {
+		@extend %inline-block;
+	  font-size: 4.0rem;
+		font-weight: 300;
+		margin-bottom: 0.2em;
+	}
 }

@@ -1,28 +1,9 @@
-<div class="container">
-	<div class="th-hero-promo">
-		<div class="text-center th-hero-promo__content" ng-controller="SearchCtrl">
-			<div class="th-hero-promo__title">
-				Simple &amp; Refreshing
-			</div>
-			<div class="th-hero-promo__title th-hero-promo__title--large">
-				Vanilla
-			</div>
-			<a data-ng-click="doSearch()" class="btn btn-success btn-lg">Shop now</a>
-		</div>
+<div class="th-product-tile__block">
+	<a data-ng-href="{{product.url}}" class="th-product-tile__image-link">
+		<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive th-product-tile__image" alt="{{product.name}}">
+	</a>
+	<a data-ng-href="{{product.url}}" class="th-product-name--medium">{{product.name}}</a>
+	<div class="th-product-price">
+		<span class="th-product-price--medium">{{product.pricing.regularPrice | currency}}</span>
 	</div>
 </div>
-
-<div class="container">
-	<!-- CONTENT 1 -->
-	<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
-	<!-- FEATURED PRODUCTS -->
-	<div data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
-		<div class="clearfix">
-			<div class="row th-product-tile__heading">
-				<h1 class="text-center">Featured Products</h1>
-				<div class="col-sm-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
-				</div>
-			</div>
-		</div>
-	</div>
-</div><!-- /container -->
