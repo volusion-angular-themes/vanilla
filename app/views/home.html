@@ -1,31 +1,27 @@
-<div class="theme-showcase" role="main" data-ui-view="" data-autoscroll="false">
-	<div class="container">
-	    <div class="th-hero-promo">
-	        <div class="th-hero-promo__content">
-	            <div class="th-hero-promo__title">
-	                Simple &amp; Refreshing
-	            </div>
-	            <div class="th-hero-promo__title th-hero-promo__title--large">
-	                Vanilla
-	            </div>
-	            <a href="#" class="btn btn-success">Shop now</a>
-	        </div>
-	    </div>
-	</div>    
+<div class="container">
+    <div class="th-hero-promo">
+        <div class="text-center th-hero-promo__content">
+            <div class="th-hero-promo__title">
+                Simple &amp; Refreshing
+            </div>
+            <div class="th-hero-promo__title th-hero-promo__title--large">
+                Vanilla
+            </div>
+            <a href="/style-guide" class="btn btn-success">Shop now</a>
+        </div>
+    </div>
+</div>    
 
-	<div class="container th-home-content">
-
-		<!-- CONTENT 1 -->
-		<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
-
-		<!-- FEATURED PRODUCTS -->
-		<div class="visible-lg visible-md" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
-			<div class="th-product-card clearfix">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
-					</div>
+<div class="container th-home-content">
+	<!-- CONTENT 1 -->
+	<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
+	<!-- FEATURED PRODUCTS -->
+	<div class="visible-lg visible-md" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
+		<div class="th-product-card clearfix">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
 				</div>
 			</div>
 		</div>
-	</div><!-- /container th-home-content -->
-</div> <!-- /theme-showcase -->
+	</div>
+</div><!-- /container th-home-content -->

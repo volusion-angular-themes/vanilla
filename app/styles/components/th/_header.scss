@@ -6,16 +6,12 @@
         border-bottom: 1px solid $gray-lighter;
     }
 
-
     &__cart {
         @extend %inline-block;
         @include respond-to(sm-and-up) {
             padding-left: 25px;
         }
     }
-
-    // Padding here represents the height of the navbar's top row minus the Logo height
-    // There is probably a better way to do this with a mixin function for vertical alignment
 
     &__logo {
         padding-top: 12px;

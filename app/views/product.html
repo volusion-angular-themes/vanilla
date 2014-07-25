@@ -2,11 +2,9 @@
 	<div class="clearfix">
 		<div class="row">
 
+			<!-- PRODUCT IMAGE AND ALT VIEWS -->
 			<div class="col-xs-12 col-md-6 text-center th-product-view">
-				<!-- PRODUCT IMAGE AND ALT VIEWS -->
-				
-
-					<div class="clearfix col-xs-12 th-product-view vn-zoom">
+					<div class="clearfix col-xs-12 vn-zoom">
 						<img easy-zoom
 								 ng-src="product.image.medium"
 								 ez-zoom-src="product.image.large"
@@ -17,37 +15,29 @@
 					<div data-ng-click="product.image=image" ng-repeat="image in product.images[product.optionSelection.images] | filter: '!youtube.com'" class="col-xs-4 th-product-view__thumbnail-div">
 						<img data-ng-src="{{image.medium}}" class="img-responsive img-thumbnail" alt="{{product.name}}">
 					</div>
-
-				
 			</div><!-- /col-xs-12 col-md-6 -->
 
-	    <div class="col-xs-12 col-md-6">
-
-		    <div class="th-product-details">
-		    	<div class="th-product-details__title">
-		    		<a href="#"><span class="th-product-title th-product-title--large" itemprop="name" data-ng-bind="product.name"></span></a>
-		    	</div>
-
-		      <div class="th-product-details__price">
-		      	<span class="th-product-price__price--large" itemscope itemtype="http://schema.org/Offer" data-ng-show="product.price.regularPrice > 0"><span itemprop="price" data-ng-bind="product.price.regularPrice | currency"></span></span></span>
-		      </div>  
-		    </div>      	
+	    <div class="col-xs-12 col-md-6 th-product-view">
+	    	<a href="#">
+	    		<div class="th-product-title--large" itemprop="name" data-ng-bind="product.name"></div>
+	    	</a>
+	      <div class="th-product-price__price--large" itemscope itemtype="http://schema.org/Offer" data-ng-show="product.price.regularPrice > 0">
+	      	<span itemprop="price" data-ng-bind="product.price.regularPrice | currency"></span>
+	      </div>
 
 		    <div class="th-product-options">
-
 	        <label class="th-label" id="size">Size</label>
 	        <div class="btn-group clearfix">
-	            <button type="button" id="size" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	                gallon <span class="caret"></span>
-	            </button>
-	            <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">gallon</a></li>
-	                <li><a href="#">quart</a></li>
-	                <li><a href="#">pint</a></li>
-	                <li><a href="#">cup</a></li>
-	            </ul>
+	          <button type="button" id="size" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	              gallon <span class="caret pull-right"></span>
+	          </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">gallon</a></li>
+                <li><a href="#">quart</a></li>
+                <li><a href="#">pint</a></li>
+                <li><a href="#">cup</a></li>
+            </ul>
 		      </div>						
-
 		      <label for="qty" class="th-label">Qty</label>
 		      <div class="form-group">
 		      	<div data-vn-block="th-qty-counter" class="input-group">
@@ -71,8 +61,7 @@
 				    </div>
 				  </div>
 
-					<div class="th-add-to-cart">
-						<button type="button" class="btn btn-default"
+						<button type="button" class="btn btn-default th-add-to-cart"
 										data-translate="product.addToCart"
 										data-ng-click="addToCart()"
 										data-ng-disabled="cartItem.qty === 0"
@@ -82,7 +71,6 @@
 										data-analytics-description="Add to Cart Button">
 							Add to Cart
 						</button>
-					</div>
 
 				</div> <!-- /product-options -->
 

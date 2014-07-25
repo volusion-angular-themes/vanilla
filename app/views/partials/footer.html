@@ -1,133 +1,38 @@
 
-<div class="container">
-	<footer class="th-footer"
-	data-ng-hide="hideWrapper"
-	data-ng-controller="FooterCtrl">
-	<div class="row">
-		<div class="col-sm-6 col-md-5">
-			<div class="th-footer__heading">Helpful Links</div>
-			<div class="row">
-				<div class="col-xs-6">
-					<div data-ng-bind-html="themeSettings.general.footer.content.column1 | legacyLinkify | html"></div>
-				</div>
-				<div class="col-xs-6">
-					<div data-ng-bind-html="themeSettings.general.footer.content.column2 | legacyLinkify | html"></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-3">
-			<div class="th-footer__heading">Social</div>
-			<div class="th-icongroup" data-ng-include=" 'views/partials/social-sharing.html' "></div>
-		</div>
-		<div class="col-sm-6 col-md-4">				
-			<div class="th-footer__elist" data-ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
-				<div class="th-footer__heading">Sign up for our newsletter!</div>
-				<form class="th-elist" role="form" name="MailingList" method="post" action="">
-					<div class="input-group">
-						<input type="email" name="emailaddress" class="form-control th-elist__input" value="" placeholder="email@example.com">
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-primary">Subscribe</button>
-						</span>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<div class="th-footer__copyright">
-		<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
-	</div>
-
-</footer>
-</div>
-
-
-
-
-<!--
-
-<footer class="th-footer"
-		data-ng-hide="hideWrapper"
-		data-ng-controller="FooterCtrl">
-
-
-	<div class="th-newsbar">
-		<div class="th-elist">
-			<div class="th-elist__title">Sign-Up for Our Newsletter</div>
-			<form class="form-inline th-elist__form" role="form" name="MailingList" method="post" action="">
-				<div class="form-group th-elist__group">
-					<input type="email" name="emailaddress" class="form-control th-elist__input" value="" placeholder="Sign-up for promotions" />
-				</div>
-				<button type="submit" class="btn btn-default th-elist__submit">Go</button>
-			</form>
-		</div>
-		.v-newsletter -->
-<!-- 	</div>
-	<div class="container th-footer__top">
+<footer class="th-footer" data-ng-hide="hideWrapper" data-ng-controller="FooterCtrl">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
-				<div class="th-footer__site-links">
-					<div class="col-md-4">
-						<ul class="nav">
-							<li class="th-footer__title">Help &amp; Support</li>
-							<li><a href="#">Customer Service</a></li>
-							<li><a href="#">Shopping Bag</a></li>
-							<li><a href="#">Order sStatus</a></li> -->
-							<!--<li><a ui-sref="i18n.contact" translate="index.contact">Contact Us</a></li>-->
-<!--
-							<li><a href="/contact" data-translate="footer.contact">Contact Us</a></li>
-							<li><a href="#">Returns</a></li>
-							<li><a href="#">Shipping</a></li>
-							<li><a href="#">Size Charts</a></li>
-							<li><a href="#">Favorites</a></li>
-							<li><a href="#">Site Map</a></li>
-						</ul>
-
+			<div class="col-sm-6 col-md-5">
+				<div class="th-footer__heading">Helpful Links</div>
+				<div class="row">
+					<div class="col-xs-6">
 						<div data-ng-bind-html="themeSettings.general.footer.content.column1 | legacyLinkify | html"></div>
-
 					</div>
-					<div class="col-md-4">
+					<div class="col-xs-6">
 						<div data-ng-bind-html="themeSettings.general.footer.content.column2 | legacyLinkify | html"></div>
 					</div>
-					<div class="col-md-4">
-						<div data-ng-bind-html="themeSettings.general.footer.content.column3 | legacyLinkify | html"></div>
-					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="th-footer__more-info">
-					<div class="th-elist" ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
-						<div class="th-elist__title">Sign-up for our Newsletter</div>
-						<div class="th-elist__text">Get our latest news and exclusive offers</div>
-						<form class="form-inline th-elist__form" role="form" name="MailingList" method="post" action="">
-							<div class="form-group th-elist__group">
-								<input type="email" name="emailaddress" class="form-control th-elist__input" value=""
-											 placeholder="Sign-up for promotions">
-							</div>
-							<button type="submit" class="btn btn-default th-elist__submit">GO</button>
-						</form>
-					</div> -->
-					<!-- .th-elist -->
-<!-- 					<div class="th-info-box">
-						<div class="th-footer__title">Extraneous Information here</div>
-						<p>
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-							classical Latin literature from 45 BC, making it over 2000 years old.
-						</p>
-					</div>
-					</div>
-					<div data-ng-bind-html="themeSettings.general.footer.content.column4 | legacyLinkify | html"></div>
+			<div class="col-sm-6 col-md-3">
+				<div class="th-footer__heading">Social</div>
+				<div class="th-icongroup" data-ng-include=" 'views/partials/social-sharing.html' "></div>
+			</div>
+			<div class="col-sm-6 col-md-4">				
+				<div class="th-footer__elist" data-ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
+					<div class="th-footer__heading">Sign up for our newsletter!</div>
+					<form class="th-elist" role="form" name="MailingList" method="post" action="">
+						<div class="input-group">
+							<input type="email" name="emailaddress" class="form-control th-elist__input" value="" placeholder="email@example.com">
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-primary">Subscribe</button>
+							</span>
+						</div>
+					</form>
 				</div>
 			</div>
-		</div> -->
-		<!-- .row -->
-<!-- 	</div>
-
-	<div class="container">
-		<div class="th-footer__bottom">
+		</div>
+		<div class="th-footer__copyright">
 			<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
 		</div>
-		.th-footer__bottom -->
-<!-- 	</div>
+	</div>
 </footer>
---> 

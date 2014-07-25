@@ -8,6 +8,7 @@
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 
 // Helpful Volusion Mixins and Silent Classes
+// We should omit obscure ones and combine these into one 'helper' file
 @import 'theme/mixins';
 @import 'theme/helpers';
 
