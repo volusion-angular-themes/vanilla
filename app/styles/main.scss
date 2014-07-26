@@ -4,12 +4,9 @@
 @import 'theme/bootstrap-variables';
 
 // Bootstrap-Sass via Bower
-// Don't edit these files, instead edit 'Bootstrap-Variables' and 'Bootstrap-Style'
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 
 // Helpful Volusion Mixins and Silent Classes
-// We should omit obscure ones and combine these into one 'helper' file
-@import 'theme/mixins';
 @import 'theme/helpers';
 
 // Theme - Bootstrap styled for Vanilla Theme

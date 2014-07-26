@@ -4,7 +4,7 @@
 		<h1>Welcome to Vanilla!</h1>
 
 		<p>
-			This is a starting point for your custom Volusion storefront.<br>Take a peek in the
+			This is a starting point for your custom Volusion storefront.</p><p>Take a peek in the
 			bootstrap-variables stylesheet and start changing things to fit your
 			design.
 		</p>
@@ -16,6 +16,22 @@
 		</p>
 	</div>
 
+  <pre>
+    &lt;div class="jumbotron"&gt;
+    &lt;h1&gt;Welcome to Vanilla!&lt;/h1&gt;
+
+    &lt;p&gt;
+    This is a starting point for your custom Volusion storefront.&lt;/p&gt;&lt;p&gt;Take a peek in the bootstrap-variables stylesheet and start changing things to fit your design.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+    &lt;a href="#" class="btn btn-primary btn-lg" role="button"&gt;
+    &lt;span&gt;Nice Button&lt;/span&gt; &raquo;
+    &lt;/a&gt;
+    &lt;/p&gt;
+    &lt;/div&gt;
+  </pre>
+
   <!-- Buttons
   ================================================== -->
 
@@ -23,7 +39,7 @@
   	<div class="row">
   		<div class="col-lg-12">
   			<h1 id="buttons">Buttons <small>are tons of fun!</small></h1>
-  			<h4>Vanilla modified the Primary and Success color variables - the others are Bootstrap's defaults.</h4>
+  			<h4>Vanilla modified the Primary and Success color variables as well as the button styling - the others are Bootstrap's defaults.</h4>
   		</div>
   	</div>
   </div>
@@ -210,7 +226,6 @@
 
       	</div>
       	<div class="col-lg-4">
-
       		<h2>Emphasis classes</h2>
       		<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
       		<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -218,8 +233,6 @@
       		<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
       		<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
       		<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-
-
       	</div>
       </div>
 
@@ -250,11 +263,9 @@
       </div>
     </div>
 
-
-
     <div class="page-header">
     	<h1>Navbars</h1>
-    	<h4>The first one looks a <em>little off</em> due to the styling of Vanilla's big navbar section</h4>
+    	<h4>Vanilla has a large customized navbar with 2 content rows - this example below is Bootstrap's default navbar and the inverse navbar.</h4>
     </div>
 
     <div class="navbar navbar-default">
@@ -266,7 +277,7 @@
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     			</button>
-    			<a class="navbar-brand" href="#">Project name</a>
+    			<a class="navbar-brand" href="#">Vanilla</a>
     		</div>
     		<div class="navbar-collapse collapse">
     			<ul class="nav navbar-nav">
@@ -300,7 +311,7 @@
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     			</button>
-    			<a class="navbar-brand" href="#">Project name</a>
+    			<a class="navbar-brand" href="#">Vanilla</a>
     		</div>
     		<div class="navbar-collapse collapse">
     			<ul class="nav navbar-nav">
@@ -325,21 +336,90 @@
     	</div>
     </div>
 
+
     <div class="page-header">
-    	<h1>Alerts</h1>
+      <h1>Thumbnails</h1>
     </div>
-    <div class="alert alert-success">
-    	<strong>Well done!</strong> You successfully read this important alert message.
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="http://lorempixel.com/250/200/fashion/6" alt="...">
+        </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="http://lorempixel.com/250/200/fashion/7" alt="...">
+        </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="http://lorempixel.com/250/200/fashion/8" alt="...">
+        </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <img src="http://lorempixel.com/250/200/fashion/9" alt="...">
+        </a>
+      </div>
+
     </div>
-    <div class="alert alert-info">
-    	<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-    </div>
-    <div class="alert alert-warning">
-    	<strong>Warning!</strong> Best check yo self, you're not looking too good.
-    </div>
-    <div class="alert alert-danger">
-    	<strong>Oh snap!</strong> Change a few things up and try submitting again.
-    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="http://lorempixel.com/350/300/fashion/4" alt="...">
+          <div class="caption">
+            <h3>Check This Out</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</p>
+              <p><a href="#" class="btn btn-info" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="http://lorempixel.com/350/300/fashion/3" alt="...">
+            <div class="caption">
+              <h3>Check This Out</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+                <p><a href="#" class="btn btn-info" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/350/300/fashion/5" alt="...">
+              <div class="caption">
+                <h3>Check This Out</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+                  <p><a href="#" class="btn btn-info" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+              </div>
+            </div>  
+          </div>
+
+          <div class="page-header">
+           <h1>Alerts</h1>
+         </div>
+         <div class="alert alert-success">
+           <strong>Well done!</strong> You successfully read this important alert message.
+         </div>
+         <div class="alert alert-info">
+           <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+         </div>
+         <div class="alert alert-warning">
+           <strong>Warning!</strong> Best check yo self, you're not looking too good.
+         </div>
+         <div class="alert alert-danger">
+           <strong>Oh snap!</strong> Change a few things up and try submitting again.
+         </div>
 
       <!-- Forms
       ================================================== -->
@@ -488,135 +568,159 @@
       		</div>
       	</div>
 
-      	<div class="page-header">
-      		<h1>List groups</h1>
-      	</div>
-      	<div class="row">
-      		<div class="col-sm-4">
-      			<ul class="list-group">
-      				<li class="list-group-item">Cras justo odio</li>
-      				<li class="list-group-item">Dapibus ac facilisis in</li>
-      				<li class="list-group-item">Morbi leo risus</li>
-      				<li class="list-group-item">Porta ac consectetur ac</li>
-      				<li class="list-group-item">Vestibulum at eros</li>
-      			</ul>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      		<div class="col-sm-4">
-      			<div class="list-group">
-      				<a href="#" class="list-group-item active">
-      					Cras justo odio
-      				</a>
-      				<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-      				<a href="#" class="list-group-item">Morbi leo risus</a>
-      				<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-      				<a href="#" class="list-group-item">Vestibulum at eros</a>
-      			</div>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      		<div class="col-sm-4">
-      			<div class="list-group">
-      				<a href="#" class="list-group-item active">
-      					<h4 class="list-group-item-heading">List group item heading</h4>
+        <div class="page-header">
+          <h1>Pagination</h1>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="pagination pull-left">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li class="active"><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
 
-      					<p class="list-group-item-text">
-      						Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-      						risus varius blandit.
-      					</p>
-      				</a>
-      				<a href="#" class="list-group-item">
-      					<h4 class="list-group-item-heading">List group item heading</h4>
+        <div class="page-header">
+          <h1>List groups</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+           <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+        <!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+         <div class="list-group">
+          <a href="#" class="list-group-item active">
+           Cras justo odio
+         </a>
+         <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+         <a href="#" class="list-group-item">Morbi leo risus</a>
+         <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+         <a href="#" class="list-group-item">Vestibulum at eros</a>
+       </div>
+     </div>
+     <!-- /.col-sm-4 -->
+     <div class="col-sm-4">
+       <div class="list-group">
+        <a href="#" class="list-group-item active">
+         <h4 class="list-group-item-heading">List group item heading</h4>
 
-      					<p class="list-group-item-text">
-      						Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-      						risus varius blandit.
-      					</p>
-      				</a>
-      				<a href="#" class="list-group-item">
-      					<h4 class="list-group-item-heading">List group item heading</h4>
+         <p class="list-group-item-text">
+          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+          risus varius blandit.
+        </p>
+      </a>
+      <a href="#" class="list-group-item">
+       <h4 class="list-group-item-heading">List group item heading</h4>
 
-      					<p class="list-group-item-text">
-      						Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-      						risus varius blandit.
-      					</p>
-      				</a>
-      			</div>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      	</div>
+       <p class="list-group-item-text">
+        Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+        risus varius blandit.
+      </p>
+    </a>
+    <a href="#" class="list-group-item">
+     <h4 class="list-group-item-heading">List group item heading</h4>
 
-      	<div class="page-header">
-      		<h1>Panels</h1>
-      	</div>
-      	<div class="row">
-      		<div class="col-sm-4">
-      			<div class="panel panel-default">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      			<div class="panel panel-primary">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      		<div class="col-sm-4">
-      			<div class="panel panel-success">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      			<div class="panel panel-info">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      		<div class="col-sm-4">
-      			<div class="panel panel-warning">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      			<div class="panel panel-danger">
-      				<div class="panel-heading">
-      					<h3 class="panel-title">Panel title</h3>
-      				</div>
-      				<div class="panel-body">
-      					Panel content
-      				</div>
-      			</div>
-      		</div>
-      		<!-- /.col-sm-4 -->
-      	</div>
+     <p class="list-group-item-text">
+      Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+      risus varius blandit.
+    </p>
+  </a>
+</div>
+</div>
+<!-- /.col-sm-4 -->
+</div>
 
-      	<div class="page-header">
-      		<h1>Wells</h1>
-      	</div>
-      	<div class="well">
-      		<p>
-      			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non
-      			magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque
-      			nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi
-      			erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
-      		</p>
-      	</div>
-      </section>
+<div class="page-header">
+  <h1>Panels</h1>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+   <div class="panel panel-default">
+    <div class="panel-heading">
+     <h3 class="panel-title">Sale Details</h3>
+   </div>
+   <div class="panel-body">
+     Panel content
+   </div>
+ </div>
+ <div class="panel panel-primary">
+  <div class="panel-heading">
+   <h3 class="panel-title">Sale Details</h3>
+ </div>
+ <div class="panel-body">
+   Panel content
+ </div>
+</div>
+</div>
+<!-- /.col-sm-4 -->
+<div class="col-sm-4">
+ <div class="panel panel-success">
+  <div class="panel-heading">
+   <h3 class="panel-title">Sale Details</h3>
+ </div>
+ <div class="panel-body">
+   Panel content
+ </div>
+</div>
+<div class="panel panel-info">
+  <div class="panel-heading">
+   <h3 class="panel-title">Sale Details</h3>
+ </div>
+ <div class="panel-body">
+   Panel content
+ </div>
+</div>
+</div>
+<!-- /.col-sm-4 -->
+<div class="col-sm-4">
+ <div class="panel panel-warning">
+  <div class="panel-heading">
+   <h3 class="panel-title">Sale Details</h3>
+ </div>
+ <div class="panel-body">
+   Panel content
+ </div>
+</div>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+   <h3 class="panel-title">Sale Details</h3>
+ </div>
+ <div class="panel-body">
+   Panel content
+ </div>
+</div>
+</div>
+<!-- /.col-sm-4 -->
+</div>
+
+<div class="page-header">
+  <h1>Wells</h1>
+</div>
+<div class="well">
+  <p class="lead"> 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p><p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non
+  magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque
+  nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi
+  erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+</p>
+</div>
+</section>
