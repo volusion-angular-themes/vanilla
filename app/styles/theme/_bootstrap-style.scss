@@ -6,7 +6,12 @@
 //
 // -----------------------------------------------------
 
-
+label {
+	display: inline-block;
+	max-width: 100%;
+	font-weight: bold;
+	margin: 0 5px 5px;
+}
 
 // Containers =================================================================
 
@@ -17,8 +22,8 @@
 
 .navbar-default {
 	margin-bottom: 0;
-	
-	.navbar-toggle{
+
+	.navbar-toggle {
 		margin-right: 0;
 		margin-top: 8px;
 	}
@@ -26,145 +31,99 @@
 	.navbar-nav {
 		font-size: 2.0rem;
 
-    > .active {
-      > a,
-      > a:hover,
-      > a.focus {
-        text-decoration: underline;
-      }
-    }
+		> .active {
+			> a,
+			> a:hover,
+			> a.focus {
+				text-decoration: underline;
+			}
+		}
 
-    > li {
+		> li {
 
-      > a {
-        display: inline-block;
-      }
+			> a {
+				display: inline-block;
 
-      > a:hover,
-      > a:focus {
-        text-decoration: underline;
-      }
-    }
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 
-    .caret {
-      margin: 0 0.5rem;
-    }
-  }
+	@include respond-to(md-and-up) {
+		.navbar-collapse.collapse {
+			padding: 20px 0;
+		}
+		.navbar-nav {
+			> li > a {
+				margin-left: 1.6rem;
+				margin-right: 0.2rem;
+				padding-left: 0;
+				padding-right: 0;
+			}
 
-  @include respond-to(md-and-up) {
-    .navbar-collapse.collapse {
-      padding: 20px 0;
-    }
-
-    .navbar-nav {
-      > li > a {
-        margin-left: 1.6rem;
-        margin-right: 0.2rem;
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      > li:first-child {
-        > a {
-          margin-left: 0;
-        }
-      }
-    }
-  }
+			> li:first-child {
+				> a {
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }
 
 .navbar-inverse {
-  margin-bottom: 0;
+	margin-bottom: 0;
 
-  .navbar-toggle{
-    margin-right: 0;
-    margin-top: 8px;
-  }
+	.navbar-toggle {
+		margin-right: 0;
+		margin-top: 8px;
+	}
+	.navbar-nav {
+		font-size: 2.0rem;
+	}
 
-  .navbar-nav {
-    font-size: 2.0rem;
-  }
-
-  @include respond-to(md-and-up) {
-    .navbar-collapse.collapse {
-      padding: 0;
-    }
-  }
+	@include respond-to(md-and-up) {
+		.navbar-collapse.collapse {
+			padding: 0;
+		}
+	}
 }
 
 
 // Buttons ====================================================================
 
-.th-hero-promo {
-  .btn-success {
-    @extend %font-smoothing;
-    border: none;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    padding: 8px 20px;
 
-    @include respond-to(sm-and-up) {
-      margin-top: 30px;
-      font-size: 1.4rem;
-      padding: 10px 33px;
-    }
+.btn-lg {
+	@extend %font-smoothing;
+	border: none;
+	font-size: 1.1rem;
+	margin-top: 15px;
+	padding: 8px 20px;
 
-    @include respond-to(md-and-up) {
-      padding: 18px 55px;
-      font-size: 2.0rem;
-    }
-  }
+	@include respond-to(sm-and-up) {
+		margin-top: 30px;
+		font-size: 1.4rem;
+		padding: 10px 33px;
+	}
+	@include respond-to(md-and-up) {
+		padding: 18px 55px;
+		font-size: 2.0rem;
+	}
 }
 
-.input-group-btn {
-  .btn-primary {
-    @extend %font-smoothing;
-    font-weight: normal;
-    padding: 10px 15px;
-    z-index: 2;  
-  }
-}
-
-button.th-add-to-cart {
-  @extend %font-smoothing;
-  background-color: $gray-dark;
-  color: lighten($text-color, 100%);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
-
-.th-product-options {
-
-  .btn-group {
-    display: block;
-  }
+.btn-group {
+	display: block;
 }
 
 
 // Dropdowns =================================================================
-
-.th-product-options {
-
-  .dropdown-toggle {
-    padding-right: 26px;
-    text-align: left;
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .caret {
-    color: $dropdown-caret-color;
-    margin: auto 0;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    bottom: 0;
-  }
-
+.dropdown-menu > li > a {
+	cursor : pointer;
 }
 
-  
+
 // Typography =================================================================
 
 
@@ -187,9 +146,9 @@ button.th-add-to-cart {
 }
 
 .th-product-options {
-  .form-group {
-    width: 130px;    
-  }
+	.form-group {
+		width: 130px;
+	}
 }
 
 
@@ -200,31 +159,31 @@ button.th-add-to-cart {
 // Pagination =================================================================
 
 .pagination {
-	margin: 80px 0 50px;
+	margin: 20px 0 10px;
 
-	@include respond-to(md-and-up) {
+	@include respond-to(sm-and-up) {
 		float: right;
+		margin-top: 50px;
 	}
 
-  .active {
-    @extend %font-smoothing;
-  }
+	.active {
+		@extend %font-smoothing;
+	}
 }
 
 
 // Image Classes ===============================================================
 
 .img-thumbnail {
-  border: none;
 
-  &:hover {
-    @extend %opacity-75;
-    cursor: pointer;
-  }
+	&:hover {
+		@extend %opacity-75;
+		cursor: -webkit-zoom-in;
+		cursor: zoom-in;
+	}
 }
 
 
 // Progress bars ==============================================================
-
 
 
