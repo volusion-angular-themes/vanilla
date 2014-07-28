@@ -1,6 +1,11 @@
 <div class="container">
   <div class="th-product-card">
     <div class="row">
+      <div class="col-xs-12 text-center" ng-class="{ 'isMobileAndHidden': true == !isMobileAndHidden }">
+        <h1 class="ng-binding">{{ category.name }} Test</h2>
+      </div>
+    </div>
+    <div class="row">
       <div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
         <span class="th-product__sale" data-ng-show="product.isOnSale"></span>
         <span class="th-product__new" data-ng-show="product.isNew"></span>

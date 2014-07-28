@@ -7,8 +7,8 @@
     },
     "footer": {
       "content": {
-        "column1": "<ul class=\"th-linklist\"> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/aboutus.asp\">About us</a></li> <li class=\"th-linklist__item\"><a href=\"#\">Contact</a></li> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/terms.asp\">Terms &amp; Conditions</a></li> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/terms_privacy.asp\">Privacy Policy</a></li> </ul>",
-        "column2": "<ul class=\"th-linklist\"> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/articles.asp?ID=57\">Shipping Information</a></li> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/returns.asp\">Returns &amp; Exchanges</a></li> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/help.asp\">FAQ</a></li> <li class=\"th-linklist__item\"><a href=\"http://www.samplestore.io/login.asp\">My Account</a></li> </ul>",
+        "column1": "<ul class=\"th-linklist\"> <li class=\"th-linklist__item\"><a href=\"/aboutus.asp\">About us</a></li> <li class=\"th-linklist__item\"><a href=\"/aboutus.asp\">Contact</a></li> <li class=\"th-linklist__item\"><a href=\"/terms.asp\">Terms &amp; Conditions</a></li> <li class=\"th-linklist__item\"><a href=\"/terms_privacy.asp\">Privacy Policy</a></li> </ul>",
+        "column2": "<ul class=\"th-linklist\"> <li class=\"th-linklist__item\"><a href=\"/articles.asp?ID=57\">Shipping Information</a></li> <li class=\"th-linklist__item\"><a href=\"/returns.asp\">Returns &amp; Exchanges</a></li> <li class=\"th-linklist__item\"><a href=\"/help.asp\">FAQ</a></li> <li class=\"th-linklist__item\"><a href=\"/myaccount.asp\">My Account</a></li> </ul>",
         "bottomRow": "Made with &#10084; by <a href=\"http://volusion-angular.github.io/theme-engine-docs/\">Awesome Theme Developer</a>. Built with <a href=\"http://www.volusion.com/\" target=\"_blank\">Volusion</a>."
       },
       "newsletterSignup": {

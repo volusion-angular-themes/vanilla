@@ -17,20 +17,23 @@
 				<div class="th-footer__heading">Social</div>
 				<div class="th-icongroup" data-ng-include=" 'views/partials/social-sharing.html' "></div>
 			</div>
+
 			<div class="col-sm-6 col-md-4">				
-				<div class="th-footer__elist" data-ng-if="themeSettings.general.footer.newsletterSignup.isEnabled">
-					<div class="th-footer__heading">Sign up for our newsletter!</div>
-					<form class="th-elist" role="form" name="MailingList" method="post" action="">
+				<div class="th-footer__heading">Sign up for our newsletter!</div>
+				<form class="th_elist" role="form" name="MailingList" method="post" action="/MailingList_subscribe.asp">
+					<div class="form-group">
 						<div class="input-group">
-							<input type="email" name="emailaddress" class="form-control th-elist__input" value="" placeholder="email@example.com">
+							<label class="sr-only" for="emailaddress">Email address</label>
+							<input type="email" name="emailaddress" id="emailaddress" class="form-control th-elist__input" value="" placeholder="email@example.com">
 							<span class="input-group-btn">
-								<button type="submit" class="btn btn-primary">Subscribe</button>
+								<button type="submit" class="btn btn-primary th-elist__submit">Subscribe</button>
 							</span>
 						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
 		</div>
+
 		<div class="th-footer__copyright">
 			<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
 		</div>

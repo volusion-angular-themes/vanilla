@@ -6,9 +6,12 @@
     padding-top: 20px;
   }
 
-  &__thumbnail-div {
-  	display: inline-block;
-  	float: none;
+  &__main-img,
+  &__thumbnails {
+    @extend %inline-block;
+  }
+
+  &__thumbnails {
 
   	@include respond-to(xs) {
   		padding-left: 5px;
