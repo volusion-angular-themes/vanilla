@@ -1,0 +1,16 @@
+.th-product-options {
+
+	&__add-to-cart {
+	  @extend %font-smoothing;
+	  background-color: $gray-dark;
+	  color: lighten($text-color, 100%);
+	  letter-spacing: 0.05em;
+	  text-transform: uppercase;
+	  margin-top: 5px;
+	}
+
+	.btn-group {
+	  display: block;
+	}
+
+}
