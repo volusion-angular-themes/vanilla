@@ -1,36 +1,10 @@
 <div class="container categories">
-	<div class="row col-md-12">
-		<div class="col-sm-3 col-lg-2 vn-faceted-search"
-			 ng-class="{ isMobileAndVisible: true == isMobileAndVisible }"
-			 data-ng-hide="!hasFacetsOrCategories">
-			<h3 data-ng-show="!showMobileSearch">Narrow By</h3>
-
-			<div vn-faceted-search
-				 categories="categoryList"
-				 facets="facets"
-				 data-ng-show="mobileDisplay"
-				 class="vn-faceted-search-control">
-			</div>
-		</div>
-		<div class="col-sm-9 col-lg-10 vn-category-product-tiles"
-			 ng-class="{ 'isMobileAndHidden': true == !isMobileAndHidden }">
+	<div class="row">
+		<!-- This is a bootstrap responsive column that holds product tiles for the current query -->
+		<div class="col-sm-12">
 			<div class="content-top">
-				<div class="page-header">
-					<div class="row">
-						<h1 class="col-sm-10 col-md-10"><span ng-if="products.length <= 0">No</span> Search results for {{searchTerms}}</h1>
-						<div vn-sort-search
-							 class="col-sm-2 col-md-2 vn-sort-desktop-search"
-							 data-ng-show="mobileDisplay"
-							 query-products="queryProducts()"
-							 ng-if="products.length > 0"></div>
-					</div>
-					<img class="banner img img-responsive"
-						 ng-hide="checkForFacetFilters()"
-						 ng-src="{{category.bannerImgUrl}}">
-
-					<div class="description" itemprop="description"
-						 ng-hide="checkForFacetFilters()"
-						 data-ng-bind-html="category.description | legacyLinkify | html"></div>
+				<div class="page-header text-center">
+					<h1>Search for {{ lastSearchString }}</h1>
 				</div>
 			</div>
 
@@ -44,14 +18,14 @@
 			</div>
 
 			<div class="row">
-				<div class="-product-tile-animation col-sm-6 col-md-4 col-lg-3" data-ng-repeat="product in products track by product.id">
+				<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
 					<div class="th-product">
 						<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
 						<span class="th-product__new" data-ng-show="product.isNew"></span>
 
 						<div class="th-product__image">
-							<a href="{{ product.url }}">
-								<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive" alt="">
+							<a href="p/{{product.slug}}">
+								<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
 							</a>
 						</div>
 						<div class="th-product__name">

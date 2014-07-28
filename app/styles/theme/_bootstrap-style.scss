@@ -93,7 +93,7 @@
 // Buttons ====================================================================
 
 
-.btn-success {
+.btn-lg {
   @extend %font-smoothing;
   border: none;
   font-size: 1.1rem;
@@ -108,29 +108,6 @@
   @include respond-to(md-and-up) {
     padding: 18px 55px;
     font-size: 2.0rem;
-  }
-}
-
-.btn-primary {
-  @extend %font-smoothing;
-  font-weight: normal;
-  padding: 10px 15px;
-  z-index: 2;  
-}
-
-button.th-add-to-cart {
-  @extend %font-smoothing;
-  background-color: $gray-dark;
-  color: lighten($text-color, 100%);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
-
-.th-product-options {
-
-  .btn-group {
-    display: block;
   }
 }
 
@@ -206,11 +183,11 @@ button.th-add-to-cart {
 // Image Classes ===============================================================
 
 .img-thumbnail {
-  // border: none;
 
   &:hover {
     @extend %opacity-75;
-    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
   }
 }
 
