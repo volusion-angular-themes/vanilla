@@ -1,43 +1,30 @@
 <div class="container categories">
 	<div class="row">
-		<!-- This is a bootstrap responsive column that holds product tiles for the current query -->
-		<div class="col-sm-12">
-			<div class="content-top">
-				<div class="page-header text-center">
-					<h1>Search for {{ lastSearchString }}</h1>
+		<div class="col-sm-12 text-center th-results-page__heading">
+			<h1>Search for &ldquo;{{ lastSearchString }}&rdquo;</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in products track by $index">
+			<div class="th-product-card">
+				<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
+				<span class="th-product__new" data-ng-show="product.isNew"></span>
+				<div class="th-product__image">
+					<a href="p/{{product.slug}}" class="th-product-card__image-link">
+						<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive th-product-card__image" alt="{{ product.name }}">
+					</a>
 				</div>
-			</div>
-			<div class="row">
-				<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
-					<div class="th-product">
-						<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
-						<span class="th-product__new" data-ng-show="product.isNew"></span>
-
-						<div class="th-product__image">
-							<a href="p/{{product.slug}}">
-								<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive" alt="">
-							</a>
-						</div>
-						<div class="th-product__name">
-							<a href="p/{{ product.slug }}">{{ product.name }}</a>
-						</div>
-						<div class="th-product__price">
-							<span class="th-reg-price" data-ng-show="product.price.regularPrice > 0">
-								<span class="th-price" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</span>
-								<span class="th-price-text th-text-left">Reg</span>
-							</span>
-							<span class="th-now-price" data-ng-show="product.price.salePrice > 0">
-								<span class="th-price">{{product.price.salePrice | currency}}</span>
-								<span class="th-price-text">Now</span>
-							</span>
-						</div>
-					</div>
+				<div class="th-product-card__title">
+					<a href="p/{{ product.slug }}" class="th-product-title--medium">{{ product.name }}</a>
 				</div>
-				<button class="btn btn-default btn-lg visible-xs th-load-more">Load More</button>
-			</div>
-			<div>
-				<a ng-click="prevPage()">Previous</a> Page {{ currentPage }} of {{ totalPages }} <a ng-click="nextPage()">Next</a>
+				<div class="th-product-card__price" data-ng-show="product.price.regularPrice > 0">
+					<div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
+				</div>
 			</div>
 		</div>
+		<button class="btn btn-default btn-lg visible-xs th-load-more">Load More</button>
+	</div>
+	<div class="pull-right">
+		<a ng-click="prevPage()">Previous</a> Page {{ currentPage }} of {{ totalPages }} <a ng-click="nextPage()">Next</a>
 	</div>
 </div>

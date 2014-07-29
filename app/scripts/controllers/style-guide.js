@@ -7,7 +7,7 @@
  * # StyleGuideCtrl
  * Controller of the volusionMethodThemeApp
  */
-angular.module('volusionMethodThemeApp')
+angular.module('Volusion.controllers')
   .controller('StyleGuideCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
