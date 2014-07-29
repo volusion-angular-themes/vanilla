@@ -3,7 +3,7 @@ describe('Controller: FooterCtrl', function () {
 	'use strict';
 
 	// load the controller's module
-	beforeEach(module('volusionMethodThemeApp'));
+	beforeEach(module('methodApp'));
 
 	var FooterCtrl,
 		scope;
