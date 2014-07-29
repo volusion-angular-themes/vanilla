@@ -9,6 +9,7 @@ angular.module('Volusion.controllers')
 				vnApi.Category().get({ slug: newSlug }).$promise.then(function(response) {
 					// Handle the category data
 					$scope.category = response.data;
+					$scope.subCategories = response.data.subCategories;
 					vnProductParams.addCategory(response.data.id);
 					$scope.queryProducts();
 				});
