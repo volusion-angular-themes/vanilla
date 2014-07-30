@@ -1,7 +1,7 @@
 <div class="container categories">
 	<div class="row">
 		<div class="col-sm-12 text-center th-results-page__heading">
-			<h1>Search for &ldquo;{{ lastSearchString }}&rdquo;</h1>
+			<h1>Search for &ldquo;{{ searchTerms.q }}&rdquo;</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -22,9 +22,6 @@
 				</div>
 			</div>
 		</div>
-		<button class="btn btn-default btn-lg visible-xs th-load-more">Load More</button>
 	</div>
-	<div class="pull-right">
-		<a ng-click="prevPage()">Previous</a> Page {{ currentPage }} of {{ totalPages }} <a ng-click="nextPage()">Next</a>
-	</div>
+	<div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>
 </div>

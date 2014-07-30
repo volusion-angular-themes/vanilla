@@ -6,7 +6,7 @@
           <ul class="list-inline" data-ng-if="category.subCategories.length">
             <li data-ng-repeat="subCategory in category.subCategories">
               <a class="" data-ng-href="{{subCategory.url}}">
-                <h4>{{ subCategory.name }}</h4>
+                {{ subCategory.name }}
               </a>
             </li>
           </ul>
@@ -27,18 +27,6 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <ul class="pagination">
-          <li><a ng-click="prevPage()">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <!-- This Angular needs to be cleaned up -->
-          <li><a ng-click="nextPage()">&raquo;</a></li>
-        </ul>
-      </div>
-    </div>
+    <div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>
   </div><!-- /th-product-card -->
 </div>

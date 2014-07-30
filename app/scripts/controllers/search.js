@@ -40,6 +40,7 @@ angular.module('methodApp')
 
 			$scope.init = function() {
 				vnProductParams.updateSearch($routeParams.q);
+				$scope.searchTerms = $routeParams;
 				$scope.queryProducts();
 			};
 
