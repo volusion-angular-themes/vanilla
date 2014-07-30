@@ -63,14 +63,10 @@ angular.module('methodApp')
 				vnProductParams.updateSearch($scope.currentSearchText);
 			};
 
-			$scope.checkFacetsAndCategories = function(categories, facets) {
-
-				if( (categories && categories.length) || (facets && facets.length) ) {
-					$scope.hasFacetsOrCategories = true;
-				} else {
-					$scope.hasFacetsOrCategories = false;
-				}
-
+			$scope.init = function() {
+				vnProductParams.updateSearch($routeParams.q);
+				$scope.searchTerms = $routeParams;
+				$scope.queryProducts();
 			};
 
 			$scope.initParams = function() {
