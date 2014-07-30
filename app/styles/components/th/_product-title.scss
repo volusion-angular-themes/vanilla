@@ -10,5 +10,9 @@
 	  font-size: 4.0rem;
 		font-weight: 300;
 		margin-bottom: 0.2em;
+
+		@include respond-to(xs) {
+			font-size: 3.4rem;
+		}
 	}
 }
