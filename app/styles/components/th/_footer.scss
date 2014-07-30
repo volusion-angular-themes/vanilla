@@ -9,6 +9,10 @@
 
         @include respond-to(xs) {
             text-align: center;
+
+            &:last-child {
+                margin-top: 30px;
+            }
         }
     }
 
@@ -18,6 +22,8 @@
         border-top: 1px solid $gray-lighter;
 
         @include respond-to(xs) {
+            margin-top: 20px;
+            padding: 10px 0 0;
             text-align: center;
         }
     }

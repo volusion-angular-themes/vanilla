@@ -1,0 +1,33 @@
+.th-results-page {
+	
+	&__heading {
+
+		h1 {
+			font-weight: 300;
+		}
+
+		ul {
+			margin-left: 0;
+		}
+
+		li {
+			padding: 0;
+
+			a {
+				margin-top: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+		}
+
+		li:nth-of-type(n+2) {
+			a {
+				border-left: 1px solid black;
+			}
+
+		}
+
+	}
+
+}
