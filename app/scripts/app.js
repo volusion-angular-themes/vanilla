@@ -96,6 +96,10 @@ angular.module('methodApp', [
 				.when('/all-products', {
 					redirectTo: 'search'
 				})
+				.when('/view-all', {
+					templateUrl: 'views/view-all.html',
+					controller: 'ViewAllCtrl'
+				})				
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller : 'ThemeSettingsCtrl'
