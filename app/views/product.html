@@ -21,7 +21,7 @@
 	      </div>
 
 		    <div class="th-product-options">
-	        <label class="th-label" id="size">Size</label>
+<!-- 	        <label class="th-label" id="size">Size</label>
 	        <div class="btn-group clearfix">
 	          <button type="button" id="size" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 	              gallon <span class="caret pull-right"></span>
@@ -32,7 +32,16 @@
                 <li><a href="#">pint</a></li>
                 <li><a href="#">cup</a></li>
             </ul>
-		      </div>						
+		      </div> -->	
+
+		      <!-- Figure out how to modify this for Vanilla -->
+						<div data-vn-product-option
+								 data-ng-repeat="option in product.options"
+								 data-option="option"
+								 data-product="product"
+								 data-save-to="cartItem.options">
+						</div>
+
 		      <label for="qty" class="th-label">Qty</label>
 		      <div class="form-group">
 		      	<div data-vn-block="th-qty-counter" class="input-group">
@@ -56,7 +65,7 @@
 				    </div>
 				  </div>
 
-						<button type="button" class="btn btn-default th-product-options__add-to-cart"
+						<button type="button" class="btn btn-primary th-product-options__add-to-cart"
 										data-translate="product.addToCart"
 										data-ng-click="addToCart()"
 										data-ng-disabled="cartItem.qty === 0"

@@ -50,7 +50,7 @@
 		&__text {
 			position: relative;
 			padding: 5px 10px;
-			font-family: $font-family-serif;
+			font-family: $font-family-sans-serif;
 			text-transform: uppercase;
 			color: #444444;
 		}
@@ -65,8 +65,8 @@
 			outline: 1px solid transparent;
 
 			&:hover {
-				border-color: #9FE6F8;
-				outline-color: #9FE6F8;
+				border-color: $gray-light;
+				outline-color: $gray-light;
 			}
 
 			&.checked {
