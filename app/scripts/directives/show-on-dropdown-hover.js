@@ -25,7 +25,7 @@ angular.module('Volusion.directives')
 						.bind('mouseleave', function() {
 							timerHide = $timeout(function () {
 								element.hide();
-							}, 1);
+							}, 100);
 						})
 						.bind('click', function() {
 							element.show();
@@ -52,4 +52,19 @@ angular.module('Volusion.directives')
 					/* jshint unused:true */
 				}
 			};
+
+			// enquire.register('screen and (min-width:992px)', {
+
+			// 	setup  : function () {
+			// 		$timeout = false;
+			// 	},
+			// 	unmatch: function () {
+			// 		$timeout = false;
+			// 	},
+			// 	// transitioning to mobile mode
+			// 	match  : function () {
+			// 		$timeout = false;
+			// 	}
+			// });
+
 		}]);

@@ -168,10 +168,11 @@
 // Pagination =================================================================
 
 .pagination {
-	margin: 80px 0 50px;
+	margin: 20px 0 10px;
 
-	@include respond-to(md-and-up) {
-		float: right;
+	@include respond-to(sm-and-up) {
+    float: right;
+    margin: 80px 0 50px;
 	}
 
   .active {
