@@ -1,7 +1,7 @@
 <div class="container categories">
 	<div class="row">
 		<div class="col-sm-12 text-center th-page-heading">
-			<h1>Search for &ldquo;{{ searchTerms.q }}&rdquo;</h1>
+			<h1>Shop Now!</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -21,13 +21,6 @@
 					<div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
 				</div>
 			</div>
-
-			<div vn-paginator
-				 cursor="cursor"
-				 current-page="currentPage"
-				 query-fn="queryProducts()"
-				 ng-if="products.length > 0"></div>
-
 		</div>
 	</div>
 	<div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>

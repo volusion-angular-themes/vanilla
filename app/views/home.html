@@ -1,13 +1,13 @@
 <div class="container">
     <div class="th-hero-promo">
-        <div class="text-center th-hero-promo__content">
+        <div class="text-center th-hero-promo__content" ng-controller="ViewAllCtrl">
             <div class="th-hero-promo__title">
                 Simple &amp; Refreshing
             </div>
             <div class="th-hero-promo__title th-hero-promo__title--large">
                 Vanilla
             </div>
-            <a href="/style-guide" class="btn btn-success btn-lg">Shop now</a>
+            <a data-ng-click="viewAll()" class="btn btn-success btn-lg">Shop now</a>
         </div>
     </div>
 </div>
