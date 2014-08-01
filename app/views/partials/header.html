@@ -37,8 +37,8 @@
 				<!-- Log In -->
 				<div class="col-xs-3 col-sm-4">
 					<div class="th-header__utility pull-right">
-						<div class="hidden-xs th-sitelinks">
-							<a legacy-link="/login.asp" data-translate="header.signIn" class="th-sitelinks__link"></a>
+						<div class="hidden-xs th-header__sign-in">
+							<a legacy-link="/login.asp" data-translate="header.signIn"></a>
 						</div>
 
 						<!-- Cart -->
@@ -67,29 +67,29 @@
 					<div class="collapse navbar-collapse" id="th-main-nav">
 						<ul class="nav navbar-nav">
 							<li data-ng-repeat="category in smartNavCategories">
-							<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
-							<span>
-								<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
-									<span class="caret"></span>
-								</a>
-								<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
-									<li data-ng-repeat="subCategory in category.subCategories">
-										<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
-									</li>
-								</ul>									
-							</span>
-						</li>
-						<li class="dropdown" data-ng-show="displaySmartNavMoreMenuItem">
-							<a href="#" class="navbar-link" data-translate="header.smartNavMoreLinkText">More</a>
-							<span>
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<span class="caret"></span>
-								</a>
-								<ul show-on-dropdown-hover class="dropdown-menu">
-									<li data-ng-repeat="category in smartNavMoreCategories">
-										<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
-									</li>
-								</ul>
+								<a class="navbar-link" href="c/{{ category.slug }}">{{category.name}}</a>
+								<span>
+									<a href="#" data-ng-if="category.subCategories.length" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</a>
+									<ul show-on-dropdown-hover class="dropdown-menu" data-ng-if="category.subCategories.length">
+										<li data-ng-repeat="subCategory in category.subCategories">
+											<a href="c/{{ subCategory.slug }}">{{subCategory.name}}</a>
+										</li>
+									</ul>
+								</span>
+							</li>
+							<li class="dropdown" data-ng-show="displaySmartNavMoreMenuItem">
+								<a href="#" class="navbar-link" data-translate="header.smartNavMoreLinkText">More</a>
+								<span>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</a>
+									<ul show-on-dropdown-hover class="dropdown-menu">
+										<li data-ng-repeat="category in smartNavMoreCategories">
+											<a class="navbar-link" href="c/{{ category.id }}">{{category.name}}</a>
+										</li>
+									</ul>
 								</span>
 							</li>
 						</ul>

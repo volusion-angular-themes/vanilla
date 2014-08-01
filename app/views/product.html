@@ -21,7 +21,9 @@
 	      </div>
 
 		    <div class="th-product-options">
-<!-- 	        <label class="th-label" id="size">Size</label>
+
+				<!-- Dropdown from Static Vanilla
+					<label class="th-label" id="size">Size</label>
 	        <div class="btn-group clearfix">
 	          <button type="button" id="size" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 	              gallon <span class="caret pull-right"></span>
@@ -34,6 +36,28 @@
             </ul>
 		      </div> -->
 
+
+					<div class="dropdown"
+						 data-vn-element="select"
+						 data-vn-modifiers="{{ option.class }}"
+						 data-ng-attr-size="{{ inputType.size }}">
+
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuOption{{ option.id }}" data-toggle="dropdown">
+							{{ currentSelectionText }}
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuOption{{ option.id }}">
+							<li role="presentation" data-ng-repeat="itemKey in option.items">
+								<a role="menuitem" tabindex="-1" href
+								   data-ng-click="onOptionChanged(option, product.optionItems[itemKey])">
+
+									{{ product.optionItems[itemKey].text }}
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
 		      <!-- Figure out how to modify this for Vanilla -->
 						<div data-vn-product-option
 								 data-ng-repeat="option in product.options"
@@ -42,7 +66,7 @@
 								 data-save-to="cartItem.options">
 						</div>
 
-		      <label for="qty" class="th-label">Qty</label>
+		      <label for="qty" class="th-product-options__label">Qty</label>
 		      <div class="form-group">
 		      	<div data-vn-block="th-qty-counter" class="input-group">
 		      		<span class="input-group-btn">
@@ -65,16 +89,16 @@
 				    </div>
 				  </div>
 
-						<button type="button" class="btn btn-primary th-product-options__add-to-cart"
-										data-translate="product.addToCart"
-										data-ng-click="addToCart()"
-										data-ng-disabled="cartItem.qty === 0"
-										data-analytics-category="element click"
-										data-analytics-label="Add to Cart"
-										data-analytics-location="body-product"
-										data-analytics-description="Add to Cart Button">
-							Add to Cart
-						</button>
+					<button type="button" class="btn btn-primary th-product-options__add-to-cart"
+									data-ng-click="addToCart()"
+									data-ng-disabled="cartItem.qty === 0"
+									data-analytics-category="element click"
+									data-analytics-label="Add to Cart"
+									data-analytics-location="body-product"
+									data-analytics-description="Add to Cart Button">
+						<span data-ng-if="cartItem.qty" data-translate="product.addToCart"></span>
+						<span data-ng-if="!cartItem.qty" data-translate="product.outOfStock"></span>
+					</button>
 
 				</div> <!-- /product-options -->
 
@@ -88,7 +112,7 @@
 
 					<!-- Social Icons -->
 					<div class="th-product-description__title">Share</div>
-					<div class="th-icongroup" data-ng-include=" 'views/partials/social-sharing.html' "></div>
+					<div class="th-icon-group" data-ng-include=" 'views/partials/social-sharing.html' "></div>
 
 				</div>
 			</div>

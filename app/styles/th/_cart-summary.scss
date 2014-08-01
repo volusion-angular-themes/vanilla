@@ -1,37 +1,16 @@
 .th-cart-summary {
-	position    : relative;
-	right       : 0;
-	top         : 8px;
-	white-space : nowrap;
+	&__link {
+		&:hover {
+			@extend %opacity-75;
+			text-decoration: none;
+		}
+	}
 
-	@include respond-to(sm) {
-		top: 23px;
+	&__number {
+		@extend %inline-block;
 	}
 
 	@include respond-to(md-and-up) {
-		right    : 13px;
-		top      : 29px;
-	}
-}
-
-.th-my-cart {
-	@include inline-block;
-	margin-left : 10px;
-	padding     : 6px 0;
-
-	&__number {
-		color : $brand-info;
-
-		&:before { content : "("; }
-		&:after { content : ")"; }
-
-	}
-
-	&__text {
-		color: $link-color;
-
-		&:hover {
-			color: $link-hover-color;
-		}
+		font-size: 1.6rem;
 	}
 }

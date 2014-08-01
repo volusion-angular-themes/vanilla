@@ -1,21 +1,49 @@
 .th-header {
-	border-bottom: 1px solid lighten($navbar-default-border, 10);
+    padding-top: 10px;
+    margin-bottom: 20px;
+    
+    @include respond-to(md-and-up) {
+        border-bottom: 1px solid $gray-lighter;
+    }
 
-	a {
-		color: $navbar-default-link-color;
+    &__cart {
+        @extend %inline-block;
+        @include respond-to(sm-and-up) {
+            padding-left: 25px;
+        }
+    }
 
-		&:hover {
-			@extend %animate-all-default;
-			color: $navbar-default-link-hover-color;
-		}
-	}
+    &__logo {
+        padding-top: 12px;
+        padding-bottom: 13px;
 
-	&__account-menu {
-		padding: 10px 15px;
-	}
+        @include respond-to(xs) {
+            display: block;
+            margin: 0 auto;
+            padding-top: 9px;
+            padding-bottom: 10px;
+        }
+    }
 
-	&__shipping-text {
-		padding: 10px 15px;
-		text-transform: uppercase;
-	}
+    &__sign-in {
+        @extend %inline-block;
+        font-size: 1.6rem;
+        text-align: right;
+    }
+
+    &__search {
+        padding: 10px 0;
+
+        @include respond-to(md-and-up) {
+            padding: 20px 0;
+        }
+    }
+
+    &__utility {
+        padding-top: 12px;
+
+        @include respond-to(md-and-up) {
+            padding-top: 30px;
+        }
+    }
 }

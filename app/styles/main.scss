@@ -1,25 +1,22 @@
 @import 'compass';
 
 // Custom Theme Variables & Configuration
-@import 'theme/bootstrap-variables';
+@import 'base/bootstrap-variables';
 
 // Bootstrap-Sass via Bower
-@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 
 // Helpful Volusion Mixins and Silent Classes
-@import 'theme/helpers';
+@import 'base/helpers';
+
+// Sprites and Fonts
+@import 'base/sprites';
+@import 'base/fonts';
 
 // Theme - Bootstrap styled for Vanilla Theme
-@import 'theme/fonts';
-@import 'theme/bootstrap-style';
+@import 'base/bootstrap-style';
 
 // All Stylesheets from Components Folder
-@import 'components/components-import';
+@import 'th-import';
 
 
-
-
-
-
-// misc stylesheet for faceted search that can be moved into components
-@import 'category';

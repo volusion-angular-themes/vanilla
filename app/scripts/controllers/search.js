@@ -58,9 +58,8 @@ angular.module('methodApp')
 					$location.path('/search');
 				}
 				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
-//				$location.search('q', $scope.searchLocal);
-
-				vnProductParams.updateSearch($scope.currentSearchText);
+				$location.search('q', $scope.searchLocal);
+				vnProductParams.updateSearch($scope.searchLocal);
 			};
 
 			$scope.init = function() {

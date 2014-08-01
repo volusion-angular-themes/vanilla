@@ -1,0 +1,26 @@
+/* SHOWCASE */
+
+// Commented out for Vanilla; added unnecessary padding
+
+/* 
+.vn-showcase {
+	@extend %backface-visibility;
+	position: relative;
+	z-index: 2;
+	background-color: $body-bg;
+	padding-top: 46px;
+	padding-bottom: 20px;
+
+	@include respond-to(sm-and-up) {
+		padding-top: 76px;
+	}
+
+	@include respond-to(md-and-up) {
+		padding-top: 152px;
+	}
+
+	@include respond-to(lg) {
+		padding-top: 152px;
+	}
+}
+ */
