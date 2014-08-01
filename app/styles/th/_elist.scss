@@ -1,4 +1,5 @@
 .th-elist {
+<<<<<<< HEAD
 	border-bottom : 1px solid $hr-border;
 	padding       : 12px 0;
 
@@ -31,10 +32,19 @@
 		&:focus {
 			border-color : darken($hr-border, 40);
 		}
+=======
+	max-width: 360px;
+
+	&__input {
+		border-color: $gray-lighter;
+		padding: 8px 15px;
+		height: 42px;
+>>>>>>> Refactoring:
 	}
 
 	&__submit {
 		@extend %font-smoothing;
+<<<<<<< HEAD
 		@include inline-block;
 		font-size  : 1.5rem;
 		padding    : 5px 10px;
@@ -71,3 +81,15 @@
 		}
 	}
 }
+=======
+		font-weight: normal;
+		padding: 10px 15px;
+		z-index: 2;
+	}
+
+	@include respond-to(xs) {
+		margin: 0 auto;
+	}
+
+}
+>>>>>>> Refactoring:

@@ -84,22 +84,9 @@ angular.module('methodApp', [
 					}
 				})
 				.when('/search', {
-					templateUrl   : 'views/search.html',
-					controller    : 'SearchCtrl',
-					reloadOnSearch: false,
-					resolve: {
-						params: ['vnAppRoute', '$location', function (vnAppRoute, $location) {
-							return vnAppRoute.resolveParams($location.search());
-						}]
-					}
-				})
-				.when('/all-products', {
-					redirectTo: 'search'
-				})
-				.when('/view-all', {
-					templateUrl: 'views/view-all.html',
-					controller: 'ViewAllCtrl'
-				})				
+					templateUrl: 'views/search.html',
+					controller: 'SearchCtrl'
+				})			
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller : 'ThemeSettingsCtrl'

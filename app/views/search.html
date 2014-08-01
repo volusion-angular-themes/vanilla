@@ -1,7 +1,10 @@
 <div class="container categories">
 	<div class="row">
-		<div class="col-sm-12 text-center th-page-heading">
-			<h1>Search for &ldquo;{{ searchTerms.q }}&rdquo;</h1>
+		<div class="col-sm-12 text-center th-page-headings">
+			<h1>
+				<span ng-if="searchTerms.q">Results for &ldquo;{{ searchTerms.q }}&rdquo;</span>
+				<span ng-if="!searchTerms.q">View All Products</span>
+			</h1>
 		</div>
 	</div>
 	<div class="row">

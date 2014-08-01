@@ -1,5 +1,11 @@
 .th-product-options {
 
+	&__label {
+		display: block;
+		font-size: 1.8rem;
+		margin-top: 20px;
+	}
+
 	// .btn-primary
 	&__add-to-cart {
 	  @extend %font-smoothing;
@@ -12,10 +18,6 @@
 	  	color: invert($btn-primary-color);
 	  }
 
-	}
-
-	.btn-group {
-	  display: block;
 	}
 
 }

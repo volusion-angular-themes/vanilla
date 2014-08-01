@@ -1,13 +1,13 @@
 <div class="container">
     <div class="th-hero-promo">
-        <div class="text-center th-hero-promo__content" ng-controller="ViewAllCtrl">
+        <div class="text-center th-hero-promo__content" ng-controller="SearchCtrl">
             <div class="th-hero-promo__title">
                 Simple &amp; Refreshing
             </div>
             <div class="th-hero-promo__title th-hero-promo__title--large">
                 Vanilla
             </div>
-            <a data-ng-click="viewAll()" class="btn btn-success btn-lg">Shop now</a>
+            <a data-ng-click="doSearch()" class="btn btn-success btn-lg">Shop now</a>
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@
 	<!-- FEATURED PRODUCTS -->
 	<div class="visible-md-block visible-lg-block" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
 		<div class="th-product-card clearfix">
-			<div class="row th-page-heading">
+			<div class="row th-page-headings">
 				<h1 class="text-center">Featured Products</h1>
 				<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
 				</div>
