@@ -18,10 +18,17 @@
         padding-bottom: 13px;
 
         @include respond-to(xs) {
+            display: block;
             margin: 0 auto;
             padding-top: 9px;
             padding-bottom: 10px;
         }
+    }
+
+    &__sign-in {
+        @extend %inline-block;
+        font-size: 1.6rem;
+        text-align: right;
     }
 
     &__search {

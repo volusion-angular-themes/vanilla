@@ -11,6 +11,7 @@ angular.module('methodApp')
 			'use strict';
 
 			$scope.searchLocal = '';
+			// $scope.hasSearchTerms = true;
 
 			$scope.queryProducts = function() {
 				var params = vnProductParams.getParamsObject();
@@ -30,12 +31,6 @@ angular.module('methodApp')
 				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
 				$location.search('q', $scope.searchLocal);
 				vnProductParams.updateSearch($scope.searchLocal);
-				$scope.lastSearchString = 'blah';
-				$scope.queryProducts();
-
-				// Clean up the UI for this Controller / Page
-				$scope.searchLocal = '';
-				// Todo: close search input after this
 			};
 
 			$scope.init = function() {

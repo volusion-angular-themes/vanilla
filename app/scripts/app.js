@@ -80,11 +80,7 @@ angular.module('methodApp', [
 				.when('/search', {
 					templateUrl: 'views/search.html',
 					controller: 'SearchCtrl'
-				})
-				.when('/view-all', {
-					templateUrl: 'views/view-all.html',
-					controller: 'ViewAllCtrl'
-				})				
+				})			
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller: 'ThemeSettingsCtrl'

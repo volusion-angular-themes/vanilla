@@ -1,3 +1,8 @@
+/* 
+	Read more about Sass mixins and silent-classes aka placeholder selectors:
+		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins
+		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+ */
 
 %inline-block {
 	@include inline-block;
