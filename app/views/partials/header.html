@@ -5,7 +5,26 @@
 				 data-ng-show="headerState"
 				 data-ng-controller="HeaderCtrl">
 
-			<div class="row">
+	<div class="hidden-xs hidden-sm th-header">
+		<div class="container">
+			<div class="pull-left th-header__shipping-text">
+				<span data-ng-bind-html="themeSettings.general.header.content.topPromo | legacyLinkify | html"></span>
+			</div>
+			<div class="pull-right th-header__account-menu">
+					<a legacy-link="/login.asp" data-translate="header.signIn">Sign In</a>
+			</div>
+		</div>
+	</div>
+	<div class="container th-menu-container">
+		<div class="row">
+			<!-- Desktop Logo -->
+			<div class="col-md-2 hidden-xs hidden-sm">
+				<!--TODO: cleanup html-->
+				<!--<a class="navbar-brand" ui-sref="i18n.home">-->
+				<a class="navbar-brand" href="/">
+					<img data-ng-src="{{config.general.logoUrl }}" class="img-responsive" />
+				</a>
+			</div>
 
 				<!-- Sandwich Button -->
 				<div class="col-xs-3 hidden-md hidden-lg">
