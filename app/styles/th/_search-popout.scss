@@ -1,0 +1,31 @@
+.th-search-popout {
+	@extend %inline-block;
+
+	&__trigger {
+		@extend %inline-block;
+		color: $navbar-default-link-color;
+		position : absolute;
+		top      : 7px;
+		left     : 7px;
+		cursor   : pointer;
+		padding  : 0;
+
+		&.-position {
+			left  : auto;
+			right : 70px;
+		}
+	}
+
+	&__input {
+		@extend %inline-block;
+		border      : 1px solid $hr-border;
+		height      : 28px;
+		text-indent : 21px;
+	}
+
+	&__submit {
+		@extend %inline-block;
+		height : 28px;
+	}
+
+}
