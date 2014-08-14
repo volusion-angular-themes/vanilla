@@ -1,0 +1,40 @@
+.th-qty-wrap {
+	padding : 4px 15px;
+}
+
+.th-qty-counter {
+	&__input {
+		height     : 45px;
+		padding    : 10px 5px;
+		text-align : center;
+	}
+}
+
+.th-qty-counter {
+	&__btn {
+		border-color : $hr-border;
+		height       : 45px;
+		min-width    : 45px;
+		padding      : 10px 8px 11px;
+	}
+}
+
+@include respond-to(sm-and-up) {
+	.th-qty-wrap {
+		padding-right: 0;
+	}
+
+	.th-qty-counter {
+		&__btn {
+			height    : 46px;
+			min-width : 25px;
+			padding   : 13px 0px 14px;
+		}
+
+		&__input {
+			height : 46px;
+		}
+	}
+}
+
+
