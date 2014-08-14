@@ -9,7 +9,7 @@ default_username=deploy.sh
 default_email=
 
 #repository to deploy to. must be readable and writable.
-repo=https://$GITHUB_TOKEN@github.com/volusion-angular-themes/method.git
+repo=https://$GITHUB_TOKEN@github.com/volusion-angular-themes/vanilla.git
 
 if [[ $1 = "-v" || $1 = "--verbose" ]]; then
 	verbose=true
