@@ -1,0 +1,18 @@
+.th-product-title {  
+	&--medium {
+		@extend %inline-block;
+		font-size: 1.8rem;
+		margin-bottom: 0.2em;
+	}
+
+	&--large {
+		@extend %inline-block;
+	  font-size: 4.0rem;
+		font-weight: 300;
+		margin-bottom: 0.2em;
+
+		@include respond-to(xs) {
+			font-size: 3.4rem;
+		}
+	}
+}

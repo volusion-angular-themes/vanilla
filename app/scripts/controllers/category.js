@@ -19,7 +19,7 @@ angular.module('Volusion.controllers')
 			$scope.getCategory = function(newSlug) {
 				vnApi.Category().get({ slug: newSlug }).$promise.then(function(response) {
 					// Handle the category data
-					$scope.category = response.data.id;  // Prior to 7-11-2014 it was object, not array. Todo: figure out the proper fix.
+					$scope.category = response.data;
 					$scope.subCategories = response.data.subCategories;
 					vnProductParams.addCategory(response.data.id);
 					$scope.queryProducts();

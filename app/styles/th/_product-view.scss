@@ -1,0 +1,25 @@
+.th-product-view {
+	@include respond-to(md-and-up) {
+    padding-top: 20px;
+  }
+
+  &__main-img {
+    @extend %inline-block;
+  }
+
+  &__thumbnails {
+    @extend %inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  	@include respond-to(xs) {
+  		padding-left: 5px;
+  		padding-right: 5px;
+
+  		img {
+  			padding: 0;
+  		}
+  	}
+  }
+
+}

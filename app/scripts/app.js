@@ -80,10 +80,14 @@ angular.module('methodApp', [
 				.when('/search', {
 					templateUrl: 'views/search.html',
 					controller: 'SearchCtrl'
-				})
+				})			
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller: 'ThemeSettingsCtrl'
+				})
+				.when('/style-guide', {
+				  templateUrl: 'views/style-guide.html',
+				  controller: 'StyleGuideCtrl'
 				})
 				// Articles must be last or the prior /search and /theme-settings will never be picked up
 				.when('/:slug', {

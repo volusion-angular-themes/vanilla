@@ -1,0 +1,15 @@
+.th-product-card {
+	&__image-link {
+		display: block;
+		padding: 20px 0;
+		text-align: center;
+
+		&:hover {
+			@extend %opacity-80;
+		}
+	}
+	
+	&__image {
+		@extend %inline-block;
+	}
+}

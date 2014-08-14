@@ -1,0 +1,47 @@
+.th-footer {
+	margin-top: 40px;
+	padding-bottom: 25px;
+	border-top: 1px solid $gray-lighter;
+
+	&__heading {
+		font-size: 2.0rem;
+		margin: 20px 0 15px;
+
+		@include respond-to(xs) {
+			text-align: center;
+
+			&:last-child {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&__copyright {
+		margin-top: 30px;
+		padding: 20px 0;
+		border-top: 1px solid $gray-lighter;
+
+		@include respond-to(xs) {
+			margin-top: 20px;
+			padding: 10px 0 0;
+			text-align: center;
+		}
+	}
+
+
+	// Component styling unique to the footer
+
+  .th-icon-group {
+
+	  @include respond-to(xs) {
+	  	text-align: center;
+	  }
+
+		&__icon {
+		  @include respond-to(xs) {
+				margin: 0 15px;
+			}
+	  }
+  }	
+
+}
