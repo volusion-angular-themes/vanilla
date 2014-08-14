@@ -160,5 +160,4 @@ angular.module('methodApp', [
 
 			// Add translated messages
 			translate.addParts('message');
-
 		}]);
