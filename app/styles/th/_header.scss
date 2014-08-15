@@ -1,7 +1,7 @@
 .th-header {
     padding-top: 10px;
     margin-bottom: 20px;
-    
+
     @include respond-to(md-and-up) {
         border-bottom: 1px solid $gray-lighter;
     }
@@ -17,11 +17,11 @@
         padding-top: 12px;
         padding-bottom: 13px;
 
-        @include respond-to(xs) {
-            display: block;
+        &--small {
+						max-height: 47px;
             margin: 0 auto;
-            padding-top: 9px;
-            padding-bottom: 10px;
+						padding-top: 0;
+						padding-bottom: 0;
         }
     }
 
