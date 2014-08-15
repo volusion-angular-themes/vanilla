@@ -1,3 +1,5 @@
+// TODO:
+
 .vn-labeled-radio {
 	text-align: left;
 	font-weight: normal;
@@ -53,6 +55,10 @@
 			font-family: $font-family-sans-serif;
 			text-transform: uppercase;
 			color: #444444;
+
+			&.-disabled {
+				color: #AAAAAA;
+			}
 		}
 
 		&__border {
@@ -95,5 +101,11 @@
 
 	&__image {
 		position: relative;
+	}
+
+	&.-disabled {
+		.vn-labeled-radio__image {
+			@include opacity(0.3);
+		}
 	}
 }

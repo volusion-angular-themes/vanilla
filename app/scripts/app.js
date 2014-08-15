@@ -1,4 +1,4 @@
-'use strict';
+/* exported VnAppRouteProvider */
 
 angular.module('Volusion.templates', []);
 angular.module('Volusion.directives', ['Volusion.templates']);
@@ -38,6 +38,8 @@ angular.module('methodApp', [
 	.config(['$routeProvider', '$locationProvider', 'translateProvider', 'AppConfigProvider',
 		function ($routeProvider, $locationProvider, translateProvider, AppConfigProvider) {
 
+			'use strict';
+
 			$locationProvider.html5Mode(true);
 
 			var translateOptions = {
@@ -62,8 +64,6 @@ angular.module('methodApp', [
 						}]
 					}
 				})
-
-				// Second pass at routes
 				.when('/p/:slug', {
 					templateUrl: 'views/product.html',
 					controller : 'ProductCtrl',
@@ -74,16 +74,18 @@ angular.module('methodApp', [
 					}
 				})
 				.when('/c/:slug', {
-					templateUrl: 'views/category.html',
-					controller : 'CategoryCtrl'
+					templateUrl   : 'views/category.html',
+					controller    : 'CategoryCtrl',
+					reloadOnSearch: false
 				})
 				.when('/search', {
-					templateUrl: 'views/search.html',
-					controller: 'SearchCtrl'
-				})			
+					templateUrl   : 'views/search.html',
+					controller    : 'SearchCtrl',
+					reloadOnSearch: false
+				})
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
-					controller: 'ThemeSettingsCtrl'
+					controller : 'ThemeSettingsCtrl'
 				})
 				.when('/style-guide', {
 				  templateUrl: 'views/style-guide.html',
@@ -98,8 +100,10 @@ angular.module('methodApp', [
 					redirectTo: '/'
 				});
 		}])
-	.run(['snapRemote', '$rootScope', '$window', 'cacheBustFilter', 'SiteConfig', 'themeSettings', 'Cart',
-		function (snapRemote, $rootScope, $window, cacheBustFilter, SiteConfig, themeSettings, Cart) {
+	.run(['snapRemote', '$rootScope', '$window', 'cacheBustFilter', 'SiteConfig', 'themeSettings', 'Cart', 'ContentMgr',
+		function (snapRemote, $rootScope, $window, cacheBustFilter, SiteConfig, themeSettings, Cart, ContentMgr) {
+
+			'use strict';
 
 			$rootScope.isInDesktopMode = true;
 
@@ -114,6 +118,17 @@ angular.module('methodApp', [
 					$rootScope.isInDesktopMode = false;
 				}
 			});
+
+			// Watch the snap menu state and update as needed
+			$rootScope.$watch(
+				// Use a fn in $watch first argument that gets value from service
+				function () {
+					return ContentMgr.getSnapMenuState();
+				},
+				// Use second fn to update the controller menu state when changed.
+				function (state) {
+					$rootScope.snapMenuState = state;
+				}, true);
 
 			$rootScope.$on('$routeChangeSuccess', function () {
 				snapRemote.close();
@@ -131,8 +146,5 @@ angular.module('methodApp', [
 
 			// Init services
 			// one time initialization for services
-			SiteConfig.init();
-			themeSettings.init();
 			Cart.init();
-
 		}]);

@@ -45,18 +45,18 @@ module.exports = function(grunt) {
 						apiEndpoint: 'http://www.samplestore.io/api/v1'
 					}
 				}
-			} //,
-//			production: {
-//				options: {
-//					dest: '<%= yeoman.dist %>/scripts/config.js'
-//				},
-//				constants: {
-//					ENV: {
-//						name: 'production',
-//						apiEndpoint: '/api/v1'
-//					}
-//				}
-//			}
+			},
+			production: {
+				options: {
+					dest: '<%= yeoman.app %>/scripts/config.js'
+				},
+				constants: {
+					ENV: {
+						name: 'production',
+						apiEndpoint: '/api/v1'
+					}
+				}
+			}
 		},
 
 		// Watches files for changes and runs tasks based on the changed files
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 				}
 			},
 			js: {
-				files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+				files: ['<%= yeoman.app %>/scripts/{,*/}*.js', '<%= yeoman.app %>/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js'],
 				tasks: ['newer:jshint:all'],
 				options: {
 					livereload: true
@@ -102,7 +102,8 @@ module.exports = function(grunt) {
 						'<%= yeoman.app %>/views/**/*.html',
 						'.tmp/styles/{,*/}*.css',
 						'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.app %>/translations/{,*/}*.json'
+						'<%= yeoman.app %>/translations/{,*/}*.json',
+						'<%= yeoman.app %>/settings/{,*/}*'
 				]
 			}
 		},
@@ -278,7 +279,9 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
 						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.dist %>/styles/fonts/*'
+						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
+						'<%= yeoman.dist %>/fonts/*'
 					]
 				}
 			}
@@ -310,7 +313,10 @@ module.exports = function(grunt) {
 			options: {
 				assetsDirs: ['<%= yeoman.dist %>'],
 				patterns: {
-					js: [[/src=([^ >]+)/g, 'Update template js to reference revved images']],
+					js: [
+						[/src=([^ >]+)/g, 'Update template js to reference revved images'],
+						[/(styles\/main.css)/gm, 'Update JS to reference our revved main.css'] //used in settings/app.js
+					],
 					css: [
 						[
 							/(?:src=|url\(\s*)['"]?(?:\.\.)?([^'"\)(\?|#)]+)['"]?\s*\)?/gm,
@@ -319,7 +325,10 @@ module.exports = function(grunt) {
 					]
 				}
 			},
-			js: ['<%= yeoman.dist %>/scripts/*.scripts.js']
+			js: [
+				'<%= yeoman.dist %>/scripts/*.scripts.js',
+				'<%= yeoman.dist %>/settings/app.js'
+			]
 		},
 
 		// The following *-min tasks produce minified files in the dist folder
@@ -360,7 +369,7 @@ module.exports = function(grunt) {
 				collapseWhitespace: true,
 				collapseBooleanAttributes: true,
 				removeCommentsFromCDATA: true,
-				removeOptionalTags: true
+//				removeOptionalTags: true // This option breaks livereload when used.
 			},
 			server: {
 				files: [
@@ -377,7 +386,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: '<%= yeoman.dist %>',
-						src: ['*.html', 'views/*.html'],
+						src: ['*.html', 'views/{,*/}*.html'],
 						dest: '<%= yeoman.dist %>'
 					}
 				]
@@ -403,7 +412,7 @@ module.exports = function(grunt) {
 				}
 			},
 			templates: {
-				src: ['<%= yeoman.app %>/views/partials/{,*/}*.html'],
+				src: ['<%= yeoman.app %>/views/{,*/}*.html'],
 				dest: '.tmp/templates.js'
 			}
 		},
@@ -418,10 +427,9 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// ngmin tries to make the code safe for minification automatically by
-		// using the Angular long form for dependency injection. It doesn't work on
-		// things like resolve or inject so those have to be done manually.
-		ngmin: {
+		// ngAnnotate tries to make the code safe for minification automatically by
+		// using the Angular long form for dependency injection.
+		ngAnnotate: {
 			dist: {
 				files: [
 					{
@@ -448,10 +456,12 @@ module.exports = function(grunt) {
 							'web.config',
 							'.htaccess',
 							'*.html',
-							'views/*.html',
+							'views/{,*/}*.html',
 							'images/{,*/}*.{webp}',
 							'styles/fonts/*',
 							'translations/{,*/}*.json',
+							'settings/{,*/}*',
+							'styles/overrides.css',
 							'bower_components/angular-i18n/angular-locale_*.js'
 						]
 					},
@@ -459,7 +469,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: '.tmp',
 						dest: '<%= yeoman.dist %>',
-						src: ['styles/main.css', 'images/generated/*']
+						src: ['styles/main.css', 'images/generated/{,*/}*.*']
 					}
 				]
 			}
@@ -487,6 +497,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'wiredep',
 			'compass:server',
+			'ngconstant:samplestore',
 			'autoprefixer',
 			'htmlmin:server',
 			'connect:livereload',
@@ -499,13 +510,25 @@ module.exports = function(grunt) {
 		grunt.task.run(['serve:' + target]);
 	});
 
-	grunt.registerTask('test', [
-		'clean:server',
-		'compass:server',
-		'autoprefixer',
-		'connect:test',
-		'karma'
-	]);
+	grunt.registerTask('test', function(target) {
+		grunt.task.run([
+			'clean:server',
+			'compass:server',
+			'autoprefixer',
+		]);
+
+		// Add additional targets according to environment variables
+		if (target === undefined || target === '' || target === 'samplestore') {
+			grunt.task.run(['ngconstant:samplestore']);
+		} else if (target === 'dist') {
+			grunt.task.run(['ngconstant:production']);
+		}
+
+		grunt.task.run([
+			'connect:test',
+			'karma'
+		]);
+	});
 
 	grunt.registerTask('build_only', [
 		'wiredep',
@@ -517,7 +540,7 @@ module.exports = function(grunt) {
 		'concat:generated',
 		'html2js',
 		'concat:templates',
-		'ngmin',
+		'ngAnnotate',
 		'copy:dist',
 		'cssmin',
 		'uglify',
@@ -530,16 +553,18 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', function(target) {
 		grunt.task.run([
 			'clean:dist',
-			'newer:jshint:all',
-			'test'
+			'newer:jshint:all'
 		]);
 
 		// Add additional targets according to environment variables
 		if (target === undefined || target === '' || target === 'samplestore') {
 			grunt.task.run(['ngconstant:samplestore']);
+		} else if (target === 'dist') {
+			grunt.task.run(['ngconstant:production']);
 		}
 
 		grunt.task.run([
+			'test:dist',
 			'build_only'
 		]);
 	});
