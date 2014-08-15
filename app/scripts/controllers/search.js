@@ -6,49 +6,89 @@
  * Controller of the methodApp
  */
 angular.module('methodApp')
-	.controller('SearchCtrl', ['$rootScope', '$scope', '$routeParams', '$location', '$window', 'vnApi', 'vnProductParams',
-		function ($rootScope, $scope, $routeParams, $location, $window, vnApi, vnProductParams) {
+	.controller('SearchCtrl', ['$rootScope', '$scope', '$routeParams', '$location', '$window', '$filter', 'vnApi', 'vnProductParams', 'ContentMgr', 'themeSettings', 'vnAppRoute',
+		function ($rootScope, $scope, $routeParams, $location, $window, $filter, vnApi, vnProductParams, ContentMgr, themeSettings, vnAppRoute) {
+
 			'use strict';
 
 			$scope.searchLocal = '';
-			// $scope.hasSearchTerms = true;
+			$scope.searchTerms = '';
 
 			$scope.queryProducts = function() {
 				var params = vnProductParams.getParamsObject();
 				vnApi.Product().query(params).$promise.then(function (response) {
 					$scope.products = response.data;
 					$scope.facets = response.facets;
-					$scope.categories = response.categories;
+					$scope.categoryList = response.categories;
 					$scope.cursor = response.cursor;
+
+					// Post response UI Setup
+					$scope.checkFacetsAndCategories(response.categories,response.facets);
 				});
+			};
+
+			$scope.getImagePath = function (imageCollections) {
+				// This gets the default:medium image for the product
+				var path = $filter('vnProductImageFilter')(imageCollections);
+
+				if ('' === path) {
+					return '/images/theme/tcp-no-image.jpg';
+				}
+
+				return path;
 			};
 
 			$scope.doSearch = function () {
 				$scope.currentSearchText = $scope.searchLocal;
 
+				// Unify scope variable to match $routeParams when reloading the page
+				$scope.searchTerms = { 'q' : $scope.searchLocal};
+
+				// This could go both ways ... depends on the route story *****************************
 				// Change apps location
 				$location.path('/search');
 				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
 				$location.search('q', $scope.searchLocal);
-				vnProductParams.updateSearch($scope.searchLocal);
+
+				// ************************************************************************************
+
+//				vnProductParams.updateSearch($scope.searchLocal);
+//				$scope.queryProducts();
+
+				// ************************************************************************************
 			};
 
-			$scope.init = function() {
-				vnProductParams.updateSearch($routeParams.q);
-				$scope.searchTerms = $routeParams;
-				$scope.queryProducts();
+			$scope.checkFacetsAndCategories = function(categories, facets) {
+
+				if( (categories && categories.length) || (facets && facets.length) ) {
+					$scope.hasFacetsOrCategories = true;
+				} else {
+					$scope.hasFacetsOrCategories = false;
+				}
+
 			};
 
-			// Todo: move this into a directive level w/ ctrl if needed.
+			$scope.initParams = function() {
+				vnProductParams.setPageSize(themeSettings.getPageSize());
+
+				if ($routeParams.q !== undefined && $scope.searchTerms !== $routeParams) {
+					vnProductParams.updateSearch($routeParams.q);
+					$scope.searchTerms = $routeParams;
+					$scope.queryProducts();
+				}
+			};
+
+
 			$scope.clearAllFilters = function () {
-				console.log('work through search controller reset flow.');
-//				// Reset for the service layer (this will reset the stuff generated via directive
-//				vnProductParams.resetParamsObject();
-//
-//				//Reset for the price fields
-//				$scope.minPrice = '';
-//				$scope.maxPrice = '';
-//				queryProducts();
+				vnProductParams.resetParams();
+
+				vnProductParams.setSort('relevance'); // Is default when
+				vnProductParams.updateSearch($routeParams.q);
+
+				//Reset for the price fields
+				$scope.minPrice = '';
+				$scope.maxPrice = '';
+				$scope.queryProducts();
 			};
 
 			$scope.searchByPrice = function (event) {
@@ -61,49 +101,36 @@ angular.module('methodApp')
 				}
 			};
 
-			$scope.toggleSearch = function () {
-				if ($scope.mobileDisplay) {
+			$scope.toggleSearch = function() {
+				// Remember, this should only ever be called / used from the mobile filter element.
+				if($scope.mobileDisplay) {
 					$scope.mobileDisplay = false;
+					$scope.isMobileAndVisible = false;
+					$scope.isMobileAndHidden = true;
+					ContentMgr.showAppFooter();
 					return;
 				}
 				$scope.mobileDisplay = true;
+				$scope.isMobileAndVisible = true;
+				$scope.isMobileAndHidden = false;
+				ContentMgr.hideAppFooter();
 			};
 
-			enquire.register('screen and (max-width:767px)', {
-
-				setup  : function () {
-					$scope.showMobileSearch = false;
-					$scope.mobileDisplay = true;
-				},
-				unmatch: function () {
-					$scope.mobileDisplay = true; // default cats and facets to open
-					$scope.showMobileSearch = false;
-				},
-				// transitioning to mobile mode
-				match  : function () {
-					$scope.mobileDisplay = false; // default cats and facets default to closed
-					$scope.showMobileSearch = true;
-				}
-			});
-			// End long Todo.
+			$scope.dismissMobileFilters = function() {
+				$scope.toggleSearch();
+			};
 
 			// Scope listeners, initialization and cleanup routines
-			$scope.init();
+			$scope.initParams();
 
-			// Listen for faceted search updates
-			$rootScope.$on('ProductSearch.facetsUpdated', function () {
-				$scope.queryProducts();
+			// First time view / controller is loaded (or reloaded) Initialization tasks
+			$scope.$on('$viewContentLoaded', function() {
+				vnAppRoute.setRouteStrategy('search');
+				vnProductParams.preloadDataForSearch($routeParams);
 			});
 
-			// Listen for Sub Category updated
-			$rootScope.$on('ProductSearch.categoriesUpdated', function (evt, args) {
-				vnProductParams.addCategory(args.categoryId);
-				$scope.queryProducts();
-			});
-
-			// Clean up before this controller is destroyed
+			// Clean up tasks when this controller is destroyed
 			$scope.$on('$destroy', function cleanUp() {
-				$scope.searchLocal = '';
-				$scope.clearAllFilters();
+				vnProductParams.resetParams();
 			});
 		}]);

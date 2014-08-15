@@ -1,11 +1,12 @@
-'use strict';
-
 angular.module('Volusion.controllers')
-	.controller('ProductCtrl', ['$rootScope', '$scope', 'vnApi', '$location', '$routeParams', '$anchorScroll', 'Cart',
-		function ($rootScope, $scope, vnApi, $location, $routeParams, $anchorScroll, Cart) {
+	.controller('ProductCtrl', ['$rootScope', '$scope', 'vnApi', '$location', '$routeParams', '$filter', '$anchorScroll', 'Cart',
+		function ($rootScope, $scope, vnApi, $location, $routeParams, $filter, $anchorScroll, Cart) {
+
+			'use strict';
 
 			$scope.product = {};
 			$scope.cartItem = {};
+			$scope.itemSelectionsNotInStock = false;
 
 			// carousel
 			$scope.carousel = {
@@ -27,20 +28,136 @@ angular.module('Volusion.controllers')
 				}
 			};
 
+			function findOptionAvailability(key) {
+                if (typeof key === 'undefined') {
+                    return true;
+                }
+
+				var qty = 0,
+					option;
+
+				option = $scope.product.optionSKUs.filter(function (option) {
+					return option.key === key;
+				});
+
+				if (option.length > 0) {
+					qty = option[0].quantityInStock;
+				}
+
+				return (qty === null || qty > 0);
+			}
+
+			function findRequiredOptionsAreSelected(options) {
+				var missedOptions = [];
+
+				if (!options) {
+					return missedOptions;
+				}
+
+				for (var i = 0; i < options.length; i++) {
+					var option = options[i];
+					if (option.isRequired && !option.hasOwnProperty('selected')) {
+						missedOptions.push(option.label);
+					}
+					if (option.options.length > 0) {
+						var subOptions = findRequiredOptionsAreSelected(option.options);
+						for (var j = 0; j < subOptions.length; j++) {
+							missedOptions.push(subOptions[j].label);
+						}
+					}
+				}
+
+				return missedOptions;
+			}
+
+			function setPopover () {
+				$scope.popoverText = '';
+				$scope.buttonDisabled = false;
+
+				var missedOptions = findRequiredOptionsAreSelected($scope.product.options);
+				if (missedOptions.length > 0) {
+					for (var idx = 0; idx < missedOptions.length; idx++) {
+						$scope.popoverText += $filter('uppercase')(missedOptions[idx]);
+
+						if (idx !== missedOptions.length - 1) {
+							$scope.popoverText += ' and ';
+						}
+					}
+
+					$scope.popoverText = 'Please select ' + $scope.popoverText + ' to add this to your cart';
+					$scope.buttonDisabled = true;
+
+					return;
+				}
+
+				var selectionAvailable = false;
+
+				if (0 === $scope.product.options.length) {
+					selectionAvailable = ($scope.product.availability.allowBackOrders ||
+										  $scope.product.availability.quantityInStock === null ||
+										  $scope.product.availability.quantityInStock > 0);
+				} else {
+					// For some reason when having only one option 'optionSelection.key' is missing :(
+					var selectedOption = (1 === $scope.product.options.length) ?
+						$scope.product.optionSelection.option.key + ':' + $scope.product.optionSelection.option.selected :
+						$scope.product.optionSelection.key;
+
+					selectionAvailable = findOptionAvailability(selectedOption);
+				}
+
+				if (!selectionAvailable) {
+					$scope.popoverText = 'Sorry, this product is not in stock';
+					$scope.buttonDisabled = true;
+
+					return;
+				}
+			}
+
+			function findAvailability () {
+				var available = 0;
+
+                if ($scope.product.options && $scope.product.options.length > 0) {
+                    for (var idx = 0; idx < $scope.product.optionSKUs.length; idx++) {
+                        available |= findOptionAvailability($scope.product.optionSKUs[idx].key);  // jshint ignore:line
+                    }
+                    $scope.itemSelectionsNotInStock = (available === 0);
+                } else {
+                    $scope.itemSelectionsNotInStock = (!$scope.product.availability.allowBackOrders &&
+                        $scope.product.availability.quantityInStock !== null &&
+                        $scope.product.availability.quantityInStock <= 0);
+                }
+
+			}
+
 			function setDefaults() {
 				var product = $scope.product;
-				product.optionSelection = { images: 'default' };
-				product.image = product.images.default[0];
-				$scope.cartItem.options = $scope.cartItem.options || {};
-				var options = product.options;
-				if (!options || !options.length) {
-					product.optionSelection = angular.extend(product.optionSelection, {
-						available: 9999,
-						isValid: true,
-						product: product,
-						state: 'available'
-					});
+				product.optionSelection = { option: {selected: 'default'} };
+
+				if (product.imageCollections.length > 0 && product.imageCollections[0].images.length > 0) {
+					product.image = product.imageCollections[0].images[0];
+				} else {
+					product.image = {};
+					product.image.medium = '/images/theme/tcp-no-image.jpg';
+					product.image.large = '/images/theme/tcp-no-image.jpg';
+					product.image.small = '/images/theme/tcp-no-image.jpg';
 				}
+
+				$scope.cartItem.options = $scope.cartItem.options || [];
+//				var options = product.options;
+//				if (!options || !options.length) {
+//					product.optionSelection = angular.extend(product.optionSelection, {
+//						available: 9999,
+//						isValid: true,
+//						product: product,
+//						state: 'available'
+//					});
+//
+//					return;
+//				}
+
+				findAvailability();
+				setPopover();
+
 			}
 
 			vnApi.Product().get({slug: $routeParams.slug }).$promise
@@ -57,6 +174,8 @@ angular.module('Volusion.controllers')
 						tumblr    : 'http://www.tumblr.com/share/link?url=' + fullUrl + '&amp;name=' + pageTitle,
 						googlePlus: 'https://plus.google.com/share?url=' + fullUrl
 					};
+
+					$scope.product.isEditable = false;
 
 					$scope.cartItem = $scope.product.cartItem;
 
@@ -103,73 +222,78 @@ angular.module('Volusion.controllers')
 			//$scope.sceDescriptions = angular.copy(product.descriptions);  // TODO: ???
 
 			$rootScope.$on('VN_PRODUCT_SELECTED', function (event, selection) {
-				selection.product.optionSelection = selection;
+				$scope.product.optionSelection = selection;
 			});
 
-			$scope.$watch('product.optionSelection', function (selection, oldSelection) {
-
-				function setAvailabilityMessage() {
-					//var message = product.optionAvailabilityMessages[selection.state];
-					//if (message) {
-					//	$scope.availabilityMessage = message.replace('{{available}}', selection.available);
-					//} else {
-					//	delete $scope.availabilityMessage;
-					//}
-				}
+			$scope.$watch('product.optionSelection', function (currentSelection) {
 
 				// TODO: Remove SKU if not needed
 				//function setSKU() {
-				//	var sku = selection.sku;
+				//	var sku = currentSelection.sku;
 				//	if (sku !== null && sku !== undefined) {
 				//		cartItem.sku = sku;
 				//	}
 				//}
 
-				function setProductCode() {
+				function setProductCodeAndId() {
 					$scope.cartItem.code = $scope.product.code;
+					$scope.cartItem.id = $scope.product.id;
 				}
 
 				function setQuantity() {
-					if (!selection.isValid) {
-						$scope.cartItem.qty = 0;
-						selection.available = 0;
-						$scope.product.optionSelection.available = 0;
+					if (!currentSelection.isValid) {
+						$scope.cartItem.qty = 1;
+						currentSelection.quantityInStock = 0;
+						$scope.product.optionSelection.quantityInStock = 0;
 
 						return;
 					}
-					if (selection.available < $scope.cartItem.qty) {
-						$scope.cartItem.qty = selection.available;
-					}
-					if (($scope.cartItem.qty === undefined || $scope.cartItem.qty === 0) && selection.available > 0) {
+
+					if ($scope.cartItem.qty === undefined || $scope.cartItem.qty === 0) {
 						$scope.cartItem.qty = 1;
 					}
-					selection.available -= $scope.cartItem.qty;
+
+					currentSelection.quantityInStock -= $scope.cartItem.qty;
 				}
 
-				function setImage() {
-					if (oldSelection === undefined || selection.images !== oldSelection.images) {
-						$scope.product.image = $scope.product.images[selection.images][0];
+				function setImages() {
+
+					if ($scope.product.imageCollections.length === 0 ||
+						$scope.product.imageCollections[0].images.length === 0) {
+
+						$scope.product.image = {};
+						$scope.product.image.medium = '/images/theme/tcp-no-image.jpg';
+						$scope.product.image.large = '/images/theme/tcp-no-image.jpg';
+						$scope.product.image.small = '/images/theme/tcp-no-image.jpg';
+
+						return;
 					}
+
+					angular.forEach($scope.product.imageCollections, function (collection) {
+						if (collection.key === currentSelection.option.selected) {
+							$scope.currentImageCollection = collection.images;
+							$scope.product.image = $scope.currentImageCollection[0];
+						}
+					});
 				}
 
-				if (selection === undefined) {
+				if (currentSelection === undefined) {
 					return;
 				}
 
-				setAvailabilityMessage();
-				//setSKU();
-				setProductCode();
+				setProductCodeAndId();
 				setQuantity();
-				setImage();
+				setImages();
+				setPopover();
 
-				$scope.isAddToCartButtonEnabled = selection.isValid && $scope.cartItem.qty > 0;
+				$scope.isAddToCartButtonEnabled = currentSelection.isValid && $scope.cartItem.qty > 0;
 			});
 
 			function modifyQuantity(amount) {
-				$scope.cartItem.qty += amount;
-				var selection = $scope.product.optionSelection;
-				if (selection && (selection.available - amount) >= 0) {
-					selection.available -= amount;
+				$scope.cartItem.qty = parseInt($scope.cartItem.qty) + amount; // manual change in input stringify model
+
+				if ($scope.product.optionSelection && ($scope.product.optionSelection.quantityInStock - amount) >= 0) {
+					$scope.product.optionSelection.quantityInStock -= amount;
 				}
 			}
 
@@ -181,38 +305,52 @@ angular.module('Volusion.controllers')
 				modifyQuantity(1);
 			};
 
-			function safeApply(scope, fn) {
-				return (scope.$$phase || scope.$root.$$phase) ? fn() : scope.$apply(fn);
-			}
+			$scope.changeQty = function () {
+				if (isNaN($scope.cartItem.qty) || parseInt($scope.cartItem.qty) < 1) {
+					$scope.cartItem.qty = 1;
+				}
+			};
+
+			$scope.getImagePath = function (imageCollections) {
+				// This gets the default:medium image for the product
+				var path = $filter('vnProductImageFilter')(imageCollections);
+
+				if ('' === path) {
+					return '/images/theme/tcp-no-image.jpg';
+				}
+
+				return path;
+			};
 
 			$scope.addToCart = function() {
 
+
+				if (findRequiredOptionsAreSelected($scope.product.options).length > 0 ||
+					!findOptionAvailability($scope.product.optionSelection.key)) {
+
+					return;
+				}
+
 				Cart.saveCart($scope.cartItem)
 					.then(function () {
-						safeApply($scope, function() {
-							$scope.cartItem.qty = 0;
-						});
-//						status = 'success';
-//						$rootScope.$emit('VN_ADD_TO_CART_SUCCESS', {
-//							status      : status,
-//							originalData: cartItem,
-//							data        : response.data
-//						});
-					}, function () {
+						$scope.cartItem.qty = 0;
+
+						$rootScope.$emit('vnNotification.show', { type: 'success', time: 100000, msg: 'Item(s) are added to your cart.' });
+
+					}, function (response) {
+                        if (response.errors &&response.errors.length > 0) {
+                            $rootScope.$emit('VN_ADD_TO_CART_ERROR', response.errors);
+                        }
+                        if (response.warnings && response.warnings.length > 0) {
+                            $rootScope.$emit('VN_ADD_TO_CART_WARNING', response.warnings);
+                        }
 //						$rootScope.$emit('VN_ADD_TO_CART_FAIL', {
 //							status: status,
 //							data  : cartItem
 //						});
 					})
 					.finally(function () {
-						safeApply($scope, function() {
-							modifyQuantity($scope.product.optionSelection.available && 1);
-						});
-//						$rootScope.$emit('VN_ADD_TO_CART_COMPLETE', {
-//							status      : status,
-//							originalData: cartItem,
-//							data        : response.data
-//						});
+						modifyQuantity(1);
 					});
 			};
 		}]);
