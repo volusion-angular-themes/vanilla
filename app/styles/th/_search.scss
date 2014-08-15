@@ -7,6 +7,12 @@
   &__submit {
     padding: 10px 15px;
 
+		&:active,
+		&:focus,
+		&:active:focus {
+			outline: 0;
+		}
+
     &:hover {
       @extend %opacity-75;
       background: none;

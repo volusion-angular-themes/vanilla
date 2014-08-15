@@ -248,7 +248,7 @@ module.exports = function(grunt) {
 				fontsDir: '<%= yeoman.app %>/styles/fonts',
 				importPath: [
 					'<%= yeoman.app %>/bower_components',
-					'<%= yeoman.app %>/bower_components/bootstrap-sass-official/vendor/assets/stylesheets'
+					'<%= yeoman.app %>/bower_components/bootstrap-sass-official/assets/stylesheets'
 				],
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
@@ -281,7 +281,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.dist %>/fonts/*'
+						'<%= yeoman.dist %>/styles/fonts/*'
 					]
 				}
 			}
