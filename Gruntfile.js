@@ -281,7 +281,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.dist %>/fonts/*'
+						'<%= yeoman.dist %>/styles/fonts/*'
 					]
 				}
 			}
