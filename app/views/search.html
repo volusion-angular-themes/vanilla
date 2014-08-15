@@ -14,14 +14,14 @@
 				<span class="th-product__new" data-ng-show="product.isNew"></span>
 				<div class="th-product__image">
 					<a href="p/{{product.slug}}" class="th-product-card__image-link">
-						<img data-ng-src="{{product.images.default[0].medium}}" class="img-responsive th-product-card__image" alt="{{ product.name }}">
+						<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive th-product-card__image" alt="{{ product.name }}">
 					</a>
 				</div>
 				<div class="th-product-card__title">
 					<a href="p/{{ product.slug }}" class="th-product-title--medium">{{ product.name }}</a>
 				</div>
-				<div class="th-product-card__price" data-ng-show="product.price.regularPrice > 0">
-					<div class="th-product-price th-product-price__price th-product-price__price--medium" data-ng-class="{strike: product.price.salePrice > 0}">{{product.price.regularPrice | currency}}</div>
+				<div class="th-product-card__price" data-ng-show="product.pricing.regularPrice > 0">
+					<div class="th-product-price th-product-price__price th-product-price__price--medium">{{product.pricing.regularPrice | currency}}</div>
 				</div>
 			</div>
 		</div>
