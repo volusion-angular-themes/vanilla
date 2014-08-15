@@ -34,10 +34,6 @@
   },
   "resolutions": {
     "angular": "~1.3.0",
-<<<<<<< HEAD
-=======
-    "angular-translate": "~2.2.0",
->>>>>>> small changes:
     "angular-touch": "~1.3.0"
   }
 }
