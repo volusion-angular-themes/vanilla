@@ -302,7 +302,11 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/scripts/{,*/}*.js',
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
+<<<<<<< HEAD
 						'<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+=======
+						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+>>>>>>> Fix bower filepaths, Vendor folder does not exist
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
 						'<%= yeoman.dist %>/styles/fonts/*'
