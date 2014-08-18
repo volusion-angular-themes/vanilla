@@ -10,17 +10,17 @@
             <a data-ng-click="doSearch()" class="btn btn-success btn-lg">Shop now</a>
         </div>
     </div>
-</div>    
+</div>
 
 <div class="container">
 	<!-- CONTENT 1 -->
 	<div data-ng-bind-html="themeSettings.pages.home.content1 | legacyLinkify | html"></div>
 	<!-- FEATURED PRODUCTS -->
-	<div class="visible-md-block visible-lg-block" data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
-		<div class="th-product-card clearfix">
-			<div class="row th-page-headings">
+	<div data-ng-if="themeSettings.pages.home.featuredProducts.isEnabled">
+		<div class="clearfix">
+			<div class="row th-product-tile__heading">
 				<h1 class="text-center">Featured Products</h1>
-				<div class="col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
+				<div class="col-sm-3" data-ng-repeat="product in featuredProducts" data-ng-include=" 'views/partials/product-tile.html' ">
 				</div>
 			</div>
 		</div>

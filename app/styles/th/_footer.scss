@@ -9,10 +9,6 @@
 
 		@include respond-to(xs) {
 			text-align: center;
-
-			&:last-child {
-				margin-top: 30px;
-			}
 		}
 	}
 
@@ -28,9 +24,6 @@
 		}
 	}
 
-
-	// Component styling unique to the footer
-
   .th-icon-group {
 
 	  @include respond-to(xs) {
@@ -42,6 +35,6 @@
 				margin: 0 15px;
 			}
 	  }
-  }	
+  }
 
 }
