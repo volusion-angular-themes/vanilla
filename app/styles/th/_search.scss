@@ -10,6 +10,7 @@
 		&:active,
 		&:focus,
 		&:active:focus {
+			border-color: $gray-lighter;
 			outline: 0;
 		}
 
