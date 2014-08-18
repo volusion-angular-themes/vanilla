@@ -1,0 +1,14 @@
+.th-product-price {
+	margin-bottom: 0.2em;
+
+	&--medium {
+		font-size: 1.8rem;
+	}
+
+	&--large {
+		@extend %inline-block;
+		font-size: 3.0rem;
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+}
