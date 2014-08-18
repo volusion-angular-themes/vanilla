@@ -13,25 +13,18 @@
 			</div><!-- /col-xs-12 col-md-6 -->
 
 	    <div class="col-xs-12 col-md-6 th-product-view">
-	    	<a href="#">
-	    		<div class="th-product-title--large" itemprop="name" data-ng-bind="product.name"></div>
-	    	</a>
-	      <div class="th-product-price__price--large" itemscope itemtype="http://schema.org/Offer">
+	    	<div class="th-product-name--large" itemprop="name" data-ng-bind="product.name"></div>
+	      <div class="th-product-price--large" itemscope itemtype="http://schema.org/Offer">
 	      	<span itemprop="price" data-ng-bind="product.pricing.regularPrice | currency"></span>
 	      </div>
 
 		    <div class="th-product-options">
-
-						<!--TODO Fix product option styling-->
-
-						<div class="th-product-details__options">
-							<div data-vn-product-option
-									 data-ng-repeat="option in product.options"
-									 data-option="option"
-									 data-product="product"
-									 data-save-to="cartItem.options">
-							</div>
-						</div>
+					<div data-vn-product-option
+							 data-ng-repeat="option in product.options"
+							 data-option="option"
+							 data-product="product"
+							 data-save-to="cartItem.options">
+					</div>
 
 		      <label for="qty" class="th-product-options__label">Qty</label>
 		      <div class="form-group">
@@ -103,6 +96,24 @@
 					<span class='st_facebook_hcount' displayText='Facebook'></span>
 					<span class='st_twitter_hcount' displayText='Tweet'></span>
 					<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+				</div>
+			</div>
+		</div>
+		<!-- RELATED PRODUCTS & ACCESSORIES -->
+		<div class="row" data-ng-if="relatedProducts.length > 0 || accessories.length > 0">
+			<div class="col-xs-12">
+				<div class="th-product-tile">
+					<div data-tabset>
+						<div data-tab data-ng-if="relatedProducts.length > 0" data-active="tabs.relatedProducts.active">
+							<div data-tab-heading data-translate="product.related">
+								Related
+							</div>
+							<div class="th-products-wrap clearfix">
+								<div class="col-xs-12 col-sm-3" data-ng-repeat="product in relatedProducts | filter: '!' + product.id" data-ng-include=" 'views/partials/product-tile.html' ">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,27 +1,28 @@
 <div class="container categories">
 	<div class="row">
-		<div class="col-sm-12 text-center th-page-headings">
+		<div class="col-sm-12 text-center th-product-tile__heading">
 			<h1>
 				<span ng-if="searchTerms.q">Results for &ldquo;{{ searchTerms.q }}&rdquo;</span>
 				<span ng-if="!searchTerms.q">View All Products</span>
 			</h1>
 		</div>
 	</div>
-	<div class="row">
-		<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-3" data-ng-repeat="product in products track by $index">
-			<div class="th-product-card">
+	<div class="row th-product-tile__block">
+		<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
+			<div class="th-product-tile">
+				<!--TODO Determine if sale/new spans are needed for Vanilla-->
 				<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
 				<span class="th-product__new" data-ng-show="product.isNew"></span>
-				<div class="th-product__image">
-					<a href="p/{{product.slug}}" class="th-product-card__image-link">
-						<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive th-product-card__image" alt="{{ product.name }}">
+				<div>
+					<a href="p/{{product.slug}}" class="th-product-tile__image-link">
+						<img data-ng-src="{{ getImagePath(product.imageCollections) }}" class="img-responsive th-product-tile__image" alt="{{ product.name }}">
 					</a>
 				</div>
-				<div class="th-product-card__title">
-					<a href="p/{{ product.slug }}" class="th-product-title--medium">{{ product.name }}</a>
+				<div class="th-product-name--medium">
+					<a href="p/{{ product.slug }}">{{ product.name }}</a>
 				</div>
-				<div class="th-product-card__price" data-ng-show="product.pricing.regularPrice > 0">
-					<div class="th-product-price th-product-price__price th-product-price__price--medium">{{product.pricing.regularPrice | currency}}</div>
+				<div class="th-product-price" data-ng-show="product.pricing.regularPrice > 0">
+					<div class="th-product-price--medium">{{product.pricing.regularPrice | currency}}</div>
 				</div>
 			</div>
 
