@@ -536,6 +536,7 @@ module.exports = function(grunt) {
 		]);
 	});
 
+	
 	grunt.registerTask('build', function(target) {
 		grunt.task.run([
 			'clean:dist',
