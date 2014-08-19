@@ -1,6 +1,5 @@
-
-<footer class="th-footer" data-ng-hide="hideWrapper" data-ng-controller="FooterCtrl">
-	<div class="container">
+<div class="container">
+	<footer class="th-footer" data-ng-hide="hideWrapper" data-ng-controller="FooterCtrl">
 		<div class="row">
 			<div class="col-sm-6 col-md-5">
 				<div class="th-footer__heading">Helpful Links</div>
@@ -18,7 +17,7 @@
 				<div class="th-icon-group" data-ng-include=" 'views/partials/social-sharing.html' "></div>
 			</div>
 
-			<div class="col-sm-6 col-md-4">				
+			<div class="col-sm-6 col-md-4">
 				<div class="th-footer__heading">Sign up for our newsletter!</div>
 				<form class="th_elist" role="form" name="MailingList" method="post" action="/MailingList_subscribe.asp">
 					<div class="form-group">
@@ -37,5 +36,5 @@
 		<div class="th-footer__copyright">
 			<div data-ng-bind-html="themeSettings.general.footer.content.bottomRow | legacyLinkify | html"></div>
 		</div>
-	</div>
-</footer>
+	</footer>
+</div>
