@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
   <div class="col-xs-12 text-center">
     <ul class="pagination">
@@ -7,3 +8,14 @@
     </ul>
   </div>
 </div>
+=======
+<ul class="pager"
+		data-ng-if="cursor.totalPages > 1">
+	<li data-ng-class="{disabled: cursor.currentPage == 1}"><a href data-ng-click="prevPage()">&laquo;</a></li>
+	<li data-ng-class="{disabled: cursor.currentPage == cursor.totalPages}"><a href data-ng-click="nextPage()">&raquo;</a></li>
+</ul>
+
+	<div class="pager">
+		Page {{ cursor.currentPage }} of {{ cursor.totalPages }}
+	</div>
+>>>>>>> Add ability to show or hide prev/next btns in vn-paginator directive.
