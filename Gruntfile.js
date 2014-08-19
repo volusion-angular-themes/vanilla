@@ -542,6 +542,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'compass:server',
 			'autoprefixer',
+			'configure:' + target,
 			'connect:test',
 			'karma'
 		]);
@@ -550,10 +551,9 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', function(target) {
 		grunt.task.run([
 			'clean:dist',
-			'clean:configure',
 			'newer:jshint:all',
 			'configure:' + target,
-			'test',
+			'test:dist',
 			'wiredep',
 			'useminPrepare',
 			'compass:dist',
