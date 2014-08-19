@@ -1,12 +1,10 @@
-.th-product-title {  
+.th-product-name {
 	&--medium {
-		@extend %inline-block;
 		font-size: 1.8rem;
 		margin-bottom: 0.2em;
 	}
 
 	&--large {
-		@extend %inline-block;
 	  font-size: 4.0rem;
 		font-weight: 300;
 		margin-bottom: 0.2em;
