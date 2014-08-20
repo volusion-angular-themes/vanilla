@@ -50,9 +50,6 @@ label {
         }
       }
     }
-    .caret {
-      margin: 0 0.5rem;
-    }
   }
 
   @include respond-to(md-and-up) {
@@ -123,7 +120,9 @@ label {
 
 // Dropdowns =================================================================
 
-
+.dropdown-menu > li > a {
+	cursor : pointer;
+}
 
 // Typography =================================================================
 

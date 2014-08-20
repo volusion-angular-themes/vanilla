@@ -6,47 +6,51 @@
  */
 
 angular.module('Volusion.directives')
-	.directive('showOnDropdownHover', ['$timeout',
-		function ($timeout) {
+		.directive('showOnDropdownHover', ['$timeout',
+			function ($timeout) {
 
-			'use strict';
+				'use strict';
 
-			return {
-				restrict: 'A',
-				link    : function postLink(scope, element) {
+				return {
+					restrict: 'A',
+//				scope   : {},
+					link    : function postLink(scope, element) {
 
-					var timerHide,
-						trigger = element.parent().parent();  // <li>
+						var timerHide,
+								triggerHover = angular.element(element.parent().parent().find('a')[0]);  // target category anchor (first <a> in <li>)
 
-					trigger.bind('mouseenter', function() {
-							element.show();
-						})
-						.bind('mouseleave', function() {
-							timerHide = $timeout(function () {
-								element.hide();
-							}, 1);
-						})
-						.bind('click', function() {
-							element.show();
-						});
-
-					element.bind('mouseenter', function() {
+						triggerHover.bind('mouseenter', function() {
 							element.show();
 							$timeout.cancel( timerHide );
 						})
-						.bind('mouseleave', function() {
-							element.hide();
-						});
+								.bind('mouseleave', function() {
+									timerHide = $timeout(function () {
+										element.hide();
+									}, 100);
+								})
+								.bind('click', function() {
+									element.show();
+								});
 
-					/* jshint unused:false */
-					scope.$on('$destroy',
-						function( event ) {
-
+						element.bind('mouseenter', function() {
+							element.show();
 							$timeout.cancel( timerHide );
+						})
+								.bind('mouseleave', function() {
+									timerHide = $timeout(function () {
+										element.hide();
+									}, 100);
+								});
 
-						}
-					);
-					/* jshint unused:true */
-				}
-			};
-		}]);
+						/* jshint unused:false */
+						scope.$on('$destroy',
+								function( event ) {
+
+									$timeout.cancel( timerHide );
+
+								}
+						);
+						/* jshint unused:true */
+					}
+				};
+			}]);
