@@ -20,6 +20,7 @@ angular.module('methodApp', [
 	'pascalprecht.translate',
 	'snap',
 	'textAngular',
+	'djds4rce.angular-socialshare',
 
 	// Volusion modules
 	'config',

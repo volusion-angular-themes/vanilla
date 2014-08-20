@@ -13,6 +13,7 @@
     "angular-touch": "~1.3.0",
     "angular-snap": "~1.5.0",
     "angular-seo": "*",
+    "angular-socialshare": "*",
     "angulartics": "https://github.com/prabinv/angulartics.git#0db9605833cd809f5336c0f981f5164d5aed66d4",
     "angular-ui-bootstrap-bower": "~0.11.0",
     "bootstrap-sass-official": "~3.2.0",

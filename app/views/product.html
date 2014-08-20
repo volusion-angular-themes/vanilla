@@ -89,13 +89,13 @@
 					</div>
 					<!-- Social Icons -->
 					<div class="th-product-description__title">Share</div>
-					<!--<div class="th-icon-group" data-ng-include=" 'views/partials/social-sharing.html' "></div>-->
-					<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-					<!--<script type="text/javascript">stLight.options({publisher: "1b7dd8df-7478-4045-b3e3-88d4ba9c7878", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>-->
-					<style> .stMainServices {height:22px !important;}</style>
-					<span class='st_facebook_hcount' displayText='Facebook'></span>
-					<span class='st_twitter_hcount' displayText='Tweet'></span>
-					<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+					<div class="th-icon-group">
+						<script src="//platform.twitter.com/widgets.js"></script>
+						<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+						<a data-facebook class="th-icon-group__share facebookShare" data-url="//google.com" data-shares="shares">{{ shares }}</a>
+						<a data-twitter class="th-icon-group__share" data-lang="en" data-count="horizontal" data-url="//google.com" data-via="notsosleepy" data-size="medium" data-text="Testing Twitter Share" ></a>
+						<a data-pintrest class="th-icon-group__share" data-href="//google.com" data-description="testing share" data-img="//plnkr.co/img/plunker.png" data-pin-do="buttonPin" data-pin-config="beside"></a>
+					</div>
 				</div>
 			</div>
 		</div>
