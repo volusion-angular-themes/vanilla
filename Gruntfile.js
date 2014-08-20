@@ -198,7 +198,7 @@ module.exports = function(grunt) {
 						}
 				]
 			},
-			config: {
+			configure: {
 				files: [
 					{
 						dot: true,
