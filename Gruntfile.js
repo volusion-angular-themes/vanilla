@@ -302,7 +302,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/scripts/{,*/}*.js',
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
-						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+						'<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
 						'<%= yeoman.dist %>/styles/fonts/*'
@@ -368,7 +368,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: '<%= yeoman.app %>/images',
-						src: '{,*/}*.{png,jpg,jpeg,gif}',
+						src: '**/*.{png,jpg,jpeg,gif}',
 						dest: '<%= yeoman.dist %>/images'
 					}
 				]
@@ -481,8 +481,8 @@ module.exports = function(grunt) {
 							'.htaccess',
 							'*.html',
 							'views/{,*/}*.html',
-							'images/{,*/}*.{webp}',
-							'styles/fonts/*',
+							'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+							'fonts/*',
 							'translations/{,*/}*.json',
 							'settings/{,*/}*',
 							'styles/overrides.css',
