@@ -2,7 +2,7 @@ rvm:
 - 2.1.1
 env:
   global:
-  - secure: V/C8aUAfTVtbGOvro4VYkP+WQtiw+GpSSoaNF41/0ekXdzXiwW7zFVPf39RdASRi5dT872mAvHjakcdaNTMZXlPBhlXSaFQSzKbtUJFVK1/B3rGZnEC/Xt4ex2FBzRV+Tyw0BgU1u6MHKdaeqXxx2m801sxXa1govBquzqwE3Tw=
+  - secure: AcQ3VW8VsgzJQQAJl000haAta/rDgX1MGdBcI3VwhOfeuM2yyixFsrnKENYoedNAT5K9M0AtE7KnTSG7/Vjk1EdFrualAuUIjr7IF42kSE6Zfthb8syZW9ELTAtkNaA2cJUAnxqAVo38LwsRkjUrz+by5ZVktMy+3z7+F3P9nRo=
 bundler_args: --without development
 language: node_js
 node_js:
