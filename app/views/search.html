@@ -25,6 +25,13 @@
 					<div class="th-product-price--medium">{{product.pricing.regularPrice | currency}}</div>
 				</div>
 			</div>
+
+			<div vn-paginator
+				 cursor="cursor"
+				 current-page="currentPage"
+				 query-fn="queryProducts()"
+				 ng-if="products.length > 0"></div>
+
 		</div>
 	</div>
 	<div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>

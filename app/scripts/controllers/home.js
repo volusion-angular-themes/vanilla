@@ -1,3 +1,4 @@
+
 angular.module('Volusion.controllers')
 	.controller('HomeCtrl', ['$scope', '$filter', 'vnApi',
 		function($scope, $filter, vnApi) {

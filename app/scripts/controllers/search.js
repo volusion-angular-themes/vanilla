@@ -14,6 +14,15 @@ angular.module('methodApp')
 			$scope.searchLocal = '';
 			$scope.searchTerms = '';
 
+			$scope.$watch(
+				function () {
+					return vnProductParams.getSearchText();
+				},
+				function () {
+					$scope.queryProducts();
+				}
+			);
+
 			$scope.queryProducts = function() {
 				var params = vnProductParams.getParamsObject();
 				vnApi.Product().query(params).$promise.then(function (response) {
@@ -24,6 +33,7 @@ angular.module('methodApp')
 
 					// Post response UI Setup
 					$scope.checkFacetsAndCategories(response.categories,response.facets);
+					$scope.searchTerms = vnProductParams.getSearchText() || 'All Products';
 				});
 			};
 
@@ -42,20 +52,32 @@ angular.module('methodApp')
 				$scope.currentSearchText = $scope.searchLocal;
 
 				// Unify scope variable to match $routeParams when reloading the page
-				$scope.searchTerms = { 'q' : $scope.searchLocal};
+//				$scope.searchTerms = { 'q' : $scope.searchLocal};
 
-				// This could go both ways ... depends on the route story *****************************
-				// Change apps location
-				$location.path('/search');
+				if('/search' !== $location.path()) {
+					$location.path('/search');
+				}
 				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
 				$location.search('q', $scope.searchLocal);
+				vnProductParams.updateSearch($scope.searchLocal);
+			};
 
-				// ************************************************************************************
+			$scope.init = function() {
+				vnProductParams.updateSearch($routeParams.q);
+				$scope.searchTerms = $routeParams;
+				$scope.queryProducts();
+			};
 
-//				vnProductParams.updateSearch($scope.searchLocal);
-//				$scope.queryProducts();
-
-				// ************************************************************************************
+			$scope.initParams = function() {
+				vnProductParams.setPageSize(themeSettings.getPageSize());
+				if (!$routeParams.q) {
+					$scope.searchTerms = 'All Products';
+					$scope.queryProducts();
+				} else {
+					vnProductParams.updateSearch($routeParams.q);
+					$scope.searchTerms = $routeParams.q;
+					$scope.queryProducts();
+				}
 			};
 
 			$scope.checkFacetsAndCategories = function(categories, facets) {
@@ -66,16 +88,6 @@ angular.module('methodApp')
 					$scope.hasFacetsOrCategories = false;
 				}
 
-			};
-
-			$scope.initParams = function() {
-				vnProductParams.setPageSize(themeSettings.getPageSize());
-
-				if ($routeParams.q !== undefined && $scope.searchTerms !== $routeParams) {
-					vnProductParams.updateSearch($routeParams.q);
-					$scope.searchTerms = $routeParams;
-					$scope.queryProducts();
-				}
 			};
 
 
@@ -126,7 +138,7 @@ angular.module('methodApp')
 			// First time view / controller is loaded (or reloaded) Initialization tasks
 			$scope.$on('$viewContentLoaded', function() {
 				vnAppRoute.setRouteStrategy('search');
-				vnProductParams.preloadDataForSearch($routeParams);
+				vnProductParams.preLoadData($routeParams);
 			});
 
 			// Clean up tasks when this controller is destroyed

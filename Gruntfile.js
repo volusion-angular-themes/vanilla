@@ -42,7 +42,20 @@ module.exports = function(grunt) {
 				constants: {
 					ENV: {
 						name: 'samplestore',
-						apiEndpoint: 'http://www.samplestore.io/api/v1'
+						host: 'http://www.samplestore.io',
+						apiEndpoint: '/api/v1'
+					}
+				}
+			},
+			mybox: {
+				options: {
+					dest: '<%= yeoman.app %>/scripts/config.js'
+				},
+				constants: {
+					ENV: {
+						name: 'mybox',
+						host: 'http://txlpt374-vm.corp.volusion.com',
+						apiEndpoint: '/api/v1'
 					}
 				}
 			},
@@ -53,6 +66,7 @@ module.exports = function(grunt) {
 				constants: {
 					ENV: {
 						name: 'production',
+						host: '',
 						apiEndpoint: '/api/v1'
 					}
 				}
@@ -99,11 +113,11 @@ module.exports = function(grunt) {
 					livereload: '<%= connect.options.livereload %>'
 				},
 				files: [
-						'<%= yeoman.app %>/views/**/*.html',
-						'.tmp/styles/{,*/}*.css',
-						'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.app %>/translations/{,*/}*.json',
-						'<%= yeoman.app %>/settings/{,*/}*'
+					'<%= yeoman.app %>/views/**/*.html',
+					'.tmp/styles/{,*/}*.css',
+					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+					'<%= yeoman.app %>/translations/{,*/}*.json',
+					'<%= yeoman.app %>/settings/{,*/}*'
 				]
 			}
 		},
@@ -117,7 +131,7 @@ module.exports = function(grunt) {
 				livereload: 35729
 			},
 			rules: [
-				{ from: '^/(bower_components|styles/fonts|images|scripts|styles|translations|views)(/.*)$', to: '/$1$2' },
+				{ from: '^/(bower_components|fonts|images|scripts|styles|translations|views)(/.*)$', to: '/$1$2' },
 				{ from: '^/404.html', to: '/404.html' },
 				{ from: '^/(.*)$', to: '/index.html' }
 			],
@@ -187,15 +201,25 @@ module.exports = function(grunt) {
 		clean: {
 			dist: {
 				files: [
-						{
-							dot: true,
-							src: [
-								'.tmp',
-								'<%= yeoman.dist %>/*',
-								'!<%= yeoman.dist %>/.git*',
-								'<%= yeoman.app %>/scripts/config.js'
-							]
-						}
+					{
+						dot: true,
+						src: [
+							'.tmp',
+							'<%= yeoman.dist %>/*',
+							'!<%= yeoman.dist %>/.git*'//,
+//								'<%= yeoman.app %>/scripts/config.js'
+						]
+					}
+				]
+			},
+			configure: {
+				files: [
+					{
+						dot: true,
+						src: [
+							'<%= yeoman.app %>/scripts/config.js'
+						]
+					}
 				]
 			},
 			server: '.tmp'
@@ -208,12 +232,12 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: [
-						{
-							expand: true,
-							cwd: '.tmp/styles/',
-							src: '{,*/}*.css',
-							dest: '.tmp/styles/'
-						}
+					{
+						expand: true,
+						cwd: '.tmp/styles/',
+						src: '{,*/}*.css',
+						dest: '.tmp/styles/'
+					}
 				]
 			}
 		},
@@ -245,14 +269,14 @@ module.exports = function(grunt) {
 				generatedImagesDir: '.tmp/images/generated',
 				imagesDir: '<%= yeoman.app %>/images',
 				javascriptsDir: '<%= yeoman.app %>/scripts',
-				fontsDir: '<%= yeoman.app %>/styles/fonts',
+				fontsDir: '<%= yeoman.app %>/fonts',
 				importPath: [
 					'<%= yeoman.app %>/bower_components',
 					'<%= yeoman.app %>/bower_components/bootstrap-sass-official/assets/stylesheets'
 				],
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
-				httpFontsPath: '/styles/fonts',
+				httpFontsPath: '/fonts',
 				relativeAssets: false,
 				assetCacheBuster: false,
 				raw: 'Sass::Script::Number.precision = 10\n'
@@ -281,7 +305,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
-						'<%= yeoman.dist %>/styles/fonts/*'
+						'<%= yeoman.dist %>/fonts/*'
 					]
 				}
 			}
@@ -458,7 +482,7 @@ module.exports = function(grunt) {
 							'*.html',
 							'views/{,*/}*.html',
 							'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-							'fonts/*',
+							'styles/fonts/*',
 							'translations/{,*/}*.json',
 							'settings/{,*/}*',
 							'styles/overrides.css',
@@ -494,12 +518,14 @@ module.exports = function(grunt) {
 		if (target === 'dist') {
 			grunt.log.write('TARGET is set to [DIST]');
 			grunt.task.run(['ngconstant:production']);
-		} else {
-			// default build
-			// if (target === undefined || target === 'undefined' || target === '' || target === 'samplestore') {
+		} else if (target === undefined || target === 'undefined' || target === '' || target === 'samplestore') {
+			//default build
 			grunt.task.run(['ngconstant:samplestore']);
 			grunt.log.write('TARGET is set to [SAMPLESTORE]');
-			//}
+		} else {
+			//specific build
+			grunt.task.run(['ngconstant:' + target ]);
+			grunt.log.write('TARGET is set to [' + target + ']');
 		}
 	});
 
@@ -512,7 +538,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'wiredep',
 			'compass:server',
-			'configure:' + target,
+				'configure:' + target,
 			'autoprefixer',
 			'htmlmin:server',
 			'connect:livereload',
@@ -525,11 +551,12 @@ module.exports = function(grunt) {
 		grunt.task.run(['serve:' + target]);
 	});
 
-	grunt.registerTask('test', function() {
+	grunt.registerTask('test', function(target) {
 		grunt.task.run([
 			'clean:server',
 			'compass:server',
 			'autoprefixer',
+				'configure:' + target,
 			'connect:test',
 			'karma'
 		]);
@@ -539,8 +566,8 @@ module.exports = function(grunt) {
 		grunt.task.run([
 			'clean:dist',
 			'newer:jshint:all',
-			'configure:' + target,
-			'test',
+				'configure:' + target,
+			'test:dist',
 			'wiredep',
 			'useminPrepare',
 			'compass:dist',

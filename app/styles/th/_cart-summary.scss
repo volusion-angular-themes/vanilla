@@ -1,16 +1,16 @@
 .th-cart-summary {
-  &__link {
-	&:hover {
-	  @extend %opacity-75;
-	  text-decoration: none;
+	&__link {
+		&:hover {
+			@extend %opacity-75;
+			text-decoration: none;
+		}
 	}
-  }
 
-  &__number {
-	@extend %inline-block;
-  }
+	&__number {
+		@extend %inline-block;
+	}
 
-  @include respond-to(md-and-up) {
-	font-size: 1.6rem;
-  }
+	@include respond-to(md-and-up) {
+		font-size: 1.6rem;
+	}
 }

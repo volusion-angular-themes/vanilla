@@ -31,67 +31,64 @@ label {
 	.navbar-nav {
 		font-size: 2.0rem;
 
-    > .active {
-      > a,
-      > a:hover,
-      > a.focus {
-        text-decoration: underline;
-      }
-    }
+		> .active {
+			> a,
+			> a:hover,
+			> a.focus {
+				text-decoration: underline;
+			}
+		}
 
-    > li {
+		> li {
 
-      > a {
-        display: inline-block;
+			> a {
+				display: inline-block;
 
-        &:hover,
-        &:focus {
-          text-decoration: underline;
-        }
-      }
-    }
-    .caret {
-      margin: 0 0.5rem;
-    }
-  }
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 
-  @include respond-to(md-and-up) {
-    .navbar-collapse.collapse {
-      padding: 20px 0;
-    }
-    .navbar-nav {
-      > li > a {
-        margin-left: 1.6rem;
-        margin-right: 0.2rem;
-        padding-left: 0;
-        padding-right: 0;
-      }
+	@include respond-to(md-and-up) {
+		.navbar-collapse.collapse {
+			padding: 20px 0;
+		}
+		.navbar-nav {
+			> li > a {
+				margin-left: 1.6rem;
+				margin-right: 0.2rem;
+				padding-left: 0;
+				padding-right: 0;
+			}
 
-      > li:first-child {
-        > a {
-          margin-left: 0;
-        }
-      }
-    }
-  }
+			> li:first-child {
+				> a {
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }
 
 .navbar-inverse {
-  margin-bottom: 0;
+	margin-bottom: 0;
 
-  .navbar-toggle {
-    margin-right: 0;
-    margin-top: 8px;
-  }
-  .navbar-nav {
-    font-size: 2.0rem;
-  }
+	.navbar-toggle {
+		margin-right: 0;
+		margin-top: 8px;
+	}
+	.navbar-nav {
+		font-size: 2.0rem;
+	}
 
-  @include respond-to(md-and-up) {
-    .navbar-collapse.collapse {
-      padding: 0;
-    }
-  }
+	@include respond-to(md-and-up) {
+		.navbar-collapse.collapse {
+			padding: 0;
+		}
+	}
 }
 
 
@@ -99,30 +96,32 @@ label {
 
 
 .btn-lg {
-  @extend %font-smoothing;
-  border: none;
-  font-size: 1.1rem;
-  margin-top: 15px;
-  padding: 8px 20px;
+	@extend %font-smoothing;
+	border: none;
+	font-size: 1.1rem;
+	margin-top: 15px;
+	padding: 8px 20px;
 
-  @include respond-to(sm-and-up) {
-    margin-top: 30px;
-    font-size: 1.4rem;
-    padding: 10px 33px;
-  }
-  @include respond-to(md-and-up) {
-    padding: 18px 55px;
-    font-size: 2.0rem;
-  }
+	@include respond-to(sm-and-up) {
+		margin-top: 30px;
+		font-size: 1.4rem;
+		padding: 10px 33px;
+	}
+	@include respond-to(md-and-up) {
+		padding: 18px 55px;
+		font-size: 2.0rem;
+	}
 }
 
 .btn-group {
-  display: block;
+	display: block;
 }
 
 
 // Dropdowns =================================================================
-
+.dropdown-menu > li > a {
+	cursor : pointer;
+}
 
 
 // Typography =================================================================
@@ -147,9 +146,9 @@ label {
 }
 
 .th-product-options {
-  .form-group {
-    width: 130px;
-  }
+	.form-group {
+		width: 130px;
+	}
 }
 
 
@@ -163,13 +162,13 @@ label {
 	margin: 20px 0 10px;
 
 	@include respond-to(sm-and-up) {
-    float: right;
-    margin-top: 50px;
+		float: right;
+		margin-top: 50px;
 	}
 
-  .active {
-    @extend %font-smoothing;
-  }
+	.active {
+		@extend %font-smoothing;
+	}
 }
 
 
@@ -177,15 +176,14 @@ label {
 
 .img-thumbnail {
 
-  &:hover {
-    @extend %opacity-75;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
-  }
+	&:hover {
+		@extend %opacity-75;
+		cursor: -webkit-zoom-in;
+		cursor: zoom-in;
+	}
 }
 
 
 // Progress bars ==============================================================
-
 
 

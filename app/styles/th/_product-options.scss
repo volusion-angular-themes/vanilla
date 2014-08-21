@@ -22,17 +22,4 @@
 
 	}
 
-	.dropdown-toggle {
-		text-align: right;
-		width: 65px;
-
-		& .caret {
-			margin-left: 10px;
-		}
-	}
-
-	.caret {
-		color: $dropdown-caret-color;
-	}
-
 }

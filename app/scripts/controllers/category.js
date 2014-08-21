@@ -9,6 +9,7 @@ angular.module('Volusion.controllers')
 				vnApi.Category().get({ slug: newSlug }).$promise.then(function(response) {
 					// Handle the category data
 					$scope.category = response.data;
+					$scope.subCategories = response.data.subCategories;
 					vnProductParams.addCategory(response.data.id);
 					$scope.queryProducts();
 				});
@@ -93,9 +94,8 @@ angular.module('Volusion.controllers')
 			// First time view / controller is loaded (or reloaded) Initialization tasks
 			$scope.$on('$viewContentLoaded', function() {
 				vnAppRoute.setRouteStrategy('category');
-				vnProductParams.preloadDataForCategory($routeParams);
+				vnAppRoute.resolveParams($location.search());
 				$scope.getCategory($routeParams.slug);
-
 			});
 
 			// Clean up tasks when this controller is destroyed

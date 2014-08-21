@@ -1,13 +1,13 @@
 .th-product-description {
-    padding-top: 40px;
+	padding-top: 40px;
 
-    &__title {
-        font-size: 1.8rem;
-				font-weight: bold;
-        margin-bottom: ($line-height-computed / 2);
-    }
+	&__title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-bottom: ($line-height-computed / 2);
+	}
 
-    p {
-        margin: 0 0 $line-height-computed;
-    }
+	p {
+		margin: 0 0 $line-height-computed;
+	}
 }

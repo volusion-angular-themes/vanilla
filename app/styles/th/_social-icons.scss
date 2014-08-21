@@ -1,0 +1,29 @@
+
+/* .th-social {
+  text-align: center;
+  padding: 26px 0 20px;
+  clear: both;
+}*/
+
+.th-social__icon {
+	@extend %inline-block;
+	margin: 0 2px;
+
+  &:hover {
+    @extend %animate-all-default;
+    @extend %opacity-80;
+  }
+}
+
+@include respond-to(md-and-up) {
+
+  .th-social {
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  .th-social__icon {
+    margin: 0px 6px 0px 0px;
+  }
+
+} */

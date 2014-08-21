@@ -76,23 +76,30 @@ angular.module('methodApp', [
 				.when('/c/:slug', {
 					templateUrl   : 'views/category.html',
 					controller    : 'CategoryCtrl',
-					reloadOnSearch: false
+					reloadOnSearch: false,
+					resolve: {
+						params: ['vnAppRoute', '$location', function (vnAppRoute, $location) {
+							return vnAppRoute.resolveParams($location.search());
+						}]
+					}
 				})
 				.when('/search', {
-					templateUrl   : 'views/search.html',
-					controller    : 'SearchCtrl',
-					reloadOnSearch: false
-				})
-				.when('/all-products', {
-					redirectTo: 'search'
+					templateUrl: 'views/search.html',
+					controller: 'SearchCtrl',
+					reloadOnSearch: false,
+					resolve: {
+						params: ['vnAppRoute', '$location', function (vnAppRoute, $location) {
+							return vnAppRoute.resolveParams($location.search());
+						}]
+					}
 				})
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller : 'ThemeSettingsCtrl'
 				})
 				.when('/style-guide', {
-				  templateUrl: 'views/style-guide.html',
-				  controller: 'StyleGuideCtrl'
+					templateUrl: 'views/style-guide.html',
+					controller: 'StyleGuideCtrl'
 				})
 				// Articles must be last or the prior /search and /theme-settings will never be picked up
 				.when('/:slug', {
@@ -153,5 +160,4 @@ angular.module('methodApp', [
 
 			// Add translated messages
 			translate.addParts('message');
-
 		}]);
