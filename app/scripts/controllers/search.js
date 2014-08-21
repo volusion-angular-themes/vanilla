@@ -80,6 +80,16 @@ angular.module('methodApp')
 				}
 			};
 
+			$scope.checkFacetsAndCategories = function(categories, facets) {
+
+				if( (categories && categories.length) || (facets && facets.length) ) {
+					$scope.hasFacetsOrCategories = true;
+				} else {
+					$scope.hasFacetsOrCategories = false;
+				}
+
+			};
+
 
 			$scope.clearAllFilters = function () {
 				vnProductParams.resetParams();
