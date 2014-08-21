@@ -1,22 +1,22 @@
 {
-	"name": "Method",
-	"version": "0.0.20",
-	"source": "https://github.com/volusion-angular-themes/method/archive/v0.0.11.zip",
+	"name": "Vanilla",
+	"version": "0.0.11",
+	"source": "https://github.com/volusion-angular-themes/vanilla/archive/v0.0.2.zip",
 	"author": {
-		"name": "John Smith",
+		"name": "Tyler Tadej",
 		"email": "test@test.com",
-		"website": "http://www.envato.com"
+		"website": ""
 	},
 	"marketing": {
-		"description": "Method is an awesome theme. Let me tell you all about it. <img src=\"http://volusion-angular-themes.github.io/assets/theme-thumbnails/method/method-large.jpg\"> Yes I just mixed in some images too.",
+		"description": "Vanilla is an awesome theme. Let me tell you all about it. <img src=\"http://volusion-angular-themes.github.io/assets/theme-thumbnails/vanilla/vanilla-large.jpg\"> Yes I just mixed in some images too.",
 		"images": [
 			{
-				"small": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/method/method-small.jpg",
-				"large": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/method/method-large.jpg"
+				"small": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/vanilla/vanilla-small.jpg",
+				"large": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/vanilla/vanilla-large.jpg"
 			},
 			{
-				"small": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/method/method-small.jpg",
-				"large": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/method/method-large.jpg"
+				"small": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/vanilla/vanilla-small.jpg",
+				"large": "http://volusion-angular-themes.github.io/assets/theme-thumbnails/vanilla/vanilla-large.jpg"
 			}
 		],
 		"facets": {
@@ -24,14 +24,14 @@
 			"colors": ["white","black","red"],
 			"styles": ["modern","sleek","minimalist"]
 		},
-		"isPremium": true
+		"isPremium": false
 	},
-	"matchingLegacyTemplateId": "method",
-	"mobileCheckoutCssOverrides": "",
 	"files": {
 		"cssOverrides": "/styles",
 		"language": "/translations"
 	},
+	"matchingLegacyTemplateId": "method",
+	"mobileCheckoutCssOverrides": "",
 	"features": {
 		"responsive": true,
 		"myRewards": false,
