@@ -13,6 +13,7 @@ angular.module('Volusion.directives')
 
 			return {
 				restrict: 'A',
+				scope: {},
 				link    : function postLink(scope, element) {
 
 					var timerHide,
@@ -25,7 +26,7 @@ angular.module('Volusion.directives')
 						.bind('mouseleave', function() {
 							timerHide = $timeout(function () {
 								element.hide();
-							}, 1);
+							}, 100);
 						})
 						.bind('click', function() {
 							element.show();
