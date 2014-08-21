@@ -58,14 +58,19 @@ angular.module('methodApp')
 					$location.path('/search');
 				}
 				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
-				$location.search('q', $scope.searchLocal);
-				vnProductParams.updateSearch($scope.searchLocal);
+//				$location.search('q', $scope.searchLocal);
+
+				vnProductParams.updateSearch($scope.currentSearchText);
 			};
 
-			$scope.init = function() {
-				vnProductParams.updateSearch($routeParams.q);
-				$scope.searchTerms = $routeParams;
-				$scope.queryProducts();
+			$scope.checkFacetsAndCategories = function(categories, facets) {
+
+				if( (categories && categories.length) || (facets && facets.length) ) {
+					$scope.hasFacetsOrCategories = true;
+				} else {
+					$scope.hasFacetsOrCategories = false;
+				}
+
 			};
 
 			$scope.initParams = function() {
@@ -78,16 +83,6 @@ angular.module('methodApp')
 					$scope.searchTerms = $routeParams.q;
 					$scope.queryProducts();
 				}
-			};
-
-			$scope.checkFacetsAndCategories = function(categories, facets) {
-
-				if( (categories && categories.length) || (facets && facets.length) ) {
-					$scope.hasFacetsOrCategories = true;
-				} else {
-					$scope.hasFacetsOrCategories = false;
-				}
-
 			};
 
 

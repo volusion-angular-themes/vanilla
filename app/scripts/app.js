@@ -83,12 +83,9 @@ angular.module('methodApp', [
 						}]
 					}
 				})
-				.when('/all-products', {
-					redirectTo: '/search'
-				})
 				.when('/search', {
-					templateUrl: 'views/search.html',
-					controller: 'SearchCtrl',
+					templateUrl   : 'views/search.html',
+					controller    : 'SearchCtrl',
 					reloadOnSearch: false,
 					resolve: {
 						params: ['vnAppRoute', '$location', function (vnAppRoute, $location) {
@@ -96,13 +93,12 @@ angular.module('methodApp', [
 						}]
 					}
 				})
+				.when('/all-products', {
+					redirectTo: '/search'
+				})
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
 					controller : 'ThemeSettingsCtrl'
-				})
-				.when('/style-guide', {
-					templateUrl: 'views/style-guide.html',
-					controller: 'StyleGuideCtrl'
 				})
 				// Articles must be last or the prior /search and /theme-settings will never be picked up
 				.when('/:slug', {

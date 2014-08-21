@@ -113,11 +113,11 @@ module.exports = function(grunt) {
 					livereload: '<%= connect.options.livereload %>'
 				},
 				files: [
-					'<%= yeoman.app %>/views/**/*.html',
-					'.tmp/styles/{,*/}*.css',
-					'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-					'<%= yeoman.app %>/translations/{,*/}*.json',
-					'<%= yeoman.app %>/settings/{,*/}*'
+						'<%= yeoman.app %>/{,*/}*.html',
+						'.tmp/styles/{,*/}*.css',
+						'<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+						'<%= yeoman.app %>/translations/{,*/}*.json',
+						'<%= yeoman.app %>/settings/{,*/}*'
 				]
 			}
 		},
@@ -201,15 +201,15 @@ module.exports = function(grunt) {
 		clean: {
 			dist: {
 				files: [
-					{
-						dot: true,
-						src: [
-							'.tmp',
-							'<%= yeoman.dist %>/*',
-							'!<%= yeoman.dist %>/.git*'//,
+						{
+							dot: true,
+							src: [
+								'.tmp',
+								'<%= yeoman.dist %>/*',
+								'!<%= yeoman.dist %>/.git*'//,
 //								'<%= yeoman.app %>/scripts/config.js'
-						]
-					}
+							]
+						}
 				]
 			},
 			configure: {
@@ -232,12 +232,12 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: [
-					{
-						expand: true,
-						cwd: '.tmp/styles/',
-						src: '{,*/}*.css',
-						dest: '.tmp/styles/'
-					}
+						{
+							expand: true,
+							cwd: '.tmp/styles/',
+							src: '{,*/}*.css',
+							dest: '.tmp/styles/'
+						}
 				]
 			}
 		},
@@ -302,7 +302,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/scripts/{,*/}*.js',
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
-						'<%= yeoman.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/homepage/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'!<%= yeoman.dist %>/images/theme/tcp-no-image.{png,jpg,jpeg,gif,webp,svg}',
 						'<%= yeoman.dist %>/fonts/*'
@@ -368,7 +368,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: '<%= yeoman.app %>/images',
-						src: '**/*.{png,jpg,jpeg,gif}',
+						src: '{,*/}*.{png,jpg,jpeg,gif}',
 						dest: '<%= yeoman.dist %>/images'
 					}
 				]
@@ -481,8 +481,8 @@ module.exports = function(grunt) {
 							'.htaccess',
 							'*.html',
 							'views/{,*/}*.html',
-							'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-							'styles/fonts/*',
+							'images/{,*/}*.{webp}',
+							'fonts/*',
 							'translations/{,*/}*.json',
 							'settings/{,*/}*',
 							'styles/overrides.css',
@@ -538,7 +538,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'wiredep',
 			'compass:server',
-				'configure:' + target,
+			'configure:' + target,
 			'autoprefixer',
 			'htmlmin:server',
 			'connect:livereload',
@@ -551,12 +551,11 @@ module.exports = function(grunt) {
 		grunt.task.run(['serve:' + target]);
 	});
 
-	grunt.registerTask('test', function(target) {
+	grunt.registerTask('test', function() {
 		grunt.task.run([
 			'clean:server',
 			'compass:server',
 			'autoprefixer',
-				'configure:' + target,
 			'connect:test',
 			'karma'
 		]);
@@ -565,9 +564,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', function(target) {
 		grunt.task.run([
 			'clean:dist',
+			'clean:configure',
 			'newer:jshint:all',
-				'configure:' + target,
-			'test:dist',
+			'configure:' + target,
+			'test',
 			'wiredep',
 			'useminPrepare',
 			'compass:dist',

@@ -13,7 +13,6 @@ angular.module('Volusion.directives')
 
 			return {
 				restrict: 'A',
-				scope: {},
 				link    : function postLink(scope, element) {
 
 					var timerHide,
