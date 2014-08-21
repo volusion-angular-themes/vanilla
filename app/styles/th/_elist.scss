@@ -1,87 +1,14 @@
 .th-elist {
-<<<<<<< HEAD
-	border-bottom : 1px solid $hr-border;
-	padding       : 12px 0;
-
-	&__form {
-		@include inline-block;
-		white-space : nowrap;
-	}
-
-	&__title {
-		@include inline-block;
-		font-family    : $font-family-condensed-reg;
-		font-size      : 1.4rem;
-		font-weight    : normal;
-		margin-right   : 13px;
-		text-transform : uppercase;
-	}
-
-	&__group {
-		@include inline-block;
-		margin : 0;
-	}
-
-	&__input {
-		@include inline-block;
-		border-color : $hr-border;
-		height       : 31px;
-		margin       : 0;
-		min-width: 162px;
-
-		&:focus {
-			border-color : darken($hr-border, 40);
-		}
-=======
 	max-width: 360px;
 
 	&__input {
 		border-color: $gray-lighter;
 		padding: 8px 15px;
 		height: 42px;
->>>>>>> Refactoring:
 	}
 
 	&__submit {
 		@extend %font-smoothing;
-<<<<<<< HEAD
-		@include inline-block;
-		font-size  : 1.5rem;
-		padding    : 5px 10px;
-		color      : lighten($text-color, 100);
-		background : $btn-primary-bg;
-		border     : 0;
-
-		&:hover {
-			background : $btn-primary-bg;
-			color      : lighten($text-color, 100);
-		}
-	}
-}
-
-@include respond-to(lg) {
-	.th-elist {
-		border-bottom : 0;
-		padding       : 0 0 25px 35px;
-
-		&__form {
-			display    : block;
-			margin-top : 5px;
-		}
-
-		&__title {
-			display     : block;
-			font-family: $font-family-condensed-bold;
-			margin      : 10px 0 0 0;
-		}
-
-		&__input {
-			min-width    : 220px;
-			border-color : lighten($hr-border, 50);
-		}
-	}
-}
-=======
 		font-weight: normal;
 		padding: 10px 15px;
 		z-index: 2;
@@ -92,4 +19,3 @@
 	}
 
 }
->>>>>>> Refactoring:
