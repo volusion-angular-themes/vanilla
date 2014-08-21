@@ -83,6 +83,9 @@ angular.module('methodApp', [
 						}]
 					}
 				})
+				.when('/all-products', {
+					redirectTo: '/search'
+				})
 				.when('/search', {
 					templateUrl: 'views/search.html',
 					controller: 'SearchCtrl',
