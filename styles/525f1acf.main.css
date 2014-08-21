@@ -364,8 +364,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../fonts/2ad0632b.glyphicons-halflings-regular.eot");
+  src: url("../fonts/2ad0632b.glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/a0537a78.glyphicons-halflings-regular.woff") format("woff"), url("../fonts/4dab103b.glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/a5b2c788.glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_glyphicons\.scss}line{font-family:\0000325}}
 .glyphicon {
@@ -8012,7 +8012,7 @@ button.close {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/sprites\/icons\/\*\.png}line{font-family:\00003112}}
 .icons-sprite, .icons-cart-bag, .icons-cart, .icons-facebook, .icons-heart, .icons-new, .icons-pinterest, .icons-sale, .icons-twitter, .icons-zoom, .th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter {
-  background-image: url('/images/generated/sprites/be9e54c0.icons-s09045b22e5.png');
+  background-image: url('/images/generated/sprites/icons-s09045b22e5.png');
   background-repeat: no-repeat;
 }
 
@@ -8095,57 +8095,57 @@ button.close {
 */
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-light-webfont.eot");
-  src: url("../fonts/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-light-webfont.woff") format("woff"), url("../fonts/lato-light-webfont.ttf") format("truetype"), url("../fonts/lato-light-webfont.svg#latolight") format("svg");
+  src: url("../fonts/3a59ecd8.lato-light-webfont.eot");
+  src: url("../fonts/3a59ecd8.lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/1c80ad68.lato-light-webfont.woff") format("woff"), url("../fonts/0088aefc.lato-light-webfont.ttf") format("truetype"), url("../fonts/24d57a66.lato-light-webfont.svg#latolight") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-lightitalic-webfont.eot");
-  src: url("../fonts/lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-lightitalic-webfont.woff") format("woff"), url("../fonts/lato-lightitalic-webfont.ttf") format("truetype"), url("../fonts/lato-lightitalic-webfont.svg#latolight_italic") format("svg");
+  src: url("../fonts/4b105c0e.lato-lightitalic-webfont.eot");
+  src: url("../fonts/4b105c0e.lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d0bd5b60.lato-lightitalic-webfont.woff") format("woff"), url("../fonts/f341fd1a.lato-lightitalic-webfont.ttf") format("truetype"), url("../fonts/636b26fe.lato-lightitalic-webfont.svg#latolight_italic") format("svg");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-regular-webfont.eot");
-  src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#latoregular") format("svg");
+  src: url("../fonts/638a425a.lato-regular-webfont.eot");
+  src: url("../fonts/638a425a.lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d365f857.lato-regular-webfont.woff") format("woff"), url("../fonts/e7fe8cdf.lato-regular-webfont.ttf") format("truetype"), url("../fonts/4ed00728.lato-regular-webfont.svg#latoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-italic-webfont.eot");
-  src: url("../fonts/lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-italic-webfont.woff") format("woff"), url("../fonts/lato-italic-webfont.ttf") format("truetype"), url("../fonts/lato-italic-webfont.svg#latoitalic") format("svg");
+  src: url("../fonts/79cce0ce.lato-italic-webfont.eot");
+  src: url("../fonts/79cce0ce.lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d482e9c2.lato-italic-webfont.woff") format("woff"), url("../fonts/f17f6662.lato-italic-webfont.ttf") format("truetype"), url("../fonts/1c94ec6d.lato-italic-webfont.svg#latoitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-bold-webfont.eot");
-  src: url("../fonts/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bold-webfont.woff") format("woff"), url("../fonts/lato-bold-webfont.ttf") format("truetype"), url("../fonts/lato-bold-webfont.svg#latobold") format("svg");
+  src: url("../fonts/c4b241c9.lato-bold-webfont.eot");
+  src: url("../fonts/c4b241c9.lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/0a02a214.lato-bold-webfont.woff") format("woff"), url("../fonts/2df7309a.lato-bold-webfont.ttf") format("truetype"), url("../fonts/7f39c87d.lato-bold-webfont.svg#latobold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-bolditalic-webfont.eot");
-  src: url("../fonts/lato-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-bolditalic-webfont.woff") format("woff"), url("../fonts/lato-bolditalic-webfont.ttf") format("truetype"), url("../fonts/lato-bolditalic-webfont.svg#latobold_italic") format("svg");
+  src: url("../fonts/7b057556.lato-bolditalic-webfont.eot");
+  src: url("../fonts/7b057556.lato-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/4c86ce38.lato-bolditalic-webfont.woff") format("woff"), url("../fonts/f3c1b0d2.lato-bolditalic-webfont.ttf") format("truetype"), url("../fonts/58684a28.lato-bolditalic-webfont.svg#latobold_italic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: 'roboto_slab';
-  src: url("../fonts/robotoslab-regular-webfont.eot");
-  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
+  src: url("../fonts/2ac6ceae.robotoslab-regular-webfont.eot");
+  src: url("../fonts/2ac6ceae.robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/88e72c35.robotoslab-regular-webfont.woff") format("woff"), url("../fonts/b56c44b3.robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/ede450b7.robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'roboto_slab';
-  src: url("../fonts/robotoslab-light-webfont.eot");
-  src: url("../fonts/robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-light-webfont.woff") format("woff"), url("../fonts/robotoslab-light-webfont.ttf") format("truetype"), url("../fonts/robotoslab-light-webfont.svg#roboto_slablight") format("svg");
+  src: url("../fonts/c7046179.robotoslab-light-webfont.eot");
+  src: url("../fonts/c7046179.robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/6edfe9d4.robotoslab-light-webfont.woff") format("woff"), url("../fonts/a7c7c3bb.robotoslab-light-webfont.ttf") format("truetype"), url("../fonts/d6860c89.robotoslab-light-webfont.svg#roboto_slablight") format("svg");
   font-weight: 300;
   font-style: normal;
 }
@@ -8607,7 +8607,7 @@ If you create a new component stylesheet make sure it gets added to this list
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_hero-promo\.scss}line{font-family:\000031}}
 .th-hero-promo {
-  background: url("../images/theme/home/2ba675f3.hero-graphic-bg.jpg") no-repeat center top;
+  background: url("../images/theme/home/hero-graphic-bg.jpg") no-repeat center top;
   background-size: cover;
   color: white;
   font-family: "roboto_slab", "Times New Roman", Times, serif;
