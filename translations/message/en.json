@@ -1,0 +1,9 @@
+{
+	"message": {
+		"addToCartSuccess": "Item(s) are added to your cart",
+		"addToCartError"  : "ERROR!",
+		"addToCartWarning": "Warning!",
+
+		"unknown" 		  : "Unknown server error"
+	}
+}
