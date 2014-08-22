@@ -51,15 +51,9 @@ angular.module('methodApp')
 			$scope.doSearch = function () {
 				$scope.currentSearchText = $scope.searchLocal;
 
-				// Unify scope variable to match $routeParams when reloading the page
-//				$scope.searchTerms = { 'q' : $scope.searchLocal};
-
 				if('/search' !== $location.path()) {
 					$location.path('/search');
 				}
-				// Modify the url for these params // Todo: use this as a model to build the url from the vnProductParams value?
-//				$location.search('q', $scope.searchLocal);
-
 				vnProductParams.updateSearch($scope.currentSearchText);
 			};
 

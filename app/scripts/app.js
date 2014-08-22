@@ -83,6 +83,16 @@ angular.module('methodApp', [
 						}]
 					}
 				})
+				.when('/all-products', {
+					templateUrl: 'views/search.html',
+					controller: 'SearchCtrl',
+					reloadOnSearch: false,
+					resolve: {
+						params: ['vnAppRoute', '$location', function (vnAppRoute, $location) {
+							return vnAppRoute.resolveParams($location.search());
+						}]
+					}
+				})
 				.when('/search', {
 					templateUrl   : 'views/search.html',
 					controller    : 'SearchCtrl',
@@ -92,9 +102,6 @@ angular.module('methodApp', [
 							return vnAppRoute.resolveParams($location.search());
 						}]
 					}
-				})
-				.when('/all-products', {
-					redirectTo: '/search'
 				})
 				.when('/theme-settings', {
 					templateUrl: 'views/theme-settings.html',
