@@ -8714,6 +8714,16 @@ If you create a new component stylesheet make sure it gets added to this list
   background-color: #f2f2f2;
   color: black;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_product-options\.scss}line{font-family:\0000324}}
+.th-product-options .dropdown-toggle {
+  text-align: right;
+  width: 65px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_product-options\.scss}line{font-family:\0000328}}
+.th-product-options .dropdown-toggle .caret {
+  margin-left: 10px;
+  color: #000;
+}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_product-price\.scss}line{font-family:\000031}}
 .th-product-price {
