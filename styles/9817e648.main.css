@@ -8010,81 +8010,56 @@ button.close {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/sprites\/icons\/\*\.png}line{font-family:\00003112}}
-.icons-sprite, .icons-cart-bag, .icons-cart, .icons-facebook, .icons-heart, .icons-new, .icons-pinterest, .icons-sale, .icons-twitter, .icons-zoom, .th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter {
-  background-image: url('/images/generated/sprites/icons-s09045b22e5.png');
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/sprites\/icons\/\*\.png}line{font-family:\0000372}}
+.icons-sprite, .icons-cart, .icons-facebook, .icons-pinterest, .icons-twitter, .th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter {
+  background-image: url('/images/generated/sprites/icons-s83f442b520.png');
   background-repeat: no-repeat;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-cart-bag {
+.icons-cart {
   background-position: 0 0;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-cart {
-  background-position: 0 -17px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
 .icons-facebook {
-  background-position: 0 -33px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-heart {
-  background-position: 0 -60px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-new {
-  background-position: 0 -78px;
+  background-position: 0 -16px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
 .icons-pinterest {
-  background-position: 0 -137px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-sale {
-  background-position: 0 -164px;
+  background-position: 0 -43px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
 .icons-twitter {
-  background-position: 0 -221px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-zoom {
-  background-position: 0 -248px;
+  background-position: 0 -70px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\000037}}
 .th-icon--cart {
-  background-position: 0 -17px;
+  background-position: 0 0;
   height: 16px;
   width: 18px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000314}}
 .th-icon--facebook {
-  background-position: 0 -33px;
+  background-position: 0 -16px;
   height: 27px;
   width: 27px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000321}}
 .th-icon--pinterest {
-  background-position: 0 -137px;
+  background-position: 0 -43px;
   height: 27px;
   width: 27px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000328}}
 .th-icon--twitter {
-  background-position: 0 -221px;
+  background-position: 0 -70px;
   height: 27px;
   width: 27px;
 }
