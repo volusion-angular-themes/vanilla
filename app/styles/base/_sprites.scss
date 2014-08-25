@@ -5,29 +5,29 @@
 
 
 .th-icon--cart {
-  @include icons-sprite(cart);
-  @extend %inline-block;
-  height: icons-sprite-height(cart);
-  width: icons-sprite-width(cart);
+	@include icons-sprite(cart);
+	@extend %inline-block;
+	height: icons-sprite-height(cart);
+	width: icons-sprite-width(cart);
 }
 
 .th-icon--facebook {
-  @include icons-sprite(facebook);
-  @extend %inline-block;
-  height: icons-sprite-height(facebook);
-  width: icons-sprite-width(facebook);
+	@include icons-sprite(facebook);
+	@extend %inline-block;
+	height: icons-sprite-height(facebook);
+	width: icons-sprite-width(facebook);
 }
 
 .th-icon--pinterest {
-  @include icons-sprite(pinterest);
-  @extend %inline-block;
-  height: icons-sprite-height(pinterest);
-  width: icons-sprite-width(pinterest);
+	@include icons-sprite(pinterest);
+	@extend %inline-block;
+	height: icons-sprite-height(pinterest);
+	width: icons-sprite-width(pinterest);
 }
 
 .th-icon--twitter {
-  @include icons-sprite(twitter);
-  @extend %inline-block;
-  height: icons-sprite-height(twitter);
-  width: icons-sprite-width(twitter);
+	@include icons-sprite(twitter);
+	@extend %inline-block;
+	height: icons-sprite-height(twitter);
+	width: icons-sprite-width(twitter);
 }
