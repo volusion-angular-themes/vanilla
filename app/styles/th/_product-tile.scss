@@ -42,6 +42,16 @@
 			max-width: 300px;
 			text-align: center;
 		}
+		@include respond-to(sm) {
+			.col-sm-6:nth-of-type(2n+3) {
+				clear : both
+			}
+		}
+		@include respond-to(md-and-up) {
+			.col-md-4:nth-of-type(3n+4) {
+				clear : both
+			}
+		}
 	}
 
 }
