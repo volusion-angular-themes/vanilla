@@ -169,6 +169,12 @@ label {
 	.active {
 		@extend %font-smoothing;
 	}
+
+	.disabled > span,
+	.disabled > span:hover {
+		color: $text-color;
+		cursor: default;
+	}
 }
 
 
