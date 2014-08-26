@@ -13,14 +13,14 @@
 			</div>
 		</div>
 		<div class="row th-product-tile__block">
-			<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by $index">
+			<div class="-product-tile-animation col-xs-12 col-sm-6 col-md-4" data-ng-repeat="product in products track by product.id">
 				<span class="th-product__sale" data-ng-show="product.isOnSale"></span>
 				<span class="th-product__new" data-ng-show="product.isNew"></span>
 				<a href="{{ product.url }}" class="th-product-tile__image-link">
 					<img data-ng-src="{{ getImagePath(product.imageCollections) }}" alt="" class="img-responsive th-product-tile__image">
 				</a>
 				<div class="th-product-name--medium">
-					<a href="p/{{ product.slug }}">{{ product.name }}</a>
+					<a href="{{ product.url }}">{{ product.name }}</a>
 				</div>
 				<div class="th-product-price" data-ng-show="product.pricing.regularPrice > 0">
 					<div class="th-product-price--medium">{{product.pricing.regularPrice | currency}}</div>
