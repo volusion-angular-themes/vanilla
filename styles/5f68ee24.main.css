@@ -8005,7 +8005,7 @@ button.close {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000339}}
-.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-product-options__add-to-cart {
+.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-icon-group .ng-social-facebook .ng-social-text, .th-product-options__add-to-cart {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8648,6 +8648,14 @@ If you create a new component stylesheet make sure it gets added to this list
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_icon-group\.scss}line{font-family:\0000311}}
 .th-icon-group__icon--small {
   margin-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_icon-group\.scss}line{font-family:\0000316}}
+.th-icon-group .ng-social-facebook {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_icon-group\.scss}line{font-family:\0000319}}
+.th-icon-group .ng-social-facebook .ng-social-text {
+  padding-left: 4px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_link-list\.scss}line{font-family:\000033}}
