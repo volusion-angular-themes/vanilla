@@ -32,6 +32,7 @@ module.exports = function(config) {
 			'app/bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
 			'app/bower_components/angular-snap/angular-snap.js',
 			'app/bower_components/angular-seo/angular-seo.js',
+			'app/bower_components/angular-social/angular-social.js',
 			'app/bower_components/angulartics/dist/angulartics.min.js',
 			'app/bower_components/enquire/dist/enquire.js',
 			'app/bower_components/textAngular/dist/textAngular.min.js',

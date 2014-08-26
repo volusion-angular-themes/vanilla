@@ -10,7 +10,17 @@
 
 		&--small {
 			margin-right: 10px;
-		}		
+		}
+	}
+
+	.ng-social-facebook {
+		margin-left: 0;
+
+		.ng-social-text {
+			@extend %font-smoothing;
+			padding-left: 4px;
+		}
 	}
 
 }
+

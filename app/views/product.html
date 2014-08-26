@@ -87,15 +87,13 @@
 							<span itemprop="extended info" data-ng-bind-html="product.descriptions.extendedInfo | legacyLinkify | html"></span>
 						</p>
 					</div>
-					<!-- Social Icons -->
+					<!-- Social Share Buttons -->
 					<div class="th-product-description__title">Share</div>
-					<!--<div class="th-icon-group" data-ng-include=" 'views/partials/social-sharing.html' "></div>-->
-					<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-					<!--<script type="text/javascript">stLight.options({publisher: "1b7dd8df-7478-4045-b3e3-88d4ba9c7878", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>-->
-					<style> .stMainServices {height:22px !important;}</style>
-					<span class='st_facebook_hcount' displayText='Facebook'></span>
-					<span class='st_twitter_hcount' displayText='Tweet'></span>
-					<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+					<ul ng-social-buttons data-title="product.name" class="th-icon-group">
+						<li class="ng-social-facebook">Facebook</li>
+						<li class="ng-social-twitter">Twitter</li>
+						<li class="ng-social-pinterest">Pinterest</li>
+					</ul>
 				</div>
 			</div>
 		</div>
