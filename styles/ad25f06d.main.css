@@ -8005,7 +8005,7 @@ button.close {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000339}}
-.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-icon-group .ng-social-facebook .ng-social-text, .th-product-options__add-to-cart {
+.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-product-options__add-to-cart {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8251,8 +8251,14 @@ label {
     margin-top: 50px;
   }
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_bootstrap-style\.scss}line{font-family:\00003173}}
+.pagination .disabled > span,
+.pagination .disabled > span:hover {
+  color: #333333;
+  cursor: default;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_bootstrap-style\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_bootstrap-style\.scss}line{font-family:\00003185}}
 .img-thumbnail:hover {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
@@ -8649,14 +8655,6 @@ If you create a new component stylesheet make sure it gets added to this list
 .th-icon-group__icon--small {
   margin-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_icon-group\.scss}line{font-family:\0000316}}
-.th-icon-group .ng-social-facebook {
-  margin-left: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_icon-group\.scss}line{font-family:\0000319}}
-.th-icon-group .ng-social-facebook .ng-social-text {
-  padding-left: 4px;
-}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_link-list\.scss}line{font-family:\000033}}
 .th-linklist {
@@ -8786,6 +8784,18 @@ If you create a new component stylesheet make sure it gets added to this list
     margin: 0 auto 25px;
     max-width: 300px;
     text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_product-tile\.scss}line{font-family:\0000346}}
+  .th-product-tile__block .col-sm-6:nth-of-type(2n+3) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 992px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/th\/_product-tile\.scss}line{font-family:\0000351}}
+  .th-product-tile__block .col-md-4:nth-of-type(3n+4) {
+    clear: both;
   }
 }
 
