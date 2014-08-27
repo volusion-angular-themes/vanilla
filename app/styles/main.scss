@@ -2,16 +2,11 @@
 
 // Custom Theme Variables & Configuration
 @import 'base/bootstrap-variables';
+@import 'base/helpers';
+@import 'base/sprites';
 
 // Bootstrap-Sass via Bower
 @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
-
-// Helpful Volusion Mixins and Silent Classes
-@import 'base/helpers';
-
-// Sprites and Fonts
-@import 'base/sprites';
-@import 'base/fonts';
 
 // Theme - Bootstrap styled for Vanilla Theme
 @import 'base/bootstrap-style';
