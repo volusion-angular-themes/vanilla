@@ -1,19 +1,20 @@
 /*
+
 This file gathers all the component stylesheets and is then imported via main.scss
 
 If you create a new component stylesheet make sure it gets added to this list
- */
+
+*/
 
 
 // Volusion Components
-@import 'th/vn/dropzone';
-@import 'th/vn/labeled-radio';
-@import 'th/vn/product-option';
-@import 'th/vn/slider';
-@import 'th/vn/zoom';
+@import 'th/toolbox-overrides/dropzone';
+@import 'th/toolbox-overrides/labeled-radio';
+@import 'th/toolbox-overrides/product-option';
+@import 'th/toolbox-overrides/slider';
+@import 'th/toolbox-overrides/zoom';
 
 // Theme Components
-
 @import 'th/cart-summary';
 @import 'th/elist';
 @import 'th/footer';
