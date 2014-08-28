@@ -5,6 +5,9 @@
 @import 'base/helpers';
 @import 'base/sprites';
 
+// Fonts currently imported via GoogleCDN but live locally in /app/fonts as an option
+// @import 'base/fonts';
+
 // Bootstrap-Sass via Bower
 @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
