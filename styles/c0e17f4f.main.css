@@ -1,4 +1,106 @@
 @charset "UTF-8";
+/*
+	Read more about Sass mixins and silent-classes aka placeholder selectors:
+		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins
+		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\000037}}
+.th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter, .vn-labeled-radio--tiles, .th-cart-summary__number, .th-header__cart, .th-header__sign-in, .th-product-price--large, .th-product-tile__image, .th-product-view__main-img, .th-product-view__thumbnails {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000315}}
+.img-thumbnail:hover, .th-cart-summary__link:hover, .th-icon-group__icon:hover, .th-search__submit:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000319}}
+.th-product-tile__image-link:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000323}}
+.th-icon-group__icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000327}}
+.form-control {
+  box-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000331}}
+.th-icon-group__icon:hover {
+  transition: all 200ms ease;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000339}}
+.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-product-options__add-to-cart {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/sprites\/icons\/\*\.png}line{font-family:\0000372}}
+.icons-sprite, .icons-cart, .icons-facebook, .icons-pinterest, .icons-twitter, .th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter {
+  background-image: url('/images/generated/sprites/icons-s83f442b520.png');
+  background-repeat: no-repeat;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
+.icons-cart {
+  background-position: 0 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
+.icons-facebook {
+  background-position: 0 -16px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
+.icons-pinterest {
+  background-position: 0 -43px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
+.icons-twitter {
+  background-position: 0 -70px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\000037}}
+.th-icon--cart {
+  background-position: 0 0;
+  height: 16px;
+  width: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000314}}
+.th-icon--facebook {
+  background-position: 0 -16px;
+  height: 27px;
+  width: 27px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000321}}
+.th-icon--pinterest {
+  background-position: 0 -43px;
+  height: 27px;
+  width: 27px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000328}}
+.th-icon--twitter {
+  background-position: 0 -70px;
+  height: 27px;
+  width: 27px;
+}
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_normalize\.scss}line{font-family:\000039}}
 html {
@@ -1399,7 +1501,7 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000327}}
 body {
-  font-family: "lato", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.458571429;
   color: #333333;
@@ -7962,168 +8064,6 @@ button.close {
     display: none !important;
   }
 }
-/*
-	Read more about Sass mixins and silent-classes aka placeholder selectors:
-		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins
-		http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\000037}}
-.th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter, .vn-labeled-radio--tiles, .th-cart-summary__number, .th-header__cart, .th-header__sign-in, .th-product-price--large, .th-product-tile__image, .th-product-view__main-img, .th-product-view__thumbnails {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000315}}
-.img-thumbnail:hover, .th-cart-summary__link:hover, .th-icon-group__icon:hover, .th-search__submit:hover {
-  opacity: 0.75;
-  filter: alpha(opacity=75);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000319}}
-.th-product-tile__image-link:hover {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000323}}
-.th-icon-group__icon {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000327}}
-.form-control {
-  box-shadow: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000331}}
-.th-icon-group__icon:hover {
-  transition: all 200ms ease;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_helpers\.scss}line{font-family:\0000339}}
-.btn-lg, .btn-group-lg > .btn, .pagination .active, .th-elist__submit, .th-hero-promo, .th-product-options__add-to-cart {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/sprites\/icons\/\*\.png}line{font-family:\0000372}}
-.icons-sprite, .icons-cart, .icons-facebook, .icons-pinterest, .icons-twitter, .th-icon--cart, .th-icon--facebook, .th-icon--pinterest, .th-icon--twitter {
-  background-image: url('/images/generated/sprites/icons-s83f442b520.png');
-  background-repeat: no-repeat;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-cart {
-  background-position: 0 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-facebook {
-  background-position: 0 -16px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-pinterest {
-  background-position: 0 -43px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/\.rvm\/gems\/ruby-1\.9\.3-p547\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000384}}
-.icons-twitter {
-  background-position: 0 -70px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\000037}}
-.th-icon--cart {
-  background-position: 0 0;
-  height: 16px;
-  width: 18px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000314}}
-.th-icon--facebook {
-  background-position: 0 -16px;
-  height: 27px;
-  width: 27px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000321}}
-.th-icon--pinterest {
-  background-position: 0 -43px;
-  height: 27px;
-  width: 27px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_sprites\.scss}line{font-family:\0000328}}
-.th-icon--twitter {
-  background-position: 0 -70px;
-  height: 27px;
-  width: 27px;
-}
-
-/*
-  Generated by Font-Squirrel and then customized with a technique found here:
-    http://www.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration
-*/
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/3a59ecd8.lato-light-webfont.eot");
-  src: url("../fonts/3a59ecd8.lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/1c80ad68.lato-light-webfont.woff") format("woff"), url("../fonts/0088aefc.lato-light-webfont.ttf") format("truetype"), url("../fonts/24d57a66.lato-light-webfont.svg#latolight") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/4b105c0e.lato-lightitalic-webfont.eot");
-  src: url("../fonts/4b105c0e.lato-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d0bd5b60.lato-lightitalic-webfont.woff") format("woff"), url("../fonts/f341fd1a.lato-lightitalic-webfont.ttf") format("truetype"), url("../fonts/636b26fe.lato-lightitalic-webfont.svg#latolight_italic") format("svg");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/638a425a.lato-regular-webfont.eot");
-  src: url("../fonts/638a425a.lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d365f857.lato-regular-webfont.woff") format("woff"), url("../fonts/e7fe8cdf.lato-regular-webfont.ttf") format("truetype"), url("../fonts/4ed00728.lato-regular-webfont.svg#latoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/79cce0ce.lato-italic-webfont.eot");
-  src: url("../fonts/79cce0ce.lato-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/d482e9c2.lato-italic-webfont.woff") format("woff"), url("../fonts/f17f6662.lato-italic-webfont.ttf") format("truetype"), url("../fonts/1c94ec6d.lato-italic-webfont.svg#latoitalic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/c4b241c9.lato-bold-webfont.eot");
-  src: url("../fonts/c4b241c9.lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/0a02a214.lato-bold-webfont.woff") format("woff"), url("../fonts/2df7309a.lato-bold-webfont.ttf") format("truetype"), url("../fonts/7f39c87d.lato-bold-webfont.svg#latobold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'lato';
-  src: url("../fonts/7b057556.lato-bolditalic-webfont.eot");
-  src: url("../fonts/7b057556.lato-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/4c86ce38.lato-bolditalic-webfont.woff") format("woff"), url("../fonts/f3c1b0d2.lato-bolditalic-webfont.ttf") format("truetype"), url("../fonts/58684a28.lato-bolditalic-webfont.svg#latobold_italic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'roboto_slab';
-  src: url("../fonts/2ac6ceae.robotoslab-regular-webfont.eot");
-  src: url("../fonts/2ac6ceae.robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/88e72c35.robotoslab-regular-webfont.woff") format("woff"), url("../fonts/b56c44b3.robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/ede450b7.robotoslab-regular-webfont.svg#roboto_slabregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'roboto_slab';
-  src: url("../fonts/c7046179.robotoslab-light-webfont.eot");
-  src: url("../fonts/c7046179.robotoslab-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/6edfe9d4.robotoslab-light-webfont.woff") format("woff"), url("../fonts/a7c7c3bb.robotoslab-light-webfont.ttf") format("truetype"), url("../fonts/d6860c89.robotoslab-light-webfont.svg#roboto_slablight") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/travis\/build\/volusion-angular-themes\/vanilla\/app\/styles\/base\/_bootstrap-style\.scss}line{font-family:\000039}}
 label {
   display: inline-block;
@@ -8327,7 +8267,7 @@ If you create a new component stylesheet make sure it gets added to this list
 .vn-labeled-radio--tiles__text {
   position: relative;
   padding: 5px 10px;
-  font-family: "lato", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #444444;
 }
@@ -8591,7 +8531,7 @@ If you create a new component stylesheet make sure it gets added to this list
   background: url("../images/theme/home/hero-graphic-bg.jpg") no-repeat center top;
   background-size: cover;
   color: white;
-  font-family: "roboto_slab", "Times New Roman", Times, serif;
+  font-family: "Roboto Slab", "Times New Roman", Times, serif;
   margin: -20px -15px 20px;
 }
 @media only screen and (min-width: 768px) {
@@ -8631,7 +8571,7 @@ If you create a new component stylesheet make sure it gets added to this list
 .th-hero-promo__title--large {
   font-size: 5.0rem;
   line-height: 1;
-  font-family: "roboto_slab", "Times New Roman", Times, serif;
+  font-family: "Roboto Slab", "Times New Roman", Times, serif;
   font-weight: 300;
 }
 @media only screen and (min-width: 768px) {
