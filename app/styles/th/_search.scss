@@ -1,28 +1,28 @@
 .th-search {
 	&__submit,
 	&__input {
-		border-color: $gray-lighter;
+		border-color : $gray-lighter;
 	}
 
 	&__submit {
-		padding: 10px 15px;
+		padding : 10px 15px;
 
 		&:active,
 		&:focus,
 		&:active:focus {
-			border-color: $gray-lighter;
-			outline: 0;
+			border-color : $gray-lighter;
+			outline      : 0;
 		}
 
 		&:hover {
 			@extend %opacity-75;
-			background: none;
-			border-color: $gray-lighter;
+			background   : none;
+			border-color : $gray-lighter;
 		}
 	}
 
 	&__input {
-		padding:8px 15px;
-		height: 42px;
+		padding : 8px 15px;
+		height  : 42px;
 	}
 }

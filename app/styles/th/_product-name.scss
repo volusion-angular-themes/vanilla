@@ -1,16 +1,16 @@
 .th-product-name {
 	&--medium {
-		font-size: 1.8rem;
-		margin-bottom: 0.2em;
+		font-size     : 1.8rem;
+		margin-bottom : 0.2em;
 	}
 
 	&--large {
-	  font-size: 4.0rem;
-		font-weight: 300;
-		margin-bottom: 0.2em;
+		font-size     : 4.0rem;
+		font-weight   : 300;
+		margin-bottom : 0.2em;
 
 		@include respond-to(xs) {
-			font-size: 3.4rem;
+			font-size : 3.4rem;
 		}
 	}
 }

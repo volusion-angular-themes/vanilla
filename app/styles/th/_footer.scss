@@ -1,42 +1,40 @@
 .th-footer {
 
-	margin-top: 40px;
-	padding-bottom: 25px;
-	border-top: 1px solid $gray-lighter;
+	margin-top     : 40px;
+	padding-bottom : 25px;
+	border-top     : 1px solid $gray-lighter;
 
 	&__heading {
-		font-size: 2.0rem;
-		margin: 20px 0 15px;
+		font-size : 2.0rem;
+		margin    : 20px 0 15px;
 
 		@include respond-to(xs) {
-			margin: 30px 0 15px;
-			text-align: center;
+			margin     : 30px 0 15px;
+			text-align : center;
 		}
 	}
 
 	&__copyright {
-		margin-top: 30px;
-		padding: 20px 0;
-		border-top: 1px solid $gray-lighter;
+		margin-top : 30px;
+		padding    : 20px 0;
+		border-top : 1px solid $gray-lighter;
 
 		@include respond-to(xs) {
-			margin-top: 20px;
-			padding: 10px 0 0;
-			text-align: center;
+			margin-top : 20px;
+			padding    : 10px 0 0;
+			text-align : center;
 		}
 	}
 
 	.th-icon-group {
-
 		@include respond-to(xs) {
-			text-align: center;
+			text-align : center;
 		}
 
 		&__icon {
 			@include respond-to(xs) {
-				margin: 0 15px;
+				margin : 0 15px;
 			}
 		}
 	}
-
 }
