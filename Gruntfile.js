@@ -304,8 +304,7 @@ module.exports = function(grunt) {
 						'<%= yeoman.dist %>/styles/{,*/}*.css',
 						'!<%= yeoman.dist %>/styles/overrides.css',
 						'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'!<%= yeoman.dist %>/images/home/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-						'!<%= yeoman.dist %>/images/theme/home/hero-graphic-bg.jpg.{png,jpg,jpeg,gif,webp,svg}',
+						'!<%= yeoman.dist %>/images/theme/home/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 						'<%= yeoman.dist %>/fonts/*'
 					]
 				}
