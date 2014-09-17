@@ -2,12 +2,12 @@
 
 ///**
 // * @ngdoc service
-// * @name methodApp.starage
+// * @name vanillaApp.starage
 // * @description
 // * # starage
-// * Factory in the methodApp.
+// * Factory in the vanillaApp.
 // */
-//angular.module('methodApp')
+//angular.module('vanillaApp')
 //  .factory('storage', function () {
 //    // Service logic
 //    // ...

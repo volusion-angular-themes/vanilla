@@ -1,9 +1,9 @@
 /**
  * @ngdoc function
- * @name methodApp.controller:FooterCtrl
+ * @name gizmoApp.controller:FooterCtrl
  * @description
  * # FooterCtrl
- * Controller of the methodApp
+ * Controller of the vanillaApp
  */
 
 angular.module('Volusion.controllers')
@@ -11,9 +11,6 @@ angular.module('Volusion.controllers')
 		function ($scope, translate, themeSettings, ContentMgr) {
 			'use strict';
 
-			translate.addParts('footer');
-
-			// Watch the footer state and update as needed
 			$scope.$watch(
 				function () {
 					return ContentMgr.getFooterState();

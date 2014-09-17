@@ -4,7 +4,7 @@
 describe.skip('Service: storage', function() {
 
 	// beforeEach(module('pascalprecht.translate', 'volusion.services', 'ngCookies'));
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	var storage;
 
