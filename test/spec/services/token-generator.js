@@ -3,7 +3,7 @@
 xdescribe('Service: tokenGenerator', function () {
 
 	// load the service's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	// instantiate service
 	var tokenGenerator;

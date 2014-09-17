@@ -504,10 +504,6 @@ module.exports = function(grunt) {
 			jasmine: {
 				configFile: 'karma.conf.jasmine.js',
 				singleRun: true
-			},
-			mocha: {
-				configFile: 'karma.conf.mocha.js',
-				singleRun: true
 			}
 		}
 	});
@@ -556,7 +552,7 @@ module.exports = function(grunt) {
 			'clean:server',
 			'compass:server',
 			'autoprefixer',
-				'configure:' + target,
+			'configure:' + target,
 			'connect:test',
 			'karma'
 		]);
@@ -566,7 +562,7 @@ module.exports = function(grunt) {
 		grunt.task.run([
 			'clean:dist',
 			'newer:jshint:all',
-				'configure:' + target,
+			'configure:' + target,
 			'test:dist',
 			'wiredep',
 			'useminPrepare',

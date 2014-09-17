@@ -3,7 +3,7 @@ describe('Controller: HeaderCtrl', function () {
 	'use strict';
 
 	// load the controller's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	var HeaderCtrl,
 		scope;

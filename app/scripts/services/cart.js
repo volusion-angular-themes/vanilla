@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc service
- * @name methodApp.cart
+ * @name vanillaApp.cart
  * @description
  * # cart
- * Service in the methodApp.
+ * Service in the vanillaApp.
  */
 angular.module('Volusion.services')
 	.service('Cart', ['vnApi',

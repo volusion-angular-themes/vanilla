@@ -3,7 +3,7 @@
 describe('Controller: ThemeSettingsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('methodApp'));
+  beforeEach(module('vanillaApp'));
 
   var ThemeSettingsCtrl,
     scope;

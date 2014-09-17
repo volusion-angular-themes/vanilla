@@ -3,7 +3,7 @@
 describe('Controller: PageCtrl', function() {
 
 	// load the controller's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	var PageCtrl;
 	var scope;

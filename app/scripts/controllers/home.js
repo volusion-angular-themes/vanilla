@@ -1,8 +1,14 @@
 angular.module('Volusion.controllers')
 	.controller('HomeCtrl', ['$scope', '$filter', 'vnApi',
-		function($scope, $filter, vnApi) {
+		function ($scope, $filter, vnApi) {
 
 			'use strict';
+
+			var imagesToPreload = [];
+
+			angular.forEach($scope.themeSettings.pages.home.slider.slides, function (slide) {
+				imagesToPreload.push(slide.imageUrl);
+			});
 
 			vnApi.Product().get({ filter: 'featured', pageSize: 4 }).$promise
 				.then(function(response) {
@@ -10,7 +16,6 @@ angular.module('Volusion.controllers')
 				});
 
 			$scope.getImagePath = function (imageCollections) {
-				// This gets the default:medium image for the product
 				var path = $filter('vnProductImageFilter')(imageCollections);
 
 				if ('' === path) {
@@ -19,8 +24,5 @@ angular.module('Volusion.controllers')
 
 				return path;
 			};
-
-
-
 		}
 	]);

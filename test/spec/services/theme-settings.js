@@ -5,7 +5,7 @@
 xdescribe('Service: themeSettings', function() {
 
 	// load the service's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	// instantiate service
 	var themeSettings;

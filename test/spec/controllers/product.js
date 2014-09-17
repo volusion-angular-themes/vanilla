@@ -3,7 +3,7 @@
 describe('Controller: ProductCtrl', function() {
 
 	// load the controller's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	var ProductCtrl;
 	var scope;

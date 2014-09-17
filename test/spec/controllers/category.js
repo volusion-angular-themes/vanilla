@@ -3,7 +3,7 @@
 describe('Controller: CategoryCtrl', function() {
 
 	// load the controller's module
-	beforeEach(module('methodApp'));
+	beforeEach(module('vanillaApp'));
 
 	var CategoryCtrl;
 	var scope;
@@ -16,7 +16,8 @@ describe('Controller: CategoryCtrl', function() {
 		});
 	}));
 
-	xit('should attach a list of awesomeThings to the scope', function() {
-		expect(scope.awesomeThings.length).toBe('');
+	it('should attach a list of awesomeThings to the scope', function() {
+//		expect(scope.awesomeThings.length).toBe('');
+		expect(!!CategoryCtrl).toBe(true);
 	});
 });
