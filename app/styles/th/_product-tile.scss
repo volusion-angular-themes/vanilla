@@ -6,9 +6,9 @@
 	}
 
 	&__image-link {
-		display: block;
-		padding: 20px 0;
-		text-align: center;
+		display    : block;
+		padding    : 20px 0;
+		text-align : center;
 
 		&:hover {
 			@extend %opacity-80;
@@ -17,30 +17,36 @@
 
 	&__heading {
 
-		h1 { font-weight: 300; }
+		h1 {
+			font-weight : 300;
+		}
 
-		ul { margin-left: 0; }
+		ul {
+			margin-left : 0;
+		}
 
 		li {
-			padding: 0;
+			padding : 0;
 
 			&:nth-of-type(n+2) {
-				a { border-left: 1px solid black; }
+				a {
+					border-left : 1px solid black;
+				}
 			}
 
 			a {
-				margin-top: 5px;
-				padding-left: 10px;
-				padding-right: 10px;
+				margin-top    : 5px;
+				padding-left  : 10px;
+				padding-right : 10px;
 			}
 		}
 	}
 
 	&__block {
 		@include respond-to(xs) {
-			margin: 0 auto 25px;
-			max-width: 300px;
-			text-align: center;
+			margin     : 0 auto 25px;
+			max-width  : 300px;
+			text-align : center;
 		}
 		@include respond-to(sm) {
 			.col-sm-6:nth-of-type(2n+3) {
@@ -53,5 +59,4 @@
 			}
 		}
 	}
-
 }

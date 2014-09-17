@@ -1,7 +1,7 @@
 .th-icon-group {
 	&__icon {
 		@extend %opacity-100;
-		margin-right: 15px;
+		margin-right : 15px;
 
 		&:hover {
 			@extend %opacity-75;
@@ -9,8 +9,7 @@
 		}
 
 		&--small {
-			margin-right: 10px;
-		}		
+			margin-right : 10px;
+		}
 	}
-
 }

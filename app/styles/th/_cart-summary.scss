@@ -2,7 +2,7 @@
 	&__link {
 		&:hover {
 			@extend %opacity-75;
-			text-decoration: none;
+			text-decoration : none;
 		}
 	}
 
@@ -11,6 +11,6 @@
 	}
 
 	@include respond-to(md-and-up) {
-		font-size: 1.6rem;
+		font-size : 1.6rem;
 	}
 }
