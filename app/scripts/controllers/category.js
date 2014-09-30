@@ -1,17 +1,9 @@
 angular.module('Volusion.controllers')
 	.controller('CategoryCtrl', [
-		'$q', '$scope', '$rootScope', '$routeParams', '$location', '$filter', '$route', 'vnApi', 'vnProductParams', 'vnAppRoute', 'ContentMgr',
-		function($q, $scope, $rootScope, $routeParams, $location, $filter, $route, vnApi, vnProductParams, vnAppRoute, ContentMgr) {
+		'$q', '$scope', '$rootScope', '$routeParams', '$location', '$route', 'vnApi', 'vnProductParams', 'vnAppRoute', 'ContentMgr',
+		function ($q, $scope, $rootScope, $routeParams, $location, $route, vnApi, vnProductParams, vnAppRoute, ContentMgr) {
 
 			'use strict';
-
-			$scope.checkFacetsAndCategories = function (categories, facets) {
-				if ((categories && categories.length) || (facets && facets.length)) {
-					$scope.hasFacetsOrCategories = true;
-				} else {
-					$scope.hasFacetsOrCategories = false;
-				}
-			};
 
 			$scope.checkForFacetFilters = function () {
 				if (vnProductParams.getFacetString()) {
@@ -41,15 +33,6 @@ angular.module('Volusion.controllers')
 				});
 			};
 
-			$scope.getImagePath = function (imageCollections) {
-				var path = $filter('vnProductImageFilter')(imageCollections);
-
-				if ('' === path) {
-					return '/images/theme/tcp-no-image.jpg';
-				}
-				return path;
-			};
-
 			$scope.queryProducts = function () {
 				var params = vnProductParams.getParamsObject();
 				vnApi.Product().get(params).$promise.then(function (response) {
@@ -60,13 +43,13 @@ angular.module('Volusion.controllers')
 					$scope.cursor = response.cursor;
 
 					// Post response UI Setup
-					$scope.checkFacetsAndCategories(response.categories,response.facets);
+					$scope.checkFacetsAndCategories(response.categories, response.facets);
 				});
 			};
 
 			$scope.toggleSearch = function () {
 				// Remember, this should only ever be called / used from the mobile filter element.
-				if($scope.mobileDisplay) {
+				if ($scope.mobileDisplay) {
 					$scope.mobileDisplay = false;
 					$scope.isMobileAndVisible = false;
 					$scope.isMobileAndHidden = true;
@@ -84,8 +67,6 @@ angular.module('Volusion.controllers')
 			});
 
 			$scope.$on('$viewContentLoaded', function () {
-				vnAppRoute.setRouteStrategy('category');
-				vnAppRoute.resolveParams($location.search());
 				vnAppRoute.setRouteStrategy('category');
 				$scope.getCategory($routeParams.slug);
 			});

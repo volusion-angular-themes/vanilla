@@ -1,6 +1,6 @@
 /**
  * @ngdoc function
- * @name gizmoApp.controller:FooterCtrl
+ * @name vanillaApp.controller:FooterCtrl
  * @description
  * # FooterCtrl
  * Controller of the vanillaApp
@@ -17,6 +17,5 @@ angular.module('Volusion.controllers')
 				},
 				function (state) {
 					$scope.footerState = state;
-				},true);
-
+				}, true);
 		}]);
