@@ -4,14 +4,8 @@ angular.module('Volusion.controllers')
 
 			'use strict';
 
-			var imagesToPreload = [];
-
-			angular.forEach($scope.themeSettings.pages.home.slider.slides, function (slide) {
-				imagesToPreload.push(slide.imageUrl);
-			});
-
 			vnApi.Product().get({ filter: 'featured', pageSize: 4 }).$promise
-				.then(function(response) {
+				.then(function (response) {
 					$scope.featuredProducts = response.data;
 				});
 
@@ -21,7 +15,6 @@ angular.module('Volusion.controllers')
 				if ('' === path) {
 					return '/images/theme/tcp-no-image.jpg';
 				}
-
 				return path;
 			};
 		}
