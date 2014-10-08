@@ -69,20 +69,8 @@
 
 				<!-- Search -->
 				<div class="col-xs-12 col-md-4">
-					<div class="th-header__search" ng-controller="SearchCtrl">
-						<form class="th-search" role="search" name="frmSearch" data-ng-submit="doSearch()" novalidate>
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button type="button" data-ng-click="doSearch()"
-													class="btn btn-default th-search__submit">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-								<input type="text" data-ng-model="searchLocal" class="form-control th-search__input"
-											 placeholder='Search...'>
-							</div>
-						</form>
-					</div>
+					<!--Custom directive for Vanilla stored in /scripts/vanilla-search-box-->
+					<div vanilla-search-box search-term="searchLocal" show-search="showSearchDesktop"></div>
 				</div>
 
 			</div><!-- /Categories and Search Row -->
