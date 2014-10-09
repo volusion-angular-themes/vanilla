@@ -39,7 +39,7 @@
 				<div class="col-sm-3 col-md-4">
 					<div class="th-header__utility pull-right">
 						<div class="hidden-xs th-header__sign-in">
-							<a legacy-link="/login.asp" data-translate="header.signIn"></a>
+							<a data-vn-legacy-link="/login.asp" data-translate="header.signIn">Sign In</a>
 						</div>
 
 						<!-- Cart -->
@@ -56,34 +56,21 @@
 								</a>
 							</div>
 						</div>
-					</div>
-					<!-- /th-header__utility -->
+					</div><!-- /th-header__utility -->
 				</div>
 
-			</div>
-			<!-- /Row -->
+			</div><!-- /Row -->
+			<div class="row">
 
-						<!-- Navbar -->
-			<div class="col-md-8 hidden-xs hidden-sm">
-				<div vn-nav category-list=""></div>
-			</div>
+				<!-- Navbar -->
+				<div class="col-md-8 hidden-xs hidden-sm">
+					<div vn-nav category-list=""></div>
+				</div>
 
 				<!-- Search -->
 				<div class="col-xs-12 col-md-4">
-					<div class="th-header__search" ng-controller="SearchCtrl">
-						<form class="th-search" role="search" name="frmSearch" data-ng-submit="doSearch()" novalidate>
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button type="button" data-ng-click="doSearch()"
-													class="btn btn-default th-search__submit">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-								<input type="text" data-ng-model="searchLocal" class="form-control th-search__input"
-											 placeholder='Search...'>
-							</div>
-						</form>
-					</div>
+					<!--Custom directive for Vanilla stored in /scripts/vanilla-search-box-->
+					<div vanilla-search-box search-term="searchLocal" show-search="showSearchDesktop"></div>
 				</div>
 
 			</div><!-- /Categories and Search Row -->

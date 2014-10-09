@@ -1,132 +1,122 @@
 <!doctype html>
 
 <html class="no-js" ng-app="vanillaApp">
-<head data-vn-meta-tags data-title="seo.metaTagTitle"
-			data-description="seo.metaTagDescription" data-keywords="seo.metaTagKeywords"
-			data-robots="seo.enableRobotsMetatags" data-to-append="seo.globallyAppendedMetatags">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="fragment" content="!"/>
-	<title>Volusion AngularJS Vanilla Theme</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<!-- build:css /styles/vendor.css -->
-	<!-- bower:css -->
-	<link rel="stylesheet" href="/bower_components/angular-snap/angular-snap.css" />
-	<link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css" />
-	<link rel="stylesheet" href="/bower_components/vn-toolbox-common/dist/vn-toolbox-common-styles.css" />
-	<!-- endbower -->
-	<link rel="stylesheet" href="/bower_components/easyzoom/css/easyzoom.css"/>
+	<head data-vn-meta-tags data-title="seo.metaTagTitle"
+				data-description="seo.metaTagDescription" data-keywords="seo.metaTagKeywords"
+				data-robots="seo.enableRobotsMetatags" data-to-append="seo.globallyAppendedMetatags">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="fragment" content="!"/>
+		<title>Volusion AngularJS Vanilla Theme</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<!-- build:css /styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="/bower_components/angular-snap/angular-snap.css" />
+		<link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="/bower_components/vn-toolbox-common/dist/vn-toolbox-common-styles.css" />
+		<!-- endbower -->
+		<link rel="stylesheet" href="/bower_components/easyzoom/css/easyzoom.css"/>
+		<!-- endbuild -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Slab:400,300">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" ng-href="{{ overridesCSS }}">
+		<base href="/">
+	</head>
+	<body role="document" data-ng-controller="MainCtrl">
+	<!--[if lt IE 9]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+		your browser</a>
+		to improve your experience.</p>
+	<![endif]-->
+
+	<!--TODO Remove SnapJS from Vanilla-->
+	<div snap-content data-snap-ignore="true">
+
+		<a id="top"></a>
+
+		<!-- Header -->
+		<div id="header" ng-include=" 'views/partials/header.html' "></div>
+
+		<!-- Main Content -->
+		<div class="vn-showcase" role="main" autoscroll="false" ng-view=""></div>
+		<!-- Footer -->
+		<div ng-include=" 'views/partials/footer.html' "></div>
+	</div>
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="/bower_components/angular-resource/angular-resource.js"></script>
+	<script src="/bower_components/angular-route/angular-route.js"></script>
+	<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/bower_components/angular-touch/angular-touch.js"></script>
+	<script src="/bower_components/snapjs/snap.js"></script>
+	<script src="/bower_components/angular-snap/angular-snap.js"></script>
+	<script src="/bower_components/angular-seo/angular-seo.js"></script>
+	<script src="/bower_components/jquery-waypoints/waypoints.js"></script>
+	<script src="/bower_components/angulartics/src/angulartics.js"></script>
+	<script src="/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+	<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+	<script src="/bower_components/easyzoom/dist/easyzoom.js"></script>
+	<script src="/bower_components/enquire/dist/enquire.js"></script>
+	<script src="/bower_components/angular-translate/angular-translate.js"></script>
+	<script src="/bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+	<script src="/bower_components/messageformat/messageformat.js"></script>
+	<script
+			src="/bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+	<script src="/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+	<script src="/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="/bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<script src="/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js"></script>
+	<script src="/bower_components/firebase/firebase.js"></script>
+	<script src="/bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+	<script src="/bower_components/angularfire/angularfire.js"></script>
+	<script src="/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js"></script>
+	<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
 	<!-- endbuild -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Slab:400,300">
-	<link rel="stylesheet" href="/styles/main.css">
-	<link rel="stylesheet" ng-href="{{ overridesCSS }}">
-	<base href="/">
-</head>
-<body role="document" data-ng-controller="MainCtrl">
-<!--[if lt IE 9]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-	your browser</a>
-	to improve your experience.</p>
-<![endif]-->
 
-<!--TODO Remove SnapJS from Vanilla-->
-<div snap-content data-snap-ignore="true">
+	<!-- build:js({.tmp,app}) /scripts/scripts.js -->
+	<script src="scripts/config.js"></script>
+	<script src="scripts/app.js"></script>
 
-	<a id="top"></a>
+	<script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/header.js"></script>
+	<script src="scripts/controllers/footer.js"></script>
+	<script src="scripts/controllers/home.js"></script>
+	<script src="scripts/controllers/category.js"></script>
+	<script src="scripts/controllers/product.js"></script>
+	<script src="scripts/controllers/search.js"></script>
+	<script src="scripts/controllers/article.js"></script>
+	<script src="scripts/controllers/page.js"></script>
+	<script src="scripts/controllers/theme-settings.js"></script>
+	<script src="scripts/vanilla-search-box/vanilla-search-box-directive.js"></script>
 
-	<!-- Header -->
-	<div id="header" ng-include=" 'views/partials/header.html' "></div>
+	<!--<script src="scripts/services/api-provider.js"></script>-->
+	<script src="scripts/services/app-config.js"></script>
+	<script src="scripts/services/content-mgr.js"></script>
+	<script src="scripts/services/site-config.js"></script>
+	<script src="scripts/services/cart.js"></script>
+	<script src="scripts/services/storage.js"></script>
+	<script src="scripts/services/theme-settings.js"></script>
+	<script src="scripts/services/token-generator.js"></script>
+	<script src="scripts/services/translate-provider.js"></script>
+	<script src="scripts/controllers/style-guide.js"></script>
+	<!-- endbuild -->
 
-	<!-- Main Content -->
-	<div class="vn-showcase" role="main" autoscroll="false" ng-view=""></div>
-	<!-- Footer -->
-	<div ng-include=" 'views/partials/footer.html' "></div>
-</div>
-
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/angular/angular.js"></script>
-<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="/bower_components/angular-resource/angular-resource.js"></script>
-<script src="/bower_components/angular-route/angular-route.js"></script>
-<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="/bower_components/angular-animate/angular-animate.js"></script>
-<script src="/bower_components/angular-touch/angular-touch.js"></script>
-<script src="/bower_components/snapjs/snap.js"></script>
-<script src="/bower_components/angular-snap/angular-snap.js"></script>
-<script src="/bower_components/angular-seo/angular-seo.js"></script>
-<script src="/bower_components/jquery-waypoints/waypoints.js"></script>
-<script src="/bower_components/angulartics/src/angulartics.js"></script>
-<script src="/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-<script src="/bower_components/easyzoom/dist/easyzoom.js"></script>
-<script src="/bower_components/enquire/dist/enquire.js"></script>
-<script src="/bower_components/angular-translate/angular-translate.js"></script>
-<script src="/bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
-<script src="/bower_components/messageformat/messageformat.js"></script>
-<script
-		src="/bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
-<script src="/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
-<script src="/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-<script src="/bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-<script src="/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js"></script>
-<script src="/bower_components/firebase/firebase.js"></script>
-<script src="/bower_components/firebase-simple-login/firebase-simple-login.js"></script>
-<script src="/bower_components/angularfire/angularfire.js"></script>
-<script src="/bower_components/vn-toolbox-common/dist/vn-toolbox-common.js"></script>
-<script src='/bower_components/textAngular/dist/textAngular.min.js'></script>
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) /scripts/scripts.js -->
-<script src="scripts/config.js"></script>
-<script src="scripts/app.js"></script>
-
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/header.js"></script>
-<script src="scripts/controllers/footer.js"></script>
-<script src="scripts/controllers/home.js"></script>
-<script src="scripts/controllers/category.js"></script>
-<script src="scripts/controllers/product.js"></script>
-<script src="scripts/controllers/search.js"></script>
-<script src="scripts/controllers/article.js"></script>
-<script src="scripts/controllers/page.js"></script>
-<script src="scripts/controllers/theme-settings.js"></script>
-
-<script src="scripts/directives/easy-zoom.js"></script>
-<script src="scripts/directives/legacy-link.js"></script>
-<script src="scripts/directives/show-on-dropdown-hover.js"></script>
-<script src="scripts/directives/scroll-to-anchor.js"></script>
-<script src="scripts/directives/paginator.js"></script>
-
-<script src="scripts/filters/cache-bust.js"></script>
-<script src="scripts/filters/html.js"></script>
-<script src="scripts/filters/legacy-linkify.js"></script>
-<script src="scripts/filters/seo-friendly.js"></script>
-
-<!--<script src="scripts/services/api-provider.js"></script>-->
-<script src="scripts/services/app-config.js"></script>
-<script src="scripts/services/content-mgr.js"></script>
-<script src="scripts/services/site-config.js"></script>
-<script src="scripts/services/cart.js"></script>
-<script src="scripts/services/storage.js"></script>
-<script src="scripts/services/theme-settings.js"></script>
-<script src="scripts/services/token-generator.js"></script>
-<script src="scripts/services/translate-provider.js"></script>
-<script src="scripts/controllers/style-guide.js"></script>
-<!-- endbuild -->
-
-</body>
+	</body>
 </html>
