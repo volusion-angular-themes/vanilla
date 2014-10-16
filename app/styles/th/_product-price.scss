@@ -11,4 +11,13 @@
 		font-weight   : 300;
 		margin-bottom : 0;
 	}
+
+	& .-sale {
+		margin-right : 5px;
+	}
+
+	& .strike {
+		color: lighten($text-color, 20);
+		text-decoration : line-through;
+	}
 }
