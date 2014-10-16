@@ -18,7 +18,12 @@
 				 data-ng-repeat="product in products track by product.id"
 				 data-ng-include=" 'views/partials/product-tile.html' "></div>
 		</div>
-		<div vn-paginator cursor="cursor" current-page="currentPage" query-fn="queryProducts()"></div>
+		<div vn-paginator
+		     data-ng-if="cursor.totalPages > 1"
+		     cursor="cursor"
+		     current-page="currentPage"
+		     query-fn="queryProducts()">
+		</div>
 	</div>
 	<!-- /th-product-tile -->
 </div>
