@@ -177,6 +177,17 @@ label {
 	}
 }
 
+.pager {
+	@include respond-to(sm-and-up) {
+		margin-top : 30px;
+		margin-bottom : 10px;
+
+		& + & {
+			margin-top : 10px;
+		}
+	}
+}
+
 
 // Image Classes ===============================================================
 
